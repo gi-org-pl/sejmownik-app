@@ -1,21 +1,12 @@
-import { useNavigate } from "react-router";
-import Button from "../components/shared/Button/Button";
-import { addTwoNumbers } from "../utils/number/addTwoNumbers";
+import { Footer } from "@/components/shared/Footer/Footer";
+import { Header } from "@/components/shared/Header/Header";
 
-const Index = () => {
-  const navigate = useNavigate();
-  const sum = addTwoNumbers(2, 2);
-
-  const handleClick = () => {
-    navigate("/another-page");
-  };
-
-  return (
-    <>
-      <div>2 + 2 = {sum}</div>
-      <Button onClick={handleClick}>Go to another page</Button>
-    </>
-  );
-};
+const Index = () => (
+  <div className="flex min-h-screen flex-col">
+    <Header />
+    <main className="flex-1" />
+    <Footer />
+  </div>
+);
 
 export default Index;
