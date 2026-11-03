@@ -1,7 +1,7 @@
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 import type { Preview } from "@storybook/react-vite";
-import { createElement, type ComponentType, type ReactElement } from "react";
+import { type ComponentType, createElement, type ReactElement } from "react";
 
 import "../src/index.css";
 

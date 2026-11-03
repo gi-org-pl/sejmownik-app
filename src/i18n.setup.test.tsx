@@ -40,7 +40,10 @@ describe("i18n setup", () => {
 
       render(
         <I18nProvider i18n={i18n}>
-          <Trans id="i18n-setup.fallback" message="Tekst źródłowy bez tłumaczenia" />
+          <Trans
+            id="i18n-setup.fallback"
+            message="Tekst źródłowy bez tłumaczenia"
+          />
         </I18nProvider>,
       );
 
