@@ -1,8 +1,21 @@
+import { i18n } from "@lingui/core";
+import { I18nProvider } from "@lingui/react";
 import type { Preview } from "@storybook/react-vite";
+import { createElement, type ComponentType, type ReactElement } from "react";
 
 import "../src/index.css";
 
+import { messages as enMessages } from "../src/locales/en/messages";
+import { messages as plMessages } from "../src/locales/pl/messages";
+
+i18n.load({ en: enMessages, pl: plMessages });
+i18n.activate("pl");
+
+export const withI18n = (Story: ComponentType): ReactElement =>
+  createElement(I18nProvider, { i18n }, createElement(Story));
+
 const preview: Preview = {
+  decorators: [withI18n],
   parameters: {
     controls: {
       matchers: {
@@ -12,9 +25,6 @@ const preview: Preview = {
     },
 
     a11y: {
-      // 'todo' - show a11y violations in the test UI only
-      // 'error' - fail CI on a11y violations
-      // 'off' - skip a11y checks entirely
       test: "todo",
     },
   },
