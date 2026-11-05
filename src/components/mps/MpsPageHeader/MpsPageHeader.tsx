@@ -36,7 +36,6 @@ const Subtitle = ({ termNumber, mpCount }: MpsPageHeaderProps) => {
   );
 };
 
-// Figma: Page / Head. Vertical flow, fill width, hug height, 8 px gap.
 export const MpsPageHeader = ({ termNumber, mpCount }: MpsPageHeaderProps) => (
   <div className="flex w-full flex-col gap-2">
     <h1 className="font-(family-name:--font-heading) text-[32px] leading-11 font-bold text-gi-primary">
