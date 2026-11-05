@@ -1,11 +1,22 @@
-msgid ""
-msgstr ""
-"POT-Creation-Date: 2026-11-03 14:56+0100\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: @lingui/cli\n"
-"Language: en\n"
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:25
+msgid "Miejscowość lub nazwisko posła"
+msgstr "Town or MP surname"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.constants.ts:8
+msgid "Nazwisko A–Ż"
+msgstr "Surname A–Z"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.constants.ts:9
+msgid "Nazwisko Z–A"
+msgstr "Surname Z–A"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:40
+msgid "Sortuj:"
+msgstr "Sort by:"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:24
+msgid "Szukaj posła lub okręgu"
+msgstr "Search for an MP or a constituency"
 
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
