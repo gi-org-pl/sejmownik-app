@@ -7,55 +7,23 @@ msgstr ""
 "X-Generator: @lingui/cli\n"
 "Language: pl\n"
 
-#: src/components/education/EducationQuizCard/EducationQuizCardPills/EducationQuizCardPills.tsx:31
+#: src/components/education/EducationQuizCard/EducationQuizCardPills/EducationQuizCardPills.tsx:30
 msgid "{durationMinutes, plural, one {# min} few {# min} many {# min} other {# min}}"
 msgstr "{durationMinutes, plural, one {# min} few {# min} many {# min} other {# min}}"
 
-#: src/components/education/EducationQuizCard/EducationQuizCardPills/EducationQuizCardPills.tsx:20
+#: src/components/education/EducationQuizCard/EducationQuizCardPills/EducationQuizCardPills.tsx:19
 msgid "{questionCount, plural, one {# pytanie} few {# pytania} many {# pytań} other {# pytań}}"
 msgstr "{questionCount, plural, one {# pytanie} few {# pytania} many {# pytań} other {# pytań}}"
 
-#: src/constants/education.ts:22
-msgid "Czytanie"
-msgstr "Czytanie"
-
-#: src/constants/education.ts:18
-msgid "Dokument zawierający projekt ustawy."
-msgstr "Dokument zawierający projekt ustawy."
-
-#: src/constants/education.ts:17
-msgid "Druk"
-msgstr "Druk"
-
-#: src/constants/education.ts:6
-msgid "Krótki opis kluczowych pojęć z procesu legislacyjnego."
-msgstr "Krótki opis kluczowych pojęć z procesu legislacyjnego."
-
-#: src/constants/education.ts:23
-msgid "Omówienie projektu ustawy w Sejmie."
-msgstr "Omówienie projektu ustawy w Sejmie."
-
-#: src/components/education/EducationQuizCard/EducationQuizCardStartLink/EducationQuizCardStartLink.tsx:35
+#: src/components/education/EducationQuizCard/EducationQuizCardStartLink/EducationQuizCardStartLink.tsx:31
 msgid "Rozpocznij"
 msgstr "Rozpocznij"
 
-#: src/components/education/EducationQuizCard/EducationQuizCardStartLink/EducationQuizCardStartLink.tsx:33
+#: src/components/education/EducationQuizCard/EducationQuizCardStartLink/EducationQuizCardStartLink.tsx:29
 msgid "Rozpocznij quiz: {title}"
 msgstr "Rozpocznij quiz: {title}"
-
-#: src/constants/education.ts:4
-msgid "Słowniczek"
-msgstr "Słowniczek"
 
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"
 msgstr "Tekst źródłowy bez tłumaczenia"
-
-#: src/constants/education.ts:28
-msgid "Więcej niż połowa ważnie oddanych głosów."
-msgstr "Więcej niż połowa ważnie oddanych głosów."
-
-#: src/constants/education.ts:27
-msgid "Większość bezwzględna"
-msgstr "Większość bezwzględna"

@@ -7,55 +7,23 @@ msgstr ""
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
 
-#: src/components/education/EducationQuizCard/EducationQuizCardPills/EducationQuizCardPills.tsx:31
+#: src/components/education/EducationQuizCard/EducationQuizCardPills/EducationQuizCardPills.tsx:30
 msgid "{durationMinutes, plural, one {# min} few {# min} many {# min} other {# min}}"
 msgstr "{durationMinutes, plural, one {# min} other {# min}}"
 
-#: src/components/education/EducationQuizCard/EducationQuizCardPills/EducationQuizCardPills.tsx:20
+#: src/components/education/EducationQuizCard/EducationQuizCardPills/EducationQuizCardPills.tsx:19
 msgid "{questionCount, plural, one {# pytanie} few {# pytania} many {# pytań} other {# pytań}}"
 msgstr "{questionCount, plural, one {# question} other {# questions}}"
 
-#: src/constants/education.ts:22
-msgid "Czytanie"
-msgstr "Reading"
-
-#: src/constants/education.ts:18
-msgid "Dokument zawierający projekt ustawy."
-msgstr "A document containing a bill draft."
-
-#: src/constants/education.ts:17
-msgid "Druk"
-msgstr "Print"
-
-#: src/constants/education.ts:6
-msgid "Krótki opis kluczowych pojęć z procesu legislacyjnego."
-msgstr "A short description of key terms from the legislative process."
-
-#: src/constants/education.ts:23
-msgid "Omówienie projektu ustawy w Sejmie."
-msgstr "Discussion of a bill in the Sejm."
-
-#: src/components/education/EducationQuizCard/EducationQuizCardStartLink/EducationQuizCardStartLink.tsx:35
+#: src/components/education/EducationQuizCard/EducationQuizCardStartLink/EducationQuizCardStartLink.tsx:31
 msgid "Rozpocznij"
 msgstr "Start"
 
-#: src/components/education/EducationQuizCard/EducationQuizCardStartLink/EducationQuizCardStartLink.tsx:33
+#: src/components/education/EducationQuizCard/EducationQuizCardStartLink/EducationQuizCardStartLink.tsx:29
 msgid "Rozpocznij quiz: {title}"
 msgstr "Start quiz: {title}"
-
-#: src/constants/education.ts:4
-msgid "Słowniczek"
-msgstr "Glossary"
 
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"
 msgstr ""
-
-#: src/constants/education.ts:28
-msgid "Więcej niż połowa ważnie oddanych głosów."
-msgstr "More than half of the valid votes cast."
-
-#: src/constants/education.ts:27
-msgid "Większość bezwzględna"
-msgstr "Absolute majority"
