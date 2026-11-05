@@ -42,9 +42,9 @@ describe("<MpsSearchToolbar />", () => {
   });
 
   it("shows the current query value", () => {
-    renderToolbar({ query: "Warszawa" });
+    renderToolbar({ query: "Kowalski" });
 
-    expect(screen.getByRole("textbox")).toHaveValue("Warszawa");
+    expect(screen.getByRole("textbox")).toHaveValue("Kowalski");
   });
 
   it("calls onQueryChange when typing", () => {
@@ -69,7 +69,7 @@ describe("<MpsSearchToolbar />", () => {
     renderToolbar({ sort: "surnameDesc" });
 
     expect(
-      screen.getByRole("button", { name: "Sortuj posłów: Nazwisko Z–A" }),
+      screen.getByRole("button", { name: "Sortuj posłów: Nazwisko Ż–A" }),
     ).toBeInTheDocument();
   });
 
@@ -79,7 +79,7 @@ describe("<MpsSearchToolbar />", () => {
     fireEvent.keyDown(screen.getByRole("button", { name: /Sortuj/ }), {
       key: "Enter",
     });
-    fireEvent.click(screen.getByText("Nazwisko Z–A"));
+    fireEvent.click(screen.getByText("Nazwisko Ż–A"));
 
     expect(onSortChange).toHaveBeenCalledWith("surnameDesc");
   });

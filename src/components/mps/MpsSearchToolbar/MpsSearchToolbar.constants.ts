@@ -6,5 +6,5 @@ export const SORT_OPTIONS: SortOption[] = ["surnameAsc", "surnameDesc"];
 
 export const SORT_OPTION_LABELS: Record<SortOption, MessageDescriptor> = {
   surnameAsc: msg`Nazwisko A–Ż`,
-  surnameDesc: msg`Nazwisko Z–A`,
+  surnameDesc: msg`Nazwisko Ż–A`,
 };

@@ -16,14 +16,14 @@ msgid "Nazwisko A–Ż"
 msgstr "Nazwisko A–Ż"
 
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.constants.ts:9
-msgid "Nazwisko Z–A"
-msgstr "Nazwisko Z–A"
+msgid "Nazwisko Ż–A"
+msgstr "Nazwisko Ż–A"
 
-#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:36
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:37
 msgid "Sortuj posłów: {currentSortLabel}"
 msgstr "Sortuj posłów: {currentSortLabel}"
 
-#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:39
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:41
 msgid "Sortuj:"
 msgstr "Sortuj:"
 

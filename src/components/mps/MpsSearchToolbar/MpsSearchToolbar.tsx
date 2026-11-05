@@ -16,8 +16,8 @@ export const MpsSearchToolbar = ({
   const currentSortLabel = i18n._(SORT_OPTION_LABELS[sort]);
 
   return (
-    <div className="flex w-full flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-6">
-      <div className="w-full md:max-w-sm">
+    <div className="flex w-full flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <div className="w-full md:w-100">
         <Input
           aria-label={t`Szukaj posła lub okręgu`}
           placeholder={t`Miejscowość lub nazwisko posła`}
@@ -32,23 +32,27 @@ export const MpsSearchToolbar = ({
           }
         />
       </div>
-      <Select
-        aria-label={t`Sortuj posłów: ${currentSortLabel}`}
-        value={
-          <>
-            <span className="font-normal text-gi-dark-gray">{t`Sortuj:`}</span>{" "}
-            {currentSortLabel}
-          </>
-        }
-      >
-        <ActionList
-          items={SORT_OPTIONS.map((option) => ({
-            label: i18n._(SORT_OPTION_LABELS[option]),
-            isSelected: option === sort,
-            onClick: () => onSortChange(option),
-          }))}
-        />
-      </Select>
+      <div className="hidden md:block">
+        <Select
+          aria-label={t`Sortuj posłów: ${currentSortLabel}`}
+          value={
+            <>
+              <span className="text-sm font-normal text-gi-dark-gray">
+                {t`Sortuj:`}
+              </span>{" "}
+              {currentSortLabel}
+            </>
+          }
+        >
+          <ActionList
+            items={SORT_OPTIONS.map((option) => ({
+              label: i18n._(SORT_OPTION_LABELS[option]),
+              isSelected: option === sort,
+              onClick: () => onSortChange(option),
+            }))}
+          />
+        </Select>
+      </div>
     </div>
   );
 };
