@@ -61,7 +61,7 @@ describe("<MpsSearchToolbar />", () => {
     renderToolbar({ sort: "surnameAsc" });
 
     expect(
-      screen.getByRole("button", { name: "Sortuj: Nazwisko A–Ż" }),
+      screen.getByRole("button", { name: "Sortuj posłów: Nazwisko A–Ż" }),
     ).toBeInTheDocument();
   });
 
@@ -69,7 +69,7 @@ describe("<MpsSearchToolbar />", () => {
     renderToolbar({ sort: "surnameDesc" });
 
     expect(
-      screen.getByRole("button", { name: "Sortuj: Nazwisko Z–A" }),
+      screen.getByRole("button", { name: "Sortuj posłów: Nazwisko Z–A" }),
     ).toBeInTheDocument();
   });
 

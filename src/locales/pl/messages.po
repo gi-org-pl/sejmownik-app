@@ -7,6 +7,30 @@ msgstr ""
 "X-Generator: @lingui/cli\n"
 "Language: pl\n"
 
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:23
+msgid "Miejscowość lub nazwisko posła"
+msgstr "Miejscowość lub nazwisko posła"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.constants.ts:8
+msgid "Nazwisko A–Ż"
+msgstr "Nazwisko A–Ż"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.constants.ts:9
+msgid "Nazwisko Z–A"
+msgstr "Nazwisko Z–A"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:36
+msgid "Sortuj posłów: {currentSortLabel}"
+msgstr "Sortuj posłów: {currentSortLabel}"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:39
+msgid "Sortuj:"
+msgstr "Sortuj:"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:22
+msgid "Szukaj posła lub okręgu"
+msgstr "Szukaj posła lub okręgu"
+
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"

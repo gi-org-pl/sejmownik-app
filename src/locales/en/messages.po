@@ -1,4 +1,13 @@
-#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:25
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-11-03 14:56+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:23
 msgid "Miejscowość lub nazwisko posła"
 msgstr "Town or MP surname"
 
@@ -10,11 +19,15 @@ msgstr "Surname A–Z"
 msgid "Nazwisko Z–A"
 msgstr "Surname Z–A"
 
-#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:40
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:36
+msgid "Sortuj posłów: {currentSortLabel}"
+msgstr "Sort MPs: {currentSortLabel}"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:39
 msgid "Sortuj:"
 msgstr "Sort by:"
 
-#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:24
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:22
 msgid "Szukaj posła lub okręgu"
 msgstr "Search for an MP or a constituency"
 
