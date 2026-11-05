@@ -15,7 +15,7 @@ export default function App() {
   return (
     <html lang={DEFAULT_LANGUAGE}>
       <head>
-        <title>vite-boilerplate</title>
+        <title>Sejmownik</title>
       </head>
       <body>
         <I18nProvider i18n={i18n}>
