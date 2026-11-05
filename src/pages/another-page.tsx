@@ -1,24 +1,12 @@
-import reactLogo from "../assets/vectors/react.svg";
-import Counter from "../components/another-domain/Counter/Counter";
+import { Footer } from "@/components/shared/Footer/Footer";
+import { Header } from "@/components/shared/Header/Header";
 
-const AnotherPage = () => {
-  return (
-    <>
-      <div>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div>
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p>Click on the Vite and React logos to learn more</p>
-    </>
-  );
-};
+const AnotherPage = () => (
+  <div className="flex min-h-screen flex-col">
+    <Header />
+    <main className="flex-1" />
+    <Footer />
+  </div>
+);
 
 export default AnotherPage;
