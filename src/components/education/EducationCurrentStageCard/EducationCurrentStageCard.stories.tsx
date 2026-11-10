@@ -45,7 +45,38 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Senate: Story = {};
+export const Default: Story = {};
+
+export const NotStarted: Story = {
+  args: {
+    bill: {
+      id: SENATE_BILL.id,
+      title: SENATE_BILL.title,
+      currentStep: null,
+      statusLine: "Projekt nie rozpoczął jeszcze procedowania",
+    },
+  },
+};
+
+export const Halfway: Story = {
+  args: {
+    bill: {
+      ...SENATE_BILL,
+      currentStep: 3,
+      statusLine: "Po I czytaniu w Sejmie · skierowany do komisji",
+    },
+  },
+};
+
+export const AllStagesCompleted: Story = {
+  args: {
+    bill: {
+      ...SENATE_BILL,
+      currentStep: 6,
+      statusLine: "Ustawa ogłoszona · procedura zakończona",
+    },
+  },
+};
 
 export const LongTitle: Story = {
   args: {

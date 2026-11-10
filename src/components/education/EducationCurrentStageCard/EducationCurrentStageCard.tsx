@@ -1,3 +1,4 @@
+import { useLingui } from "@lingui/react/macro";
 import { Link } from "react-router";
 import arrowRightIcon from "@/assets/icons/arrow-right.svg";
 import { BillStageProgress } from "@/components/shared/BillStageProgress/BillStageProgress";
@@ -12,14 +13,38 @@ export const EducationCurrentStageCard = ({
   totalSteps,
   billHref,
 }: EducationCurrentStageCardProps) => {
+  const { t } = useLingui();
+
   if (!bill) {
     return null;
   }
 
+  const currentStep = bill.currentStep;
+  const totalIsValid = Number.isInteger(totalSteps) && totalSteps >= 1;
+  const notStarted = totalIsValid && (currentStep == null || currentStep === 0);
+  const hasStage =
+    totalIsValid &&
+    currentStep != null &&
+    Number.isInteger(currentStep) &&
+    currentStep >= 1 &&
+    currentStep <= totalSteps;
+  const accessibleName = [
+    bill.title,
+    badgeLabel,
+    hasStage
+      ? t`Etap ${currentStep} z ${totalSteps}`
+      : notStarted
+        ? t`Żaden etap się nie rozpoczął`
+        : null,
+    bill.statusLine,
+  ]
+    .filter((part) => part)
+    .join(" ");
+
   return (
     <Link
       to={billHref}
-      aria-label={`${bill.title} ${badgeLabel}`}
+      aria-label={accessibleName}
       className={`group block w-full cursor-pointer overflow-hidden rounded-3xl border border-gi-light-gray-dark bg-white no-underline text-gi-primary ${FOCUS_CLASS_NAME}`}
     >
       <p className="w-fit max-w-full rounded-br-2xl bg-gi-primary px-4 py-3 text-sm leading-4.5 font-bold wrap-break-word text-white">

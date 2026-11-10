@@ -70,7 +70,9 @@ describe("EducationCurrentStageCard", () => {
     it("links the whole card to billHref", () => {
       renderCard();
 
-      const link = screen.getByRole("link", { name: `${TITLE} ${BADGE}` });
+      const link = screen.getByRole("link", {
+        name: `${TITLE} ${BADGE} Etap 5 z 6 ${STATUS}`,
+      });
 
       expect(screen.getAllByRole("link")).toHaveLength(1);
       expect(link).toHaveAttribute("href", BILL_HREF);
@@ -101,7 +103,7 @@ describe("EducationCurrentStageCard", () => {
       renderCard({ bill: { ...senateBill, title } });
 
       expect(screen.getByRole("link")).toHaveAccessibleName(
-        `${title} ${BADGE}`,
+        `${title} ${BADGE} Etap 5 z 6 ${STATUS}`,
       );
       expect(screen.getByText(title)).toHaveClass("line-clamp-2");
     });
@@ -146,12 +148,20 @@ describe("EducationCurrentStageCard", () => {
   });
 
   describe("given no currentStep", () => {
-    it("omits the progress bar", () => {
+    it("renders every segment inactive", () => {
       renderCard({ bill: { ...senateBill, currentStep: undefined } });
 
-      expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
-      expect(screen.getByText(TITLE)).toBeInTheDocument();
-      expect(screen.getByText(STATUS)).toBeInTheDocument();
+      const bar = screen.getByRole("progressbar", {
+        name: "Żaden etap się nie rozpoczął",
+      });
+
+      expect(bar.querySelectorAll("span")).toHaveLength(6);
+      for (const segment of bar.querySelectorAll("span")) {
+        expect(segment).toHaveClass("bg-gi-dark-ash");
+      }
+      expect(screen.getByRole("link")).toHaveAccessibleName(
+        `${TITLE} ${BADGE} Żaden etap się nie rozpoczął ${STATUS}`,
+      );
     });
   });
 });
