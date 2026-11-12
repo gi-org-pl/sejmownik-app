@@ -6,12 +6,6 @@ const meta = {
   component: EducationStepAccordion,
   parameters: {
     layout: "padded",
-    docs: {
-      description: {
-        component:
-          "Athena does not include an accordion. This one is built from native buttons and panels and follows the WAI-ARIA accordion keyboard pattern.",
-      },
-    },
   },
   decorators: [
     (Story) => (
