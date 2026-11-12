@@ -7,6 +7,18 @@ msgstr ""
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
 
+#: src/components/mps/ConstituencySummary/utils/formatMpCount.ts:4
+msgid "{count, plural, one {# poseł} few {# posłowie} many {# posłów} other {# posła}}"
+msgstr "{count, plural, one {# MP} other {# MPs}}"
+
+#: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:22
+msgid "{count} · także głosy oddane za granicą"
+msgstr "{count} · including votes cast abroad"
+
+#: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:16
+msgid "Okręg nr {number} · {name}"
+msgstr "Constituency no. {number} · {name}"
+
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"
