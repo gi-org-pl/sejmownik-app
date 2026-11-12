@@ -7,7 +7,166 @@ msgstr ""
 "X-Generator: @lingui/cli\n"
 "Language: pl\n"
 
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:107
+msgid "brak stanowiska oznacza przyjęcie ustawy bez zmian"
+msgstr "brak stanowiska oznacza przyjęcie ustawy bez zmian"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:90
+#~ msgid "Etap {activeStep} z {totalSteps}"
+#~ msgstr "Etap {activeStep} z {totalSteps}"
+
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.tsx:35
+#: src/components/shared/BillStageProgress/BillStageProgress.tsx:33
+msgid "Etap {currentStep} z {totalSteps}"
+msgstr "Etap {currentStep} z {totalSteps}"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:172
+msgid "Głosowanie w Sejmie"
+msgstr "Głosowanie w Sejmie"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:59
+msgid "grupa posłów"
+msgstr "grupa posłów"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:158
+msgid "I czytanie"
+msgstr "I czytanie"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:165
+msgid "Komisja"
+msgstr "Komisja"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:166
+msgid "Komisja rozpatruje projekt przepis po przepisie, może zapraszać ekspertów i zgłaszać poprawki."
+msgstr "Komisja rozpatruje projekt przepis po przepisie, może zapraszać ekspertów i zgłaszać poprawki."
+
+#. placeholder {0}: step.number
+#. placeholder {1}: step.title
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:168
+msgid "Krok {0}: {1}"
+msgstr "Krok {0}: {1}"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:65
+msgid "obywatele — co najmniej 100 tysięcy podpisów"
+msgstr "obywatele — co najmniej 100 tysięcy podpisów"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:76
+msgid "odrzucić projekt w całości"
+msgstr "odrzucić projekt w całości"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:173
+msgid "Po czytaniach Sejm głosuje nad ustawą. Do jej uchwalenia wystarcza zwykła większość głosów przy kworum."
+msgstr "Po czytaniach Sejm głosuje nad ustawą. Do jej uchwalenia wystarcza zwykła większość głosów przy kworum."
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:100
+msgid "Po uchwaleniu"
+msgstr "Po uchwaleniu"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:120
+msgid "podpisać ustawę i zarządzić jej publikację"
+msgstr "podpisać ustawę i zarządzić jej publikację"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:159
+msgid "Posłowie dyskutują o celu projektu. Sejm nie rozstrzyga jeszcze o poszczególnych przepisach."
+msgstr "Posłowie dyskutują o celu projektu. Sejm nie rozstrzyga jeszcze o poszczególnych przepisach."
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:61
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:186
+msgid "Prezydent"
+msgstr "Prezydent"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:187
+msgid "Prezydent dostaje uchwaloną ustawę i ma 21 dni na decyzję: podpis, weto albo wniosek do Trybunału Konstytucyjnego."
+msgstr "Prezydent dostaje uchwaloną ustawę i ma 21 dni na decyzję: podpis, weto albo wniosek do Trybunału Konstytucyjnego."
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:116
+msgid "Prezydent może"
+msgstr "Prezydent może"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:57
+msgid "Projekt mogą wnieść"
+msgstr "Projekt mogą wnieść"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:152
+msgid "Projekt ustawy wpływa do Sejmu i dostaje numer druku. Od tej chwili zaczyna się jego droga przez sześć etapów."
+msgstr "Projekt ustawy wpływa do Sejmu i dostaje numer druku. Od tej chwili zaczyna się jego droga przez sześć etapów."
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:87
+msgid "propozycję uchwalenia albo odrzucenia"
+msgstr "propozycję uchwalenia albo odrzucenia"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:89
+msgid "przyjęte poprawki"
+msgstr "przyjęte poprawki"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:62
+msgid "Rada Ministrów"
+msgstr "Rada Ministrów"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:73
+msgid "Sejm może"
+msgstr "Sejm może"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:60
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:179
+msgid "Senat"
+msgstr "Senat"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:103
+msgid "Senat ma 30 dni na stanowisko"
+msgstr "Senat ma 30 dni na stanowisko"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:180
+msgid "Senat ma 30 dni na stanowisko. Może przyjąć ustawę, zaproponować poprawki albo ją odrzucić."
+msgstr "Senat ma 30 dni na stanowisko. Może przyjąć ustawę, zaproponować poprawki albo ją odrzucić."
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:130
+msgid "skierować ją do Trybunału Konstytucyjnego"
+msgstr "skierować ją do Trybunału Konstytucyjnego"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:75
+msgid "skierować projekt do komisji"
+msgstr "skierować projekt do komisji"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:47
+msgid "Składki ZUS dla artystów"
+msgstr "Składki ZUS dla artystów"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:83
+msgid "Sprawozdanie komisji zawiera"
+msgstr "Sprawozdanie komisji zawiera"
+
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"
 msgstr "Tekst źródłowy bez tłumaczenia"
+
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.stories.tsx:24
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:42
+msgid "Teraz na tym etapie"
+msgstr "Teraz na tym etapie"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:49
+msgid "Uchwalona przez Sejm 8 paź 2026 · czeka na stanowisko Senatu"
+msgstr "Uchwalona przez Sejm 8 paź 2026 · czeka na stanowisko Senatu"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:102
+msgid "ustawa trafia do Senatu"
+msgstr "ustawa trafia do Senatu"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:151
+msgid "Wpłynięcie projektu"
+msgstr "Wpłynięcie projektu"
+
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.tsx:37
+#: src/components/shared/BillStageProgress/BillStageProgress.tsx:32
+msgid "Żaden etap się nie rozpoczął"
+msgstr "Żaden etap się nie rozpoczął"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:125
+msgid "zawetować ją — Sejm odrzuca weto większością 3/5 głosów"
+msgstr "zawetować ją — Sejm odrzuca weto większością 3/5 głosów"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:92
+msgid "zdania odrębne, jeśli je zgłoszono"
+msgstr "zdania odrębne, jeśli je zgłoszono"
