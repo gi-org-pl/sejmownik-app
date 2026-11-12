@@ -9,7 +9,6 @@ export type EducationStep = {
 };
 
 export type EducationStepAccordionProps = {
-  steps: EducationStep[];
   initialOpenKey?: string;
 };
 
