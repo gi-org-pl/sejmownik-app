@@ -19,11 +19,11 @@ msgstr "Surname A–Z"
 msgid "Nazwisko Ż–A"
 msgstr "Surname Z–A"
 
-#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:37
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:36
 msgid "Sortuj posłów: {currentSortLabel}"
 msgstr "Sort MPs: {currentSortLabel}"
 
-#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:41
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:40
 msgid "Sortuj:"
 msgstr "Sort by:"
 

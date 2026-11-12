@@ -32,27 +32,25 @@ export const MpsSearchToolbar = ({
           }
         />
       </div>
-      <div className="hidden md:block">
-        <Select
-          aria-label={t`Sortuj posłów: ${currentSortLabel}`}
-          value={
-            <>
-              <span className="text-sm font-normal text-gi-dark-gray">
-                {t`Sortuj:`}
-              </span>{" "}
-              {currentSortLabel}
-            </>
-          }
-        >
-          <ActionList
-            items={SORT_OPTIONS.map((option) => ({
-              label: i18n._(SORT_OPTION_LABELS[option]),
-              isSelected: option === sort,
-              onClick: () => onSortChange(option),
-            }))}
-          />
-        </Select>
-      </div>
+      <Select
+        aria-label={t`Sortuj posłów: ${currentSortLabel}`}
+        value={
+          <>
+            <span className="text-sm font-normal text-gi-dark-gray">
+              {t`Sortuj:`}
+            </span>{" "}
+            {currentSortLabel}
+          </>
+        }
+      >
+        <ActionList
+          items={SORT_OPTIONS.map((option) => ({
+            label: i18n._(SORT_OPTION_LABELS[option]),
+            isSelected: option === sort,
+            onClick: () => onSortChange(option),
+          }))}
+        />
+      </Select>
     </div>
   );
 };

@@ -36,7 +36,7 @@ type Story = StoryObj<typeof MpsSearchToolbarStory>;
 export const Default: Story = {};
 
 export const FilledQuery: Story = {
-  args: { initialQuery: "" },
+  args: { initialQuery: "Kowalski" },
 };
 
 export const ReverseSort: Story = {
