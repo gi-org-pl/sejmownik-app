@@ -7,6 +7,22 @@ msgstr ""
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
 
+#: src/components/education/EducationQuizCard/EducationQuizCardPills/EducationQuizCardPills.tsx:30
+msgid "{durationMinutes, plural, one {# min} few {# min} many {# min} other {# min}}"
+msgstr "{durationMinutes, plural, one {# min} other {# min}}"
+
+#: src/components/education/EducationQuizCard/EducationQuizCardPills/EducationQuizCardPills.tsx:19
+msgid "{questionCount, plural, one {# pytanie} few {# pytania} many {# pytań} other {# pytań}}"
+msgstr "{questionCount, plural, one {# question} other {# questions}}"
+
+#: src/components/education/EducationQuizCard/EducationQuizCardStartLink/EducationQuizCardStartLink.tsx:31
+msgid "Rozpocznij"
+msgstr "Start"
+
+#: src/components/education/EducationQuizCard/EducationQuizCardStartLink/EducationQuizCardStartLink.tsx:29
+msgid "Rozpocznij quiz: {title}"
+msgstr "Start quiz: {title}"
+
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"
