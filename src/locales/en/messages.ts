@@ -1,1 +1,1 @@
-/*eslint-disable*/import type{Messages}from"@lingui/core";export const messages=JSON.parse("{\"i18n-setup.fallback\":[\"Tekst źródłowy bez tłumaczenia\"]}")as Messages;
+/*eslint-disable*/import type{Messages}from"@lingui/core";export const messages=JSON.parse("{\"cKQxh9\":[\"Now at this stage\"],\"i18n-setup.fallback\":[\"Tekst źródłowy bez tłumaczenia\"],\"lHYb2o\":[\"No stage has started\"],\"pihKzs\":[\"Stage \",[\"currentStep\"],\" of \",[\"totalSteps\"]]}")as Messages;

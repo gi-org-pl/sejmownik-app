@@ -7,7 +7,21 @@ msgstr ""
 "X-Generator: @lingui/cli\n"
 "Language: pl\n"
 
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.tsx:35
+#: src/components/shared/BillStageProgress/BillStageProgress.tsx:33
+msgid "Etap {currentStep} z {totalSteps}"
+msgstr "Etap {currentStep} z {totalSteps}"
+
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"
 msgstr "Tekst źródłowy bez tłumaczenia"
+
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.stories.tsx:24
+msgid "Teraz na tym etapie"
+msgstr "Teraz na tym etapie"
+
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.tsx:37
+#: src/components/shared/BillStageProgress/BillStageProgress.tsx:32
+msgid "Żaden etap się nie rozpoczął"
+msgstr "Żaden etap się nie rozpoczął"
