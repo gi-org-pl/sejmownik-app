@@ -7,6 +7,76 @@ msgstr ""
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
 
+#. placeholder {0}: term.roman
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:33
+msgid "{0} kadencja"
+msgstr "{0} term"
+
+#. placeholder {0}: term.roman
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:32
+msgid "{0} kadencja, obecna"
+msgstr "{0} term, current"
+
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:57
+#~ msgid "{clubName} · Okręg nieznany"
+#~ msgstr "{clubName} · Unknown constituency"
+
+#. placeholder {0}: constituency.number
+#. placeholder {1}: constituency.name
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:59
+#~ msgid "{clubName} · okręg nr {0} {1}"
+#~ msgstr "{clubName} · constituency no. {0} {1}"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:18
+#~ msgid "brak danych"
+#~ msgstr "no data"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:18
+#~ msgid "brak danych o kadencji"
+#~ msgstr "no data about the term"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:18
+msgid "Brak danych o kadencji"
+msgstr "No data about the term"
+
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:43
+#~ msgid "brak danych o klubie"
+#~ msgstr "no data about the club"
+
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:43
+msgid "Brak danych o klubie"
+msgstr "No data about the club"
+
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:31
+#~ msgid "Brak klubu"
+#~ msgstr "No club"
+
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:51
+#~ msgid "Brak klubu · Okręg nieznany"
+#~ msgstr "No club · Unknown constituency"
+
+#. placeholder {0}: constituency.number
+#. placeholder {1}: constituency.name
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:53
+#~ msgid "Brak klubu · okręg nr {0} {1}"
+#~ msgstr "No club · constituency no. {0} {1}"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:51
+#~ msgid "Kadencja"
+#~ msgstr "Term"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:47
+#~ msgid "kadencje Sejmu"
+#~ msgstr "terms of the Sejm"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:26
+msgid "Kadencje Sejmu"
+msgstr "Terms of the Sejm"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:26
+#~ msgid "Kadencje Sejmu:"
+#~ msgstr "Terms of the Sejm:"
+
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"
