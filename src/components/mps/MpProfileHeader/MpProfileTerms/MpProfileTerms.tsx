@@ -1,8 +1,7 @@
 import { Trans, useLingui } from "@lingui/react/macro";
 import type { MpProfileTermsProps } from "../MpProfileHeader.types";
 
-const PAST_CHIP_CLASS_NAME =
-  "border-gi-ash bg-gi-ash text-gi-light-primary";
+const PAST_CHIP_CLASS_NAME = "border-gi-ash bg-gi-ash text-gi-light-primary";
 
 const CURRENT_CHIP_CLASS_NAME =
   "border-gi-light-primary bg-gi-light-primary text-white";
