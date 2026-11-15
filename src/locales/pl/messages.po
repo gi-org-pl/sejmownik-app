@@ -15,6 +15,10 @@ msgstr "{count, plural, one {# poseł} few {# posłowie} many {# posłów} other
 msgid "{count} · także głosy oddane za granicą"
 msgstr "{count} · także głosy oddane za granicą"
 
+#: src/components/mps/ConstituencySummary/ClubFilter/ClubFilter.tsx:21
+msgid "Filtruj według klubu"
+msgstr "Filtruj według klubu"
+
 #: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:16
 msgid "Okręg nr {number} · {name}"
 msgstr "Okręg nr {number} · {name}"
@@ -23,3 +27,7 @@ msgstr "Okręg nr {number} · {name}"
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"
 msgstr "Tekst źródłowy bez tłumaczenia"
+
+#: src/components/mps/ConstituencySummary/ClubFilter/ClubFilter.tsx:29
+msgid "Wszystkie"
+msgstr "Wszystkie"
