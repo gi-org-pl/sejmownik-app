@@ -17,7 +17,7 @@ msgstr "{count} · including votes cast abroad"
 
 #: src/components/mps/ConstituencySummary/ClubFilter/ClubFilter.tsx:21
 msgid "Filtruj według klubu"
-msgstr ""
+msgstr "Filter by club"
 
 #: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:16
 msgid "Okręg nr {number} · {name}"
@@ -30,4 +30,4 @@ msgstr ""
 
 #: src/components/mps/ConstituencySummary/ClubFilter/ClubFilter.tsx:29
 msgid "Wszystkie"
-msgstr ""
+msgstr "All"
