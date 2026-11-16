@@ -12,6 +12,7 @@ export type MpVoteBadgeConfig = {
   iconUrl: string | null;
   label: MessageDescriptor;
   circleClassName: string;
+  iconMaskSize: string | null;
   iconTestId: string | null;
 };
 
@@ -19,6 +20,7 @@ export const NULL_VOTE_BADGE: MpVoteBadgeConfig = {
   iconUrl: null,
   label: msg({ id: "mps.vote-badge.null", message: "brak danych" }),
   circleClassName: "border border-gi-gray bg-transparent text-gi-gray",
+  iconMaskSize: null,
   iconTestId: null,
 };
 
@@ -27,18 +29,21 @@ export const VOTE_BADGE_BY_VOTE: Record<MpVote, MpVoteBadgeConfig> = {
     iconUrl: voteCheckIcon,
     label: msg({ id: "mps.vote-badge.yes", message: "Za" }),
     circleClassName: "border border-transparent bg-gi-green text-white",
+    iconMaskSize: "12px 12px",
     iconTestId: "mp-vote-badge-icon-check",
   },
   no: {
     iconUrl: voteCrossIcon,
     label: msg({ id: "mps.vote-badge.no", message: "Przeciw" }),
     circleClassName: "border border-transparent bg-gi-red text-white",
+    iconMaskSize: "12px 12px",
     iconTestId: "mp-vote-badge-icon-cross",
   },
   abstain: {
     iconUrl: voteAbstainIcon,
     label: msg({ id: "mps.vote-badge.abstain", message: "Wstrzymał się" }),
     circleClassName: "border border-transparent bg-gi-ash text-gi-dark-gray",
+    iconMaskSize: "8px 4px",
     iconTestId: "mp-vote-badge-icon-tilde",
   },
   absent: {
@@ -46,6 +51,7 @@ export const VOTE_BADGE_BY_VOTE: Record<MpVote, MpVoteBadgeConfig> = {
     label: msg({ id: "mps.vote-badge.absent", message: "Nie głosował" }),
     circleClassName:
       "border border-gi-dark-gray bg-transparent text-gi-dark-gray",
+    iconMaskSize: "8px 2px",
     iconTestId: "mp-vote-badge-icon-minus",
   },
 };

@@ -14,9 +14,13 @@ describe("<MpVoteBadge />", () => {
       renderBadge(<MpVoteBadge vote="yes" />);
 
       expect(screen.getByText("Za")).toBeInTheDocument();
-      expect(screen.getByTestId("mp-vote-badge-icon-check")).toBeInTheDocument();
       expect(
-        screen.getByTestId(MP_VOTE_BADGE_TEST_ID).querySelector("[aria-hidden]"),
+        screen.getByTestId("mp-vote-badge-icon-check"),
+      ).toBeInTheDocument();
+      expect(
+        screen
+          .getByTestId(MP_VOTE_BADGE_TEST_ID)
+          .querySelector("[aria-hidden]"),
       ).toBeInTheDocument();
     });
   });
@@ -26,7 +30,9 @@ describe("<MpVoteBadge />", () => {
       renderBadge(<MpVoteBadge vote="no" />);
 
       expect(screen.getByText("Przeciw")).toBeInTheDocument();
-      expect(screen.getByTestId("mp-vote-badge-icon-cross")).toBeInTheDocument();
+      expect(
+        screen.getByTestId("mp-vote-badge-icon-cross"),
+      ).toBeInTheDocument();
     });
   });
 
@@ -35,7 +41,9 @@ describe("<MpVoteBadge />", () => {
       renderBadge(<MpVoteBadge vote="abstain" />);
 
       expect(screen.getByText("Wstrzymał się")).toBeInTheDocument();
-      expect(screen.getByTestId("mp-vote-badge-icon-tilde")).toBeInTheDocument();
+      expect(
+        screen.getByTestId("mp-vote-badge-icon-tilde"),
+      ).toBeInTheDocument();
     });
   });
 
@@ -44,7 +52,9 @@ describe("<MpVoteBadge />", () => {
       renderBadge(<MpVoteBadge vote="absent" />);
 
       expect(screen.getByText("Nie głosował")).toBeInTheDocument();
-      expect(screen.getByTestId("mp-vote-badge-icon-minus")).toBeInTheDocument();
+      expect(
+        screen.getByTestId("mp-vote-badge-icon-minus"),
+      ).toBeInTheDocument();
     });
   });
 
@@ -53,12 +63,22 @@ describe("<MpVoteBadge />", () => {
       renderBadge(<MpVoteBadge vote={null} />);
 
       expect(screen.getByText("brak danych")).toBeInTheDocument();
-      expect(screen.queryByTestId("mp-vote-badge-icon-check")).not.toBeInTheDocument();
-      expect(screen.queryByTestId("mp-vote-badge-icon-cross")).not.toBeInTheDocument();
-      expect(screen.queryByTestId("mp-vote-badge-icon-tilde")).not.toBeInTheDocument();
-      expect(screen.queryByTestId("mp-vote-badge-icon-minus")).not.toBeInTheDocument();
       expect(
-        screen.getByTestId(MP_VOTE_BADGE_TEST_ID).querySelector("[data-testid^='mp-vote-badge-icon-']"),
+        screen.queryByTestId("mp-vote-badge-icon-check"),
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByTestId("mp-vote-badge-icon-cross"),
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByTestId("mp-vote-badge-icon-tilde"),
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByTestId("mp-vote-badge-icon-minus"),
+      ).not.toBeInTheDocument();
+      expect(
+        screen
+          .getByTestId(MP_VOTE_BADGE_TEST_ID)
+          .querySelector("[data-testid^='mp-vote-badge-icon-']"),
       ).toBeNull();
     });
   });
@@ -71,7 +91,9 @@ describe("<MpVoteBadge />", () => {
 
       expect(label).toBeInTheDocument();
       expect(label).toHaveClass("sr-only");
-      expect(screen.getByTestId("mp-vote-badge-icon-check")).toBeInTheDocument();
+      expect(
+        screen.getByTestId("mp-vote-badge-icon-check"),
+      ).toBeInTheDocument();
     });
   });
 });
