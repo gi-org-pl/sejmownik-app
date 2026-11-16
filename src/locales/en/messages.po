@@ -21,19 +21,19 @@ msgstr "Filter by club"
 
 #: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:30
 msgid "Głosowania: udział w głosowaniach"
-msgstr ""
+msgstr "Votes: participation in votes"
 
 #: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:28
 msgid "Głosowania: udział w głosowaniach, {sittingsLabel}"
-msgstr ""
+msgstr "Votes: participation in votes, {sittingsLabel}"
 
 #: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:47
 msgid "Interpelacje: pozycja wśród {totalMps} posłów, kreska = mediana Sejmu"
-msgstr ""
+msgstr "Interpellations: position among {totalMps} MPs, line = Sejm median"
 
 #: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:42
 msgid "Interpelacje: pozycja wśród {totalMps} posłów, kreska = mediana Sejmu ({median})"
-msgstr ""
+msgstr "Interpellations: position among {totalMps} MPs, line = Sejm median ({median})"
 
 #: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:16
 msgid "Okręg nr {number} · {name}"
