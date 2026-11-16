@@ -15,29 +15,25 @@ msgstr "{count, plural, one {# MP} other {# MPs}}"
 msgid "{count} · także głosy oddane za granicą"
 msgstr "{count} · including votes cast abroad"
 
-#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:20
-msgid "{totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}"
-msgstr "{totalMps, plural, one {# MP} other {# MPs}}"
-
 #: src/components/mps/ConstituencySummary/ClubFilter/ClubFilter.tsx:21
 msgid "Filtruj według klubu"
 msgstr "Filter by club"
 
-#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:43
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:36
 msgid "Głosowania: udział w głosowaniach"
 msgstr "Votes: participation in votes"
 
-#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:38
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:31
 msgid "Głosowania: udział w głosowaniach, posiedzenia {participationFrom}–{participationTo}"
 msgstr "Votes: participation in votes, sittings {participationFrom}–{participationTo}"
 
 #: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:60
-msgid "Interpelacje: pozycja wśród {mps}, kreska = mediana Sejmu"
-msgstr "Interpellations: position among {mps}, line = Sejm median"
+msgid "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu"
+msgstr "Interpellations: position among {totalMps, plural, one {# MP} other {# MPs}}, line = Sejm median"
 
-#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:55
-msgid "Interpelacje: pozycja wśród {mps}, kreska = mediana Sejmu ({median})"
-msgstr "Interpellations: position among {mps}, line = Sejm median ({median})"
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:48
+msgid "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu ({median})"
+msgstr "Interpellations: position among {totalMps, plural, one {# MP} other {# MPs}}, line = Sejm median ({median})"
 
 #: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:16
 msgid "Okręg nr {number} · {name}"

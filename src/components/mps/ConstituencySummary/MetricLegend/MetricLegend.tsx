@@ -1,5 +1,4 @@
-import { plural } from "@lingui/core/macro";
-import { Trans, useLingui } from "@lingui/react/macro";
+import { Plural, Trans, useLingui } from "@lingui/react/macro";
 import { formatDecimal } from "../utils/formatDecimal";
 import type { MetricLegendProps } from "./MetricLegend.types";
 
@@ -17,12 +16,6 @@ export const MetricLegend = ({
   const median = hasMedian
     ? formatDecimal(medianInterpellations, i18n.locale)
     : "";
-  const mps = plural(totalMps, {
-    one: "# posła",
-    few: "# posłów",
-    many: "# posłów",
-    other: "# posła",
-  });
 
   return (
     <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm leading-5 text-gi-primary">
@@ -53,12 +46,27 @@ export const MetricLegend = ({
         <span>
           {hasMedian ? (
             <Trans>
-              Interpelacje: pozycja wśród {mps}, kreska = mediana Sejmu (
-              {median})
+              Interpelacje: pozycja wśród{" "}
+              <Plural
+                value={totalMps}
+                one="# posła"
+                few="# posłów"
+                many="# posłów"
+                other="# posła"
+              />
+              , kreska = mediana Sejmu ({median})
             </Trans>
           ) : (
             <Trans>
-              Interpelacje: pozycja wśród {mps}, kreska = mediana Sejmu
+              Interpelacje: pozycja wśród{" "}
+              <Plural
+                value={totalMps}
+                one="# posła"
+                few="# posłów"
+                many="# posłów"
+                other="# posła"
+              />
+              , kreska = mediana Sejmu
             </Trans>
           )}
         </span>
