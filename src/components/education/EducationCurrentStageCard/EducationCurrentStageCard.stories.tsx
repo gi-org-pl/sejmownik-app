@@ -37,7 +37,6 @@ const meta = {
   args: {
     badgeLabel: "Teraz na tym etapie",
     bill: SENATE_BILL,
-    totalSteps: 6,
     billHref: "/ustawy/skladki-zus-dla-artystow",
   },
 } satisfies Meta<typeof EducationCurrentStageCardStory>;

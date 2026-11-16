@@ -45,31 +45,10 @@ describe("BillStageProgress", () => {
   });
 
   describe("given no current step", () => {
-    it("renders every segment inactive", () => {
-      const { rerender } = renderProgress({ currentStep: undefined });
+    it.each([undefined, null, 0])("does not render for %s", (currentStep) => {
+      renderProgress({ currentStep });
 
-      const bar = screen.getByRole("progressbar", {
-        name: "Żaden etap się nie rozpoczął",
-      });
-
-      expect(bar).toHaveAttribute("aria-valuenow", "0");
-      expect(bar).toHaveAttribute("aria-valuemin", "0");
-      expect(bar).toHaveAttribute("aria-valuemax", "6");
-      expect(segments()).toHaveLength(6);
-      for (const segment of segments()) {
-        expect(segment).toHaveClass("bg-gi-dark-ash");
-      }
-
-      rerender(
-        <I18nProvider i18n={i18n}>
-          <BillStageProgress currentStep={0} totalSteps={6} />
-        </I18nProvider>,
-      );
-
-      expect(segments()).toHaveLength(6);
-      for (const segment of segments()) {
-        expect(segment).toHaveClass("bg-gi-dark-ash");
-      }
+      expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
     });
   });
 
