@@ -10,7 +10,6 @@ const renderLegend = (props: Partial<MetricLegendProps> = {}) =>
       <MetricLegend
         participationFrom={64}
         participationTo={66}
-        sittingsLabel="posiedzenia 64–66"
         totalMps={460}
         medianInterpellations={30.5}
         {...props}
@@ -30,14 +29,27 @@ describe("<MetricLegend />", () => {
     });
   });
 
-  describe("given no sittings label", () => {
+  describe("given no sittings range", () => {
     it("omits the range instead of inventing it", () => {
-      renderLegend({ sittingsLabel: undefined });
+      renderLegend({
+        participationFrom: undefined,
+        participationTo: undefined,
+      });
       const items = screen.getAllByRole("listitem");
 
       expect(items[0]).toHaveTextContent("Głosowania");
       expect(items[0]).not.toHaveTextContent("posiedzenia");
       expect(items[0]).not.toHaveTextContent("64");
+    });
+  });
+
+  describe("given only one end of the sittings range", () => {
+    it("omits the range", () => {
+      renderLegend({ participationTo: undefined });
+
+      expect(screen.getAllByRole("listitem")[0]).not.toHaveTextContent(
+        "posiedzenia",
+      );
     });
   });
 
@@ -56,6 +68,33 @@ describe("<MetricLegend />", () => {
 
       expect(second).toHaveTextContent("450");
       expect(second).not.toHaveTextContent("460");
+    });
+  });
+
+  describe("given 1, 2 and 22 MPs", () => {
+    it("uses the correct Polish plural form after wśród", () => {
+      const { rerender } = renderLegend({ totalMps: 1 });
+      expect(screen.getAllByRole("listitem")[1]).toHaveTextContent(
+        "wśród 1 posła",
+      );
+
+      rerender(
+        <I18nProvider i18n={i18n}>
+          <MetricLegend totalMps={2} />
+        </I18nProvider>,
+      );
+      expect(screen.getAllByRole("listitem")[1]).toHaveTextContent(
+        "wśród 2 posłów",
+      );
+
+      rerender(
+        <I18nProvider i18n={i18n}>
+          <MetricLegend totalMps={22} />
+        </I18nProvider>,
+      );
+      expect(screen.getAllByRole("listitem")[1]).toHaveTextContent(
+        "wśród 22 posłów",
+      );
     });
   });
 

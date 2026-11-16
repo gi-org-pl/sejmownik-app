@@ -15,25 +15,29 @@ msgstr "{count, plural, one {# poseł} few {# posłowie} many {# posłów} other
 msgid "{count} · także głosy oddane za granicą"
 msgstr "{count} · także głosy oddane za granicą"
 
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:20
+msgid "{totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}"
+msgstr "{totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}"
+
 #: src/components/mps/ConstituencySummary/ClubFilter/ClubFilter.tsx:21
 msgid "Filtruj według klubu"
 msgstr "Filtruj według klubu"
 
-#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:30
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:43
 msgid "Głosowania: udział w głosowaniach"
 msgstr "Głosowania: udział w głosowaniach"
 
-#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:28
-msgid "Głosowania: udział w głosowaniach, {sittingsLabel}"
-msgstr "Głosowania: udział w głosowaniach, {sittingsLabel}"
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:38
+msgid "Głosowania: udział w głosowaniach, posiedzenia {participationFrom}–{participationTo}"
+msgstr "Głosowania: udział w głosowaniach, posiedzenia {participationFrom}–{participationTo}"
 
-#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:47
-msgid "Interpelacje: pozycja wśród {totalMps} posłów, kreska = mediana Sejmu"
-msgstr "Interpelacje: pozycja wśród {totalMps} posłów, kreska = mediana Sejmu"
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:60
+msgid "Interpelacje: pozycja wśród {mps}, kreska = mediana Sejmu"
+msgstr "Interpelacje: pozycja wśród {mps}, kreska = mediana Sejmu"
 
-#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:42
-msgid "Interpelacje: pozycja wśród {totalMps} posłów, kreska = mediana Sejmu ({median})"
-msgstr "Interpelacje: pozycja wśród {totalMps} posłów, kreska = mediana Sejmu ({median})"
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:55
+msgid "Interpelacje: pozycja wśród {mps}, kreska = mediana Sejmu ({median})"
+msgstr "Interpelacje: pozycja wśród {mps}, kreska = mediana Sejmu ({median})"
 
 #: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:16
 msgid "Okręg nr {number} · {name}"

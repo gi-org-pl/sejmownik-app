@@ -1,7 +1,6 @@
 export type MetricLegendProps = {
-  participationFrom: number;
-  participationTo: number;
-  sittingsLabel?: string;
+  participationFrom?: number;
+  participationTo?: number;
   totalMps: number;
   medianInterpellations?: number;
 };

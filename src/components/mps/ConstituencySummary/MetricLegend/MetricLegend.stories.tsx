@@ -7,7 +7,6 @@ const meta: Meta<typeof MetricLegend> = {
   args: {
     participationFrom: 64,
     participationTo: 66,
-    sittingsLabel: "posiedzenia 64–66",
     totalMps: 460,
     medianInterpellations: 30.5,
   },
@@ -19,5 +18,5 @@ type Story = StoryObj<typeof MetricLegend>;
 export const Default: Story = {};
 
 export const NoSittingsRange: Story = {
-  args: { sittingsLabel: undefined },
+  args: { participationFrom: undefined, participationTo: undefined },
 };
