@@ -7,6 +7,14 @@ msgstr ""
 "X-Generator: @lingui/cli\n"
 "Language: pl\n"
 
+#: src/components/mps/ConstituencySummary/utils/formatMpCount.ts:4
+msgid "{count, plural, one {# poseł} few {# posłowie} many {# posłów} other {# posła}}"
+msgstr "{count, plural, one {# poseł} few {# posłowie} many {# posłów} other {# posła}}"
+
+#: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:22
+msgid "{count} · także głosy oddane za granicą"
+msgstr "{count} · także głosy oddane za granicą"
+
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:12
 msgid "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
@@ -15,15 +23,20 @@ msgstr "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejsc
 msgid "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 
-#: src/components/mps/MpMetricBar/MpMetricBar.tsx:31
-#: src/components/mps/MpMetricBar/MpMetricBar.tsx:66
-msgid "brak danych"
-msgstr "brak danych"
-
 #. js-lingui-explicit-id
 #: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:21
 msgid "mps.vote-badge.null"
 msgstr "brak danych"
+
+#: src/components/mps/MpMetricBar/MpMetricBar.tsx:34
+#: src/components/mps/MpMetricBar/MpMetricBar.tsx:70
+msgid "brak danych"
+msgstr "brak danych"
+
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.tsx:32
+#: src/components/shared/BillStageProgress/BillStageProgress.tsx:27
+msgid "Etap {currentStep} z {totalSteps}"
+msgstr "Etap {currentStep} z {totalSteps}"
 
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:23
 msgid "Miejscowość lub nazwisko posła"
@@ -41,6 +54,10 @@ msgstr "Nazwisko Ż–A"
 #: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:51
 msgid "mps.vote-badge.absent"
 msgstr "Nie głosował"
+
+#: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:16
+msgid "Okręg nr {number} · {name}"
+msgstr "Okręg nr {number} · {name}"
 
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:42
 msgid "Posłowie"
@@ -71,6 +88,10 @@ msgstr "Szukaj posła lub okręgu"
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"
 msgstr "Tekst źródłowy bez tłumaczenia"
+
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.stories.tsx:24
+msgid "Teraz na tym etapie"
+msgstr "Teraz na tym etapie"
 
 #. js-lingui-explicit-id
 #: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:44
