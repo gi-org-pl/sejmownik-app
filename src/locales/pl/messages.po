@@ -11,3 +11,28 @@ msgstr ""
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"
 msgstr "Tekst źródłowy bez tłumaczenia"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:18
+msgid "mps.vote-badge.null"
+msgstr "brak danych"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:26
+msgid "mps.vote-badge.yes"
+msgstr "Za"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:32
+msgid "mps.vote-badge.no"
+msgstr "Przeciw"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:38
+msgid "mps.vote-badge.abstain"
+msgstr "Wstrzymał się"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:44
+msgid "mps.vote-badge.absent"
+msgstr "Nie głosował"
