@@ -18,8 +18,85 @@ msgstr "{count} · także głosy oddane za granicą"
 #: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:16
 msgid "Okręg nr {number} · {name}"
 msgstr "Okręg nr {number} · {name}"
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:12
+msgid "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:20
+msgid "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:21
+msgid "mps.vote-badge.null"
+msgstr "brak danych"
+
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.tsx:32
+#: src/components/shared/BillStageProgress/BillStageProgress.tsx:27
+msgid "Etap {currentStep} z {totalSteps}"
+msgstr "Etap {currentStep} z {totalSteps}"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:23
+msgid "Miejscowość lub nazwisko posła"
+msgstr "Miejscowość lub nazwisko posła"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.constants.ts:8
+msgid "Nazwisko A–Ż"
+msgstr "Nazwisko A–Ż"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.constants.ts:9
+msgid "Nazwisko Ż–A"
+msgstr "Nazwisko Ż–A"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:51
+msgid "mps.vote-badge.absent"
+msgstr "Nie głosował"
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:42
+msgid "Posłowie"
+msgstr "Posłowie"
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:28
+msgid "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:37
+msgid "mps.vote-badge.no"
+msgstr "Przeciw"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:36
+msgid "Sortuj posłów: {currentSortLabel}"
+msgstr "Sortuj posłów: {currentSortLabel}"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:40
+msgid "Sortuj:"
+msgstr "Sortuj:"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:22
+msgid "Szukaj posła lub okręgu"
+msgstr "Szukaj posła lub okręgu"
 
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"
 msgstr "Tekst źródłowy bez tłumaczenia"
+
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.stories.tsx:24
+msgid "Teraz na tym etapie"
+msgstr "Teraz na tym etapie"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:44
+msgid "mps.vote-badge.abstain"
+msgstr "Wstrzymał się"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:30
+msgid "mps.vote-badge.yes"
+msgstr "Za"
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:35
+msgid "Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "Znajdź swój okręg po miejscowości albo posła po nazwisku."
