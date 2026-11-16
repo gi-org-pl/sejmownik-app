@@ -11,6 +11,21 @@ msgstr ""
 #: src/components/shared/BillStageProgress/BillStageProgress.tsx:33
 msgid "Etap {currentStep} z {totalSteps}"
 msgstr "Stage {currentStep} of {totalSteps}"
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:12
+msgid "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "{mpCount} MPs in the Sejm, term {term}. Find your constituency by town or an MP by surname."
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:20
+msgid "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "{mpCount} MPs in the Sejm. Find your constituency by town or an MP by surname."
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:43
+msgid "Posłowie"
+msgstr "MPs"
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:28
+msgid "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "MPs of the Sejm, term {term}. Find your constituency by town or an MP by surname."
 
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
@@ -25,3 +40,6 @@ msgstr "Now at this stage"
 #: src/components/shared/BillStageProgress/BillStageProgress.tsx:32
 msgid "Żaden etap się nie rozpoczął"
 msgstr "No stage has started"
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:35
+msgid "Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "Find your constituency by town or an MP by surname."
