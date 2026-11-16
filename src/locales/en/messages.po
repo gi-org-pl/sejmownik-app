@@ -19,6 +19,22 @@ msgstr "{count} · including votes cast abroad"
 msgid "Filtruj według klubu"
 msgstr "Filter by club"
 
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:30
+msgid "Głosowania: udział w głosowaniach"
+msgstr ""
+
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:28
+msgid "Głosowania: udział w głosowaniach, {sittingsLabel}"
+msgstr ""
+
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:47
+msgid "Interpelacje: pozycja wśród {totalMps} posłów, kreska = mediana Sejmu"
+msgstr ""
+
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:42
+msgid "Interpelacje: pozycja wśród {totalMps} posłów, kreska = mediana Sejmu ({median})"
+msgstr ""
+
 #: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:16
 msgid "Okręg nr {number} · {name}"
 msgstr "Constituency no. {number} · {name}"
