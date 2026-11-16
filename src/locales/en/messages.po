@@ -52,6 +52,30 @@ msgstr "MPs of the Sejm, term {term}. Find your constituency by town or an MP by
 msgid "i18n-setup.fallback"
 msgstr ""
 
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:18
+msgid "mps.vote-badge.null"
+msgstr "no data"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:26
+msgid "mps.vote-badge.yes"
+msgstr "Yes"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:32
+msgid "mps.vote-badge.no"
+msgstr "No"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:38
+msgid "mps.vote-badge.abstain"
+msgstr "Abstained"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:44
+msgid "mps.vote-badge.absent"
+msgstr "Did not vote"
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:35
 msgid "Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "Find your constituency by town or an MP by surname."
