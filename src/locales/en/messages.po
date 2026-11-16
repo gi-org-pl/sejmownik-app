@@ -7,6 +7,24 @@ msgstr ""
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
 
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:12
+msgid "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "{mpCount} MPs in the Sejm, term {term}. Find your constituency by town or an MP by surname."
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:20
+msgid "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "{mpCount} MPs in the Sejm. Find your constituency by town or an MP by surname."
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:21
+msgid "mps.vote-badge.null"
+msgstr "no data"
+
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.tsx:32
+#: src/components/shared/BillStageProgress/BillStageProgress.tsx:27
+msgid "Etap {currentStep} z {totalSteps}"
+msgstr "Stage {currentStep} of {totalSteps}"
+
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:23
 msgid "Miejscowość lub nazwisko posła"
 msgstr "Town or MP surname"
@@ -18,6 +36,24 @@ msgstr "Surname A–Z"
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.constants.ts:9
 msgid "Nazwisko Ż–A"
 msgstr "Surname Z–A"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:51
+msgid "mps.vote-badge.absent"
+msgstr "Did not vote"
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:42
+msgid "Posłowie"
+msgstr "MPs"
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:28
+msgid "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "MPs of the Sejm, term {term}. Find your constituency by town or an MP by surname."
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:37
+msgid "mps.vote-badge.no"
+msgstr "No"
 
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:36
 msgid "Sortuj posłów: {currentSortLabel}"
@@ -31,51 +67,25 @@ msgstr "Sort by:"
 msgid "Szukaj posła lub okręgu"
 msgstr "Search for an MP or a constituency"
 
-#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:12
-msgid "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
-msgstr "{mpCount} MPs in the Sejm, term {term}. Find your constituency by town or an MP by surname."
-
-#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:20
-msgid "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
-msgstr "{mpCount} MPs in the Sejm. Find your constituency by town or an MP by surname."
-
-#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:43
-msgid "Posłowie"
-msgstr "MPs"
-
-#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:28
-msgid "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
-msgstr "MPs of the Sejm, term {term}. Find your constituency by town or an MP by surname."
-
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"
 msgstr ""
 
-#. js-lingui-explicit-id
-#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:18
-msgid "mps.vote-badge.null"
-msgstr "no data"
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.stories.tsx:24
+msgid "Teraz na tym etapie"
+msgstr "Now at this stage"
 
 #. js-lingui-explicit-id
-#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:26
-msgid "mps.vote-badge.yes"
-msgstr "Yes"
-
-#. js-lingui-explicit-id
-#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:32
-msgid "mps.vote-badge.no"
-msgstr "No"
-
-#. js-lingui-explicit-id
-#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:38
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:44
 msgid "mps.vote-badge.abstain"
 msgstr "Abstained"
 
 #. js-lingui-explicit-id
-#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:44
-msgid "mps.vote-badge.absent"
-msgstr "Did not vote"
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:30
+msgid "mps.vote-badge.yes"
+msgstr "Yes"
+
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:35
 msgid "Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "Find your constituency by town or an MP by surname."
