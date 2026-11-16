@@ -30,6 +30,7 @@ msgstr "Sort by:"
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:22
 msgid "Szukaj posła lub okręgu"
 msgstr "Search for an MP or a constituency"
+
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:12
 msgid "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "{mpCount} MPs in the Sejm, term {term}. Find your constituency by town or an MP by surname."

@@ -30,6 +30,7 @@ msgstr "Sortuj:"
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:22
 msgid "Szukaj posła lub okręgu"
 msgstr "Szukaj posła lub okręgu"
+
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:12
 msgid "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
