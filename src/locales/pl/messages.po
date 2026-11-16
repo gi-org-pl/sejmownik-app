@@ -27,6 +27,27 @@ msgstr "{0} kadencja, obecna"
 #~ msgid "{clubName} · okręg nr {0} {1}"
 #~ msgstr "{clubName} · okręg nr {0} {1}"
 
+#: src/components/mps/ConstituencySummary/utils/formatMpCount.ts:4
+msgid "{count, plural, one {# poseł} few {# posłowie} many {# posłów} other {# posła}}"
+msgstr "{count, plural, one {# poseł} few {# posłowie} many {# posłów} other {# posła}}"
+
+#: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:22
+msgid "{count} · także głosy oddane za granicą"
+msgstr "{count} · także głosy oddane za granicą"
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:12
+msgid "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:20
+msgid "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:21
+msgid "mps.vote-badge.null"
+msgstr "brak danych"
+
 #: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:18
 #~ msgid "brak danych"
 #~ msgstr "brak danych"
@@ -61,6 +82,15 @@ msgstr "Brak danych o klubie"
 #~ msgid "Brak klubu · okręg nr {0} {1}"
 #~ msgstr "Brak klubu · okręg nr {0} {1}"
 
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.tsx:32
+#: src/components/shared/BillStageProgress/BillStageProgress.tsx:27
+msgid "Etap {currentStep} z {totalSteps}"
+msgstr "Etap {currentStep} z {totalSteps}"
+
+#: src/components/mps/ConstituencySummary/ClubFilter/ClubFilter.tsx:21
+msgid "Filtruj według klubu"
+msgstr "Filtruj według klubu"
+
 #: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:51
 #~ msgid "Kadencja"
 #~ msgstr "Kadencja"
@@ -76,34 +106,6 @@ msgstr "Kadencje Sejmu"
 #: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:26
 #~ msgid "Kadencje Sejmu:"
 #~ msgstr "Kadencje Sejmu:"
-#: src/components/mps/ConstituencySummary/utils/formatMpCount.ts:4
-msgid "{count, plural, one {# poseł} few {# posłowie} many {# posłów} other {# posła}}"
-msgstr "{count, plural, one {# poseł} few {# posłowie} many {# posłów} other {# posła}}"
-
-#: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:22
-msgid "{count} · także głosy oddane za granicą"
-msgstr "{count} · także głosy oddane za granicą"
-
-#: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:16
-msgid "Okręg nr {number} · {name}"
-msgstr "Okręg nr {number} · {name}"
-#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:12
-msgid "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
-msgstr "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
-
-#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:20
-msgid "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
-msgstr "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
-
-#. js-lingui-explicit-id
-#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:21
-msgid "mps.vote-badge.null"
-msgstr "brak danych"
-
-#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.tsx:32
-#: src/components/shared/BillStageProgress/BillStageProgress.tsx:27
-msgid "Etap {currentStep} z {totalSteps}"
-msgstr "Etap {currentStep} z {totalSteps}"
 
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:23
 msgid "Miejscowość lub nazwisko posła"
@@ -121,6 +123,10 @@ msgstr "Nazwisko Ż–A"
 #: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:51
 msgid "mps.vote-badge.absent"
 msgstr "Nie głosował"
+
+#: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:16
+msgid "Okręg nr {number} · {name}"
+msgstr "Okręg nr {number} · {name}"
 
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:42
 msgid "Posłowie"
@@ -160,6 +166,10 @@ msgstr "Teraz na tym etapie"
 #: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:44
 msgid "mps.vote-badge.abstain"
 msgstr "Wstrzymał się"
+
+#: src/components/mps/ConstituencySummary/ClubFilter/ClubFilter.tsx:29
+msgid "Wszystkie"
+msgstr "Wszystkie"
 
 #. js-lingui-explicit-id
 #: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:30
