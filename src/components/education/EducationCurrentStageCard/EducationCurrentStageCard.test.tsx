@@ -145,17 +145,18 @@ describe("EducationCurrentStageCard", () => {
   });
 
   describe("given no currentStep", () => {
-    it.each([undefined, null, 0])(
-      "omits the progress bar for %s",
-      (currentStep) => {
-        renderCard({ bill: { ...senateBill, currentStep } });
+    it.each([
+      undefined,
+      null,
+      0,
+    ])("omits the progress bar for %s", (currentStep) => {
+      renderCard({ bill: { ...senateBill, currentStep } });
 
-        expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
-        expect(screen.getByText(TITLE)).toBeInTheDocument();
-        expect(screen.getByRole("link")).toHaveAccessibleName(
-          `${TITLE} ${BADGE} ${STATUS}`,
-        );
-      },
-    );
+      expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
+      expect(screen.getByText(TITLE)).toBeInTheDocument();
+      expect(screen.getByRole("link")).toHaveAccessibleName(
+        `${TITLE} ${BADGE} ${STATUS}`,
+      );
+    });
   });
 });

@@ -21,7 +21,6 @@ const STEP_KEY = {
   submission: "submission",
   firstReading: "first-reading",
   committee: "committee",
-  readings: "readings",
   vote: "sejm-vote",
   senate: "senate",
   president: "president",
@@ -259,39 +258,8 @@ export const EducationStepAccordion = ({
       ),
     },
     {
-      key: STEP_KEY.readings,
-      number: 4,
-      title: t`II i III czytanie`,
-      description: t`Drugie czytanie odbywa się na posiedzeniu Sejmu: sprawozdanie komisji, debata i poprawki. Trzecie czytanie zaczyna się od dodatkowego sprawozdania, jeśli poprawki wróciły do komisji.`,
-      content: (
-        <StageNotes
-          heading={<Trans>Poprawki</Trans>}
-          items={[
-            {
-              id: "who",
-              label: (
-                <Trans>
-                  może je zgłaszać wnioskodawca, posłowie i Rada Ministrów
-                </Trans>
-              ),
-            },
-            {
-              id: "return",
-              label: (
-                <Trans>
-                  po drugim czytaniu wracają do komisji po dodatkowe
-                  sprawozdanie, chyba że Sejm przejdzie od razu do trzeciego
-                  czytania
-                </Trans>
-              ),
-            },
-          ]}
-        />
-      ),
-    },
-    {
       key: STEP_KEY.vote,
-      number: 5,
+      number: 4,
       title: t`Głosowanie w Sejmie`,
       description: t`To końcowe głosowanie w trzecim czytaniu, zanim ustawa trafi do Senatu. Sejm rozstrzyga najpierw o poprawkach, potem o całej ustawie.`,
       content: (
@@ -329,7 +297,7 @@ export const EducationStepAccordion = ({
     },
     {
       key: STEP_KEY.senate,
-      number: 6,
+      number: 5,
       title: t`Senat`,
       description: t`Marszałek Sejmu przekazuje uchwaloną ustawę Marszałkowi Senatu. Senat ma 30 dni na stanowisko.`,
       content: (
@@ -403,7 +371,7 @@ export const EducationStepAccordion = ({
     },
     {
       key: STEP_KEY.president,
-      number: 7,
+      number: 6,
       title: t`Prezydent`,
       description: t`Marszałek Sejmu przedstawia ustawę Prezydentowi. Prezydent ma 21 dni i wybiera jedną z trzech dróg.`,
       content: (

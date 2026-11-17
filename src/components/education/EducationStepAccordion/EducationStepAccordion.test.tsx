@@ -14,10 +14,9 @@ const STEP_LABELS = [
   "Krok 1: Inicjatywa ustawodawcza",
   "Krok 2: I czytanie",
   "Krok 3: Komisja",
-  "Krok 4: II i III czytanie",
-  "Krok 5: Głosowanie w Sejmie",
-  "Krok 6: Senat",
-  "Krok 7: Prezydent",
+  "Krok 4: Głosowanie w Sejmie",
+  "Krok 5: Senat",
+  "Krok 6: Prezydent",
 ];
 
 const getRows = () => screen.getAllByRole("button");
@@ -38,17 +37,17 @@ const expectPanelClosed = (row: HTMLElement) => {
 
 describe("EducationStepAccordion", () => {
   describe("given no initially open step", () => {
-    it("renders seven collapsed rows", () => {
+    it("renders six collapsed rows", () => {
       renderAccordion();
 
       const rows = getRows();
 
-      expect(rows).toHaveLength(7);
+      expect(rows).toHaveLength(6);
       expect(rows.map((row) => row.getAttribute("aria-label"))).toEqual(
         STEP_LABELS,
       );
       expect(screen.getByText("1")).toBeVisible();
-      expect(screen.getByText("7")).toBeVisible();
+      expect(screen.getByText("6")).toBeVisible();
 
       for (const row of rows) {
         expect(row).toHaveAttribute("aria-expanded", "false");
@@ -66,7 +65,7 @@ describe("EducationStepAccordion", () => {
     it("expands it and shows its description and content", () => {
       renderAccordion();
 
-      const senate = screen.getByRole("button", { name: "Krok 6: Senat" });
+      const senate = screen.getByRole("button", { name: "Krok 5: Senat" });
       fireEvent.click(senate);
 
       expect(senate).toHaveAttribute("aria-expanded", "true");
@@ -95,7 +94,7 @@ describe("EducationStepAccordion", () => {
     it("collapses it", () => {
       renderAccordion("senate");
 
-      const senate = screen.getByRole("button", { name: "Krok 6: Senat" });
+      const senate = screen.getByRole("button", { name: "Krok 5: Senat" });
       fireEvent.click(senate);
 
       expect(senate).toHaveAttribute("aria-expanded", "false");
@@ -110,16 +109,16 @@ describe("EducationStepAccordion", () => {
       renderAccordion("senate");
 
       fireEvent.click(
-        screen.getByRole("button", { name: "Krok 7: Prezydent" }),
+        screen.getByRole("button", { name: "Krok 6: Prezydent" }),
       );
 
       expect(
-        screen.getByRole("button", { name: "Krok 6: Senat" }),
+        screen.getByRole("button", { name: "Krok 5: Senat" }),
       ).toHaveAttribute("aria-expanded", "false");
       expect(
-        screen.getByRole("button", { name: "Krok 7: Prezydent" }),
+        screen.getByRole("button", { name: "Krok 6: Prezydent" }),
       ).toHaveAttribute("aria-expanded", "true");
-      expectPanelClosed(screen.getByRole("button", { name: "Krok 6: Senat" }));
+      expectPanelClosed(screen.getByRole("button", { name: "Krok 5: Senat" }));
       expect(
         screen.getByText(
           "Marszałek Sejmu przedstawia ustawę Prezydentowi. Prezydent ma 21 dni i wybiera jedną z trzech dróg.",
@@ -138,7 +137,7 @@ describe("EducationStepAccordion", () => {
       renderAccordion("senate");
 
       expect(
-        screen.getByRole("button", { name: "Krok 6: Senat" }),
+        screen.getByRole("button", { name: "Krok 5: Senat" }),
       ).toHaveAttribute("aria-expanded", "true");
       expect(screen.getByText("uchwalić poprawki")).toBeVisible();
       expect(
@@ -173,15 +172,15 @@ describe("EducationStepAccordion", () => {
       expect(rows[0]).toHaveFocus();
 
       fireEvent.keyDown(rows[0], { key: "End" });
-      expect(rows[6]).toHaveFocus();
+      expect(rows[5]).toHaveFocus();
 
-      fireEvent.keyDown(rows[6], { key: "ArrowDown" });
+      fireEvent.keyDown(rows[5], { key: "ArrowDown" });
       expect(rows[0]).toHaveFocus();
 
       fireEvent.keyDown(rows[0], { key: "ArrowUp" });
-      expect(rows[6]).toHaveFocus();
+      expect(rows[5]).toHaveFocus();
 
-      fireEvent.keyDown(rows[6], { key: "Home" });
+      fireEvent.keyDown(rows[5], { key: "Home" });
       expect(rows[0]).toHaveFocus();
 
       fireEvent.keyDown(rows[0], { key: "Tab" });
@@ -217,7 +216,7 @@ describe("EducationStepAccordion", () => {
       expect(screen.getByText("co najmniej 15 posłów")).toBeVisible();
 
       fireEvent.click(
-        screen.getByRole("button", { name: "Krok 5: Głosowanie w Sejmie" }),
+        screen.getByRole("button", { name: "Krok 4: Głosowanie w Sejmie" }),
       );
       expect(
         screen.getByText(
@@ -226,7 +225,7 @@ describe("EducationStepAccordion", () => {
       ).toBeVisible();
 
       fireEvent.click(
-        screen.getByRole("button", { name: "Krok 7: Prezydent" }),
+        screen.getByRole("button", { name: "Krok 6: Prezydent" }),
       );
       expect(
         screen.getByText(
