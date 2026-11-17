@@ -2,24 +2,58 @@ import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { EducationStepAccordion } from "./EducationStepAccordion";
+import type { EducationStep } from "./EducationStepAccordion.types";
 
-const renderAccordion = (initialOpenKey?: string) =>
-  render(
-    <I18nProvider i18n={i18n}>
-      <EducationStepAccordion initialOpenKey={initialOpenKey} />
-    </I18nProvider>,
-  );
+const STEPS: EducationStep[] = [
+  {
+    key: "submission",
+    number: 1,
+    title: "Inicjatywa ustawodawcza",
+    description: "Projekt wpływa do Marszałka Sejmu.",
+  },
+  {
+    key: "first-reading",
+    number: 2,
+    title: "I czytanie",
+    description: "Wnioskodawca uzasadnia projekt.",
+  },
+  {
+    key: "senate",
+    number: 3,
+    title: "Senat",
+    description: "Senat ma 30 dni na stanowisko.",
+    content: <p>przyjąć ustawę bez zmian</p>,
+  },
+  {
+    key: "president",
+    number: 4,
+    title: "Prezydent",
+    description: "Prezydent ma 21 dni.",
+    content: <p>podpisać ustawę</p>,
+  },
+];
 
 const STEP_LABELS = [
   "Krok 1: Inicjatywa ustawodawcza",
   "Krok 2: I czytanie",
-  "Krok 3: Komisja",
-  "Krok 4: Głosowanie w Sejmie",
-  "Krok 5: Senat",
-  "Krok 6: Prezydent",
+  "Krok 3: Senat",
+  "Krok 4: Prezydent",
 ];
 
+const renderAccordion = (
+  props: { steps?: EducationStep[]; initialOpenKey?: string } = {},
+) =>
+  render(
+    <I18nProvider i18n={i18n}>
+      <EducationStepAccordion
+        steps={props.steps ?? STEPS}
+        initialOpenKey={props.initialOpenKey}
+      />
+    </I18nProvider>,
+  );
+
 const getRows = () => screen.getAllByRole("button");
+const getRow = (name: string) => screen.getByRole("button", { name });
 
 const circleOf = (row: HTMLElement) => row.querySelector("span");
 
@@ -37,27 +71,35 @@ const expectPanelClosed = (row: HTMLElement) => {
 
 describe("EducationStepAccordion", () => {
   describe("given no initially open step", () => {
-    it("renders six collapsed rows", () => {
+    it("renders one collapsed row per step", () => {
       renderAccordion();
 
       const rows = getRows();
 
-      expect(rows).toHaveLength(6);
+      expect(rows).toHaveLength(STEPS.length);
       expect(rows.map((row) => row.getAttribute("aria-label"))).toEqual(
         STEP_LABELS,
       );
       expect(screen.getByText("1")).toBeVisible();
-      expect(screen.getByText("6")).toBeVisible();
+      expect(screen.getByText("4")).toBeVisible();
 
       for (const row of rows) {
         expect(row).toHaveAttribute("aria-expanded", "false");
         expect(row).toHaveAttribute("aria-controls");
-        expect(circleOf(row)).not.toHaveClass("bg-[#00718F]");
+        expect(circleOf(row)).not.toHaveClass("bg-gi-secondary");
         expect(row.querySelector("svg")).not.toHaveClass("rotate-180");
+        expectPanelClosed(row);
       }
 
-      expectPanelClosed(rows[5]);
       expect(screen.queryByRole("region")).not.toBeInTheDocument();
+    });
+  });
+
+  describe("given an empty steps list", () => {
+    it("renders nothing", () => {
+      const { container } = renderAccordion({ steps: [] });
+
+      expect(container).toBeEmptyDOMElement();
     });
   });
 
@@ -65,40 +107,46 @@ describe("EducationStepAccordion", () => {
     it("expands it and shows its description and content", () => {
       renderAccordion();
 
-      const senate = screen.getByRole("button", { name: "Krok 5: Senat" });
+      const senate = getRow("Krok 3: Senat");
       fireEvent.click(senate);
 
       expect(senate).toHaveAttribute("aria-expanded", "true");
-      expect(circleOf(senate)).toHaveClass("bg-[#00718F]");
+      expect(circleOf(senate)).toHaveClass("bg-gi-secondary");
       expect(senate.querySelector("svg")).toHaveClass("rotate-180");
-      expect(
-        screen.getByText(
-          "Marszałek Sejmu przekazuje uchwaloną ustawę Marszałkowi Senatu. Senat ma 30 dni na stanowisko.",
-        ),
-      ).toBeVisible();
+      expect(screen.getByText("Senat ma 30 dni na stanowisko.")).toBeVisible();
       expect(screen.getByText("przyjąć ustawę bez zmian")).toBeVisible();
 
-      const panel = document.getElementById(
-        senate.getAttribute("aria-controls") ?? "",
-      );
+      const panel = panelOf(senate);
       expect(panel).toHaveAttribute("role", "region");
       expect(screen.getByRole("region", { name: "Senat" })).toBe(panel);
-      expect(panel?.firstElementChild?.firstElementChild).toHaveClass("pl-14");
-      expectPanelClosed(
-        screen.getByRole("button", { name: "Krok 1: Inicjatywa ustawodawcza" }),
-      );
+      expect(panel.firstElementChild?.firstElementChild).toHaveClass("pl-14");
+      expectPanelClosed(getRow("Krok 1: Inicjatywa ustawodawcza"));
+    });
+  });
+
+  describe("given a step with a description and no content", () => {
+    it("shows only the description when opened", () => {
+      renderAccordion({ initialOpenKey: "submission" });
+
+      const panel = panelOf(getRow("Krok 1: Inicjatywa ustawodawcza"));
+
+      expect(panel).toHaveAttribute("aria-hidden", "false");
+      expect(
+        screen.getByText("Projekt wpływa do Marszałka Sejmu."),
+      ).toBeVisible();
+      expect(panel.querySelectorAll("p")).toHaveLength(1);
     });
   });
 
   describe("when an open row is clicked", () => {
     it("collapses it", () => {
-      renderAccordion("senate");
+      renderAccordion({ initialOpenKey: "senate" });
 
-      const senate = screen.getByRole("button", { name: "Krok 5: Senat" });
+      const senate = getRow("Krok 3: Senat");
       fireEvent.click(senate);
 
       expect(senate).toHaveAttribute("aria-expanded", "false");
-      expect(circleOf(senate)).not.toHaveClass("bg-[#00718F]");
+      expect(circleOf(senate)).not.toHaveClass("bg-gi-secondary");
       expect(senate.querySelector("svg")).not.toHaveClass("rotate-180");
       expectPanelClosed(senate);
     });
@@ -106,43 +154,42 @@ describe("EducationStepAccordion", () => {
 
   describe("given one row is open and another is clicked", () => {
     it("closes the first and opens the second", () => {
-      renderAccordion("senate");
+      renderAccordion({ initialOpenKey: "senate" });
 
-      fireEvent.click(
-        screen.getByRole("button", { name: "Krok 6: Prezydent" }),
+      fireEvent.click(getRow("Krok 4: Prezydent"));
+
+      expect(getRow("Krok 3: Senat")).toHaveAttribute("aria-expanded", "false");
+      expect(getRow("Krok 4: Prezydent")).toHaveAttribute(
+        "aria-expanded",
+        "true",
       );
-
-      expect(
-        screen.getByRole("button", { name: "Krok 5: Senat" }),
-      ).toHaveAttribute("aria-expanded", "false");
-      expect(
-        screen.getByRole("button", { name: "Krok 6: Prezydent" }),
-      ).toHaveAttribute("aria-expanded", "true");
-      expectPanelClosed(screen.getByRole("button", { name: "Krok 5: Senat" }));
-      expect(
-        screen.getByText(
-          "Marszałek Sejmu przedstawia ustawę Prezydentowi. Prezydent ma 21 dni i wybiera jedną z trzech dróg.",
-        ),
-      ).toBeVisible();
-      expect(
-        screen.getByText(
-          "podpisać ustawę i zarządzić jej ogłoszenie w Dzienniku Ustaw",
-        ),
-      ).toBeVisible();
+      expectPanelClosed(getRow("Krok 3: Senat"));
+      expect(screen.getByText("podpisać ustawę")).toBeVisible();
     });
   });
 
   describe("given initialOpenKey matches a step", () => {
     it("renders that step expanded on first render", () => {
-      renderAccordion("senate");
+      renderAccordion({ initialOpenKey: "senate" });
 
-      expect(
-        screen.getByRole("button", { name: "Krok 5: Senat" }),
-      ).toHaveAttribute("aria-expanded", "true");
-      expect(screen.getByText("uchwalić poprawki")).toBeVisible();
-      expect(
-        screen.getByRole("button", { name: "Krok 1: Inicjatywa ustawodawcza" }),
-      ).toHaveAttribute("aria-expanded", "false");
+      expect(getRow("Krok 3: Senat")).toHaveAttribute("aria-expanded", "true");
+      expect(screen.getByText("przyjąć ustawę bez zmian")).toBeVisible();
+      expect(getRow("Krok 1: Inicjatywa ustawodawcza")).toHaveAttribute(
+        "aria-expanded",
+        "false",
+      );
+    });
+  });
+
+  describe("given initialOpenKey that matches no step", () => {
+    it("renders every row collapsed and does not throw", () => {
+      renderAccordion({ initialOpenKey: "missing" });
+
+      for (const row of getRows()) {
+        expect(row).toHaveAttribute("aria-expanded", "false");
+      }
+
+      expect(screen.queryByRole("region")).not.toBeInTheDocument();
     });
   });
 
@@ -151,14 +198,13 @@ describe("EducationStepAccordion", () => {
       renderAccordion();
 
       const rows = getRows();
+      const last = rows.length - 1;
       rows[0].focus();
 
       fireEvent.keyDown(rows[0], { key: "Enter" });
       expect(rows[0]).toHaveAttribute("aria-expanded", "true");
       expect(
-        screen.getByText(
-          "Projekt ustawy wpływa do Marszałka Sejmu i dostaje numer druku. Wnioskodawca przedstawia skutki finansowe jego wykonania.",
-        ),
+        screen.getByText("Projekt wpływa do Marszałka Sejmu."),
       ).toBeVisible();
 
       fireEvent.keyDown(rows[0], { key: " " });
@@ -172,15 +218,15 @@ describe("EducationStepAccordion", () => {
       expect(rows[0]).toHaveFocus();
 
       fireEvent.keyDown(rows[0], { key: "End" });
-      expect(rows[5]).toHaveFocus();
+      expect(rows[last]).toHaveFocus();
 
-      fireEvent.keyDown(rows[5], { key: "ArrowDown" });
+      fireEvent.keyDown(rows[last], { key: "ArrowDown" });
       expect(rows[0]).toHaveFocus();
 
       fireEvent.keyDown(rows[0], { key: "ArrowUp" });
-      expect(rows[5]).toHaveFocus();
+      expect(rows[last]).toHaveFocus();
 
-      fireEvent.keyDown(rows[5], { key: "Home" });
+      fireEvent.keyDown(rows[last], { key: "Home" });
       expect(rows[0]).toHaveFocus();
 
       fireEvent.keyDown(rows[0], { key: "Tab" });
@@ -189,52 +235,23 @@ describe("EducationStepAccordion", () => {
     });
   });
 
-  describe("given initialOpenKey that matches no step", () => {
-    it("renders every row collapsed and does not throw", () => {
-      renderAccordion("missing");
+  describe("given two steps with the same key", () => {
+    it("keeps them as separate rows and warns in development", () => {
+      const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
 
-      for (const row of getRows()) {
-        expect(row).toHaveAttribute("aria-expanded", "false");
-      }
+      renderAccordion({
+        steps: [STEPS[0], { ...STEPS[1], key: STEPS[0].key }],
+      });
 
-      expect(screen.queryByRole("region")).not.toBeInTheDocument();
-    });
-  });
+      fireEvent.click(getRows()[1]);
 
-  describe("given the legislative copy", () => {
-    it("explains the ordinary statute from initiative to publication", () => {
-      renderAccordion();
-
-      expect(
-        screen.getByRole("heading", { level: 1, name: "Jak powstaje ustawa" }),
-      ).toBeInTheDocument();
-
-      fireEvent.click(
-        screen.getByRole("button", { name: "Krok 1: Inicjatywa ustawodawcza" }),
+      expect(getRows()[0]).toHaveAttribute("aria-expanded", "false");
+      expect(getRows()[1]).toHaveAttribute("aria-expanded", "true");
+      expect(warn).toHaveBeenCalledWith(
+        expect.stringContaining('duplicate step key "submission"'),
       );
-      expect(screen.getByText("komisja sejmowa")).toBeVisible();
-      expect(screen.getByText("co najmniej 15 posłów")).toBeVisible();
 
-      fireEvent.click(
-        screen.getByRole("button", { name: "Krok 4: Głosowanie w Sejmie" }),
-      );
-      expect(
-        screen.getByText(
-          "wystarcza zwykła większość: więcej głosów „za” niż „przeciw”",
-        ),
-      ).toBeVisible();
-
-      fireEvent.click(
-        screen.getByRole("button", { name: "Krok 6: Prezydent" }),
-      );
-      expect(
-        screen.getByText(
-          "gdy terminu nie ma, wchodzi w życie po 14 dniach od ogłoszenia",
-        ),
-      ).toBeVisible();
-      expect(
-        screen.getByRole("heading", { level: 2, name: "Inne tryby" }),
-      ).toBeInTheDocument();
+      warn.mockRestore();
     });
   });
 });
