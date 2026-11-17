@@ -13,12 +13,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const NotStarted: Story = {
-  args: {
-    currentStep: null,
-  },
-};
-
 export const Halfway: Story = {
   args: {
     currentStep: 3,

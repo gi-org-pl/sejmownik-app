@@ -20,7 +20,6 @@ const senateBill = {
 const defaultProps: EducationCurrentStageCardProps = {
   badgeLabel: BADGE,
   bill: senateBill,
-  totalSteps: 6,
   billHref: BILL_HREF,
 };
 
@@ -83,16 +82,14 @@ describe("EducationCurrentStageCard", () => {
     });
   });
 
-  describe("given a different number of steps", () => {
-    it("draws the progress bar for that total", () => {
-      renderCard({
-        totalSteps: 4,
-        bill: { ...senateBill, currentStep: 2 },
-      });
+  describe("given any bill with a stage", () => {
+    it("always draws six stages", () => {
+      renderCard({ bill: { ...senateBill, currentStep: 2 } });
 
-      expect(
-        screen.getByRole("progressbar", { name: "Etap 2 z 4" }),
-      ).toHaveAttribute("aria-valuemax", "4");
+      const bar = screen.getByRole("progressbar", { name: "Etap 2 z 6" });
+
+      expect(bar).toHaveAttribute("aria-valuemax", "6");
+      expect(bar.querySelectorAll("span")).toHaveLength(6);
     });
   });
 
@@ -148,20 +145,17 @@ describe("EducationCurrentStageCard", () => {
   });
 
   describe("given no currentStep", () => {
-    it("renders every segment inactive", () => {
-      renderCard({ bill: { ...senateBill, currentStep: undefined } });
+    it.each([undefined, null, 0])(
+      "omits the progress bar for %s",
+      (currentStep) => {
+        renderCard({ bill: { ...senateBill, currentStep } });
 
-      const bar = screen.getByRole("progressbar", {
-        name: "Żaden etap się nie rozpoczął",
-      });
-
-      expect(bar.querySelectorAll("span")).toHaveLength(6);
-      for (const segment of bar.querySelectorAll("span")) {
-        expect(segment).toHaveClass("bg-gi-dark-ash");
-      }
-      expect(screen.getByRole("link")).toHaveAccessibleName(
-        `${TITLE} ${BADGE} Żaden etap się nie rozpoczął ${STATUS}`,
-      );
-    });
+        expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
+        expect(screen.getByText(TITLE)).toBeInTheDocument();
+        expect(screen.getByRole("link")).toHaveAccessibleName(
+          `${TITLE} ${BADGE} ${STATUS}`,
+        );
+      },
+    );
   });
 });

@@ -8,6 +8,5 @@ export type EducationCurrentStageBill = {
 export type EducationCurrentStageCardProps = {
   badgeLabel: string;
   bill?: EducationCurrentStageBill | null;
-  totalSteps: number;
   billHref: string;
 };

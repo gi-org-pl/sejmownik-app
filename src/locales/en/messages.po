@@ -7,298 +7,411 @@ msgstr ""
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:495
+#. placeholder {0}: term.roman
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:33
+msgid "{0} kadencja"
+msgstr "{0} term"
+
+#. placeholder {0}: term.roman
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:32
+msgid "{0} kadencja, obecna"
+msgstr "{0} term, current"
+
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:57
+#~ msgid "{clubName} · Okręg nieznany"
+#~ msgstr "{clubName} · Unknown constituency"
+
+#. placeholder {0}: constituency.number
+#. placeholder {1}: constituency.name
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:59
+#~ msgid "{clubName} · okręg nr {0} {1}"
+#~ msgstr "{clubName} · constituency no. {0} {1}"
+
+#: src/components/mps/ConstituencySummary/utils/formatMpCount.ts:4
+msgid "{count, plural, one {# poseł} few {# posłowie} many {# posłów} other {# posła}}"
+msgstr "{count, plural, one {# MP} other {# MPs}}"
+
+#: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:22
+msgid "{count} · także głosy oddane za granicą"
+msgstr "{count} · including votes cast abroad"
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:12
+msgid "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "{mpCount} MPs in the Sejm, term {term}. Find your constituency by town or an MP by surname."
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:20
+msgid "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "{mpCount} MPs in the Sejm. Find your constituency by town or an MP by surname."
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:497
 msgid "bez większości 3/5 ustawa nie dochodzi do skutku"
-msgstr ""
+msgstr "without a 3/5 majority the act fails"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:107
-#~ msgid "brak stanowiska oznacza przyjęcie ustawy bez zmian"
-#~ msgstr ""
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:21
+msgid "mps.vote-badge.null"
+msgstr "no data"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:145
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:18
+#~ msgid "brak danych"
+#~ msgstr "no data"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:18
+#~ msgid "brak danych o kadencji"
+#~ msgstr "no data about the term"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:18
+msgid "Brak danych o kadencji"
+msgstr "No data about the term"
+
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:43
+#~ msgid "brak danych o klubie"
+#~ msgstr "no data about the club"
+
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:43
+msgid "Brak danych o klubie"
+msgstr "No data about the club"
+
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:31
+#~ msgid "Brak klubu"
+#~ msgstr "No club"
+
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:51
+#~ msgid "Brak klubu · Okręg nieznany"
+#~ msgstr "No club · Unknown constituency"
+
+#. placeholder {0}: constituency.number
+#. placeholder {1}: constituency.name
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:53
+#~ msgid "Brak klubu · okręg nr {0} {1}"
+#~ msgstr "No club · constituency no. {0} {1}"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:147
 msgid "co najmniej 100 000 obywateli mających prawo wybierania do Sejmu"
-msgstr ""
+msgstr "at least 100,000 citizens with the right to vote in Sejm elections"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:138
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:140
 msgid "co najmniej 15 posłów"
-msgstr ""
+msgstr "at least 15 MPs"
 
-#: src/pages/edukacja.tsx:173
-#~ msgid "Drugie czytanie odbywa się na posiedzeniu Sejmu: sprawozdanie komisji, debata i poprawki. Trzecie czytanie kończy się głosowaniem."
-#~ msgstr ""
+#: src/constants/education.ts:22
+msgid "Czytanie"
+msgstr "Reading"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:263
+#: src/constants/education.ts:18
+msgid "Dokument zawierający projekt ustawy."
+msgstr "A document containing a bill draft."
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:265
 msgid "Drugie czytanie odbywa się na posiedzeniu Sejmu: sprawozdanie komisji, debata i poprawki. Trzecie czytanie zaczyna się od dodatkowego sprawozdania, jeśli poprawki wróciły do komisji."
-msgstr ""
+msgstr "The second reading takes place at a sitting of the Sejm: the committee report, debate and amendments. The third reading starts with an additional report if the amendments went back to the committee."
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:90
-#~ msgid "Etap {activeStep} z {totalSteps}"
-#~ msgstr ""
+#: src/constants/education.ts:17
+msgid "Druk"
+msgstr "Print"
 
-#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.tsx:35
-#: src/components/shared/BillStageProgress/BillStageProgress.tsx:33
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.tsx:32
+#: src/components/shared/BillStageProgress/BillStageProgress.tsx:27
 msgid "Etap {currentStep} z {totalSteps}"
-msgstr ""
+msgstr "Stage {currentStep} of {totalSteps}"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:460
+#: src/components/mps/ConstituencySummary/ClubFilter/ClubFilter.tsx:21
+msgid "Filtruj według klubu"
+msgstr "Filter by club"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:462
 msgid "gdy niezgodne są tylko niektóre przepisy i nie są nierozerwalnie związane z całą ustawą, Prezydent po opinii Marszałka Sejmu podpisuje ustawę z ich pominięciem albo zwraca ją Sejmowi"
-msgstr ""
+msgstr "if only some provisions are unconstitutional and are not inseparably linked to the whole act, the President, after consulting the Marshal of the Sejm, signs the act without them or returns it to the Sejm"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:359
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:361
 msgid "Gdy Senat zgłosi poprawki albo odrzucenie"
-msgstr ""
+msgstr "If the Senate proposes amendments or rejection"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:520
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:522
 msgid "gdy terminu nie ma, wchodzi w życie po 14 dniach od ogłoszenia"
-msgstr ""
+msgstr "if no date is set, it enters into force 14 days after publication"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:163
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:165
 msgid "Gdzie się odbywa"
-msgstr ""
+msgstr "Where it takes place"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:293
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:36
+msgid "Głosowania: udział w głosowaniach"
+msgstr "Votes: participation in votes"
+
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:31
+msgid "Głosowania: udział w głosowaniach, posiedzenia {participationFrom}–{participationTo}"
+msgstr "Votes: participation in votes, sittings {participationFrom}–{participationTo}"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:295
 msgid "Głosowanie w Sejmie"
-msgstr ""
+msgstr "Vote in the Sejm"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:59
-#~ msgid "grupa posłów"
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:158
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:160
 msgid "I czytanie"
-msgstr ""
+msgstr "First reading"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:262
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:264
 msgid "II i III czytanie"
-msgstr ""
+msgstr "Second and third reading"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:131
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:133
 msgid "Inicjatywa ustawodawcza"
-msgstr ""
+msgstr "Legislative initiative"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:666
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:668
 msgid "Inne tryby"
-msgstr ""
+msgstr "Other procedures"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:587
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:60
+msgid "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu"
+msgstr "Interpellations: position among {totalMps, plural, one {# MP} other {# MPs}}, line = Sejm median"
+
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:48
+msgid "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu ({median})"
+msgstr "Interpellations: position among {totalMps, plural, one {# MP} other {# MPs}}, line = Sejm median ({median})"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:589
 msgid "Jak powstaje ustawa"
-msgstr ""
+msgstr "How a law is made"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:215
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:51
+#~ msgid "Kadencja"
+#~ msgstr "Term"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:47
+#~ msgid "kadencje Sejmu"
+#~ msgstr "terms of the Sejm"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:26
+msgid "Kadencje Sejmu"
+msgstr "Terms of the Sejm"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:26
+#~ msgid "Kadencje Sejmu:"
+#~ msgstr "Terms of the Sejm:"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:217
 msgid "Komisja"
-msgstr ""
+msgstr "Committee"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:166
-#~ msgid "Komisja rozpatruje projekt przepis po przepisie, może zapraszać ekspertów i zgłaszać poprawki."
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:216
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:218
 msgid "Komisja rozpatruje projekt przepis po przepisie. Może powołać podkomisję i zapraszać ekspertów."
-msgstr ""
+msgstr "The committee examines the bill provision by provision. It can set up a subcommittee and invite experts."
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:137
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:139
 msgid "komisja sejmowa"
-msgstr ""
+msgstr "a Sejm committee"
 
 #. placeholder {0}: step.number
 #. placeholder {1}: step.title
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:620
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:622
 msgid "Krok {0}: {1}"
-msgstr ""
+msgstr "Step {0}: {1}"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:406
+#: src/constants/education.ts:6
+msgid "Krótki opis kluczowych pojęć z procesu legislacyjnego."
+msgstr "A short description of key terms from the legislative process."
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:408
 msgid "Marszałek Sejmu przedstawia ustawę Prezydentowi. Prezydent ma 21 dni i wybiera jedną z trzech dróg."
-msgstr ""
+msgstr "The Marshal of the Sejm presents the act to the President. The President has 21 days and chooses one of three paths."
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:332
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:334
 msgid "Marszałek Sejmu przekazuje uchwaloną ustawę Marszałkowi Senatu. Senat ma 30 dni na stanowisko."
-msgstr ""
+msgstr "The Marshal of the Sejm passes the adopted act to the Marshal of the Senate. The Senate has 30 days to take a position."
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:271
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:23
+msgid "Miejscowość lub nazwisko posła"
+msgstr "Town or MP surname"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:273
 msgid "może je zgłaszać wnioskodawca, posłowie i Rada Ministrów"
-msgstr ""
+msgstr "they can be proposed by the sponsor, MPs and the Council of Ministers"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:174
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:176
 msgid "na posiedzeniu Sejmu przy projektach zmiany Konstytucji, budżetowych, podatkowych, wyborczych, ustrojowych i przy kodeksach"
-msgstr ""
+msgstr "at a sitting of the Sejm for bills amending the Constitution, budget, tax, electoral and political-system bills, and codes"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:184
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:186
 msgid "na posiedzeniu Sejmu także wtedy, gdy tak skieruje projekt Marszałek Sejmu"
-msgstr ""
+msgstr "at a sitting of the Sejm also when the Marshal of the Sejm refers the bill there"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:350
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.constants.ts:8
+msgid "Nazwisko A–Ż"
+msgstr "Surname A–Z"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.constants.ts:9
+msgid "Nazwisko Ż–A"
+msgstr "Surname Z–A"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:51
+msgid "mps.vote-badge.absent"
+msgstr "Did not vote"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:352
 msgid "nie podjąć uchwały: ustawa zostaje wtedy w brzmieniu Sejmu i idzie do Prezydenta"
-msgstr ""
+msgstr "pass no resolution: the act then keeps the Sejm's wording and goes to the President"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:391
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:393
 msgid "nieodrzucenie wniosku o odrzucenie oznacza, że ustawa nie dochodzi do skutku"
-msgstr ""
+msgstr "if the motion to reject is not voted down, the act fails"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:454
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:456
 msgid "niezgodność całej ustawy oznacza odmowę podpisu"
-msgstr ""
+msgstr "if the whole act is unconstitutional, the President refuses to sign it"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:65
-#~ msgid "obywatele — co najmniej 100 tysięcy podpisów"
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:319
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:321
 msgid "odrzucenie projektu na tym etapie kończy postępowanie"
-msgstr ""
+msgstr "rejecting the bill at this stage ends the procedure"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:76
-#~ msgid "odrzucić projekt w całości"
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:202
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:204
 msgid "odrzucić projekt w całości, i wtedy ustawa nie powstaje"
-msgstr ""
+msgstr "reject the bill in its entirety, and then no act is passed"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:503
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:505
 msgid "Ogłoszenie"
-msgstr ""
+msgstr "Publication"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:445
+#: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:16
+msgid "Okręg nr {number} · {name}"
+msgstr "Constituency no. {number} · {name}"
+
+#: src/constants/education.ts:23
+msgid "Omówienie projektu ustawy w Sejmie."
+msgstr "Discussion of a bill in the Sejm."
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:447
 msgid "orzeczenie o zgodności z Konstytucją zobowiązuje Prezydenta do podpisu"
-msgstr ""
+msgstr "a ruling that the act is constitutional obliges the President to sign it"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:173
-#~ msgid "Po czytaniach Sejm głosuje nad ustawą. Do jej uchwalenia wystarcza zwykła większość głosów przy kworum."
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:279
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:281
 msgid "po drugim czytaniu wracają do komisji po dodatkowe sprawozdanie, chyba że Sejm przejdzie od razu do trzeciego czytania"
-msgstr ""
+msgstr "after the second reading they go back to the committee for an additional report, unless the Sejm moves straight to the third reading"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:485
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:487
 msgid "po ponownym uchwaleniu Prezydent podpisuje ustawę w ciągu 7 dni i nie może zawetować jej drugi raz ani skierować do Trybunału"
-msgstr ""
+msgstr "once the act is passed again, the President signs it within 7 days and cannot veto it a second time or refer it to the Tribunal"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:100
-#~ msgid "Po uchwaleniu"
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:415
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:417
 msgid "podpisać ustawę i zarządzić jej ogłoszenie w Dzienniku Ustaw"
-msgstr ""
+msgstr "sign the act and order its publication in the Journal of Laws"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:120
-#~ msgid "podpisać ustawę i zarządzić jej publikację"
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:508
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:510
 msgid "podpisana ustawa ukazuje się w Dzienniku Ustaw"
-msgstr ""
+msgstr "the signed act is published in the Journal of Laws"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:383
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:385
 msgid "poprawka, której Sejm nie odrzuci, wchodzi do ustawy"
-msgstr ""
+msgstr "an amendment the Sejm does not reject becomes part of the act"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:266
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:268
 msgid "Poprawki"
-msgstr ""
+msgstr "Amendments"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:159
-#~ msgid "Posłowie dyskutują o celu projektu. Sejm nie rozstrzyga jeszcze o poszczególnych przepisach."
-#~ msgstr ""
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:42
+msgid "Posłowie"
+msgstr "MPs"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:140
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:405
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:28
+msgid "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "MPs of the Sejm, term {term}. Find your constituency by town or an MP by surname."
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:142
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:407
 msgid "Prezydent"
-msgstr ""
+msgstr "President"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:187
-#~ msgid "Prezydent dostaje uchwaloną ustawę i ma 21 dni na decyzję: podpis, weto albo wniosek do Trybunału Konstytucyjnego."
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:410
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:412
 msgid "Prezydent może"
-msgstr ""
+msgstr "The President can"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:135
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:137
 msgid "Projekt mogą wnieść"
-msgstr ""
+msgstr "A bill can be introduced by"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:248
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:250
 msgid "projekt poselski upada, gdy popiera go mniej niż 15 posłów spośród tych, którzy go podpisali"
-msgstr ""
+msgstr "an MPs' bill lapses when fewer than 15 of the MPs who signed it still support it"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:670
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:672
 msgid "Projekt rządowy, zanim trafi do Sejmu, przechodzi uzgodnienia, konsultacje i uchwałę Rady Ministrów."
-msgstr ""
+msgstr "Before it reaches the Sejm, a government bill goes through inter-ministerial arrangements, consultations and a resolution of the Council of Ministers."
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:132
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:134
 msgid "Projekt ustawy wpływa do Marszałka Sejmu i dostaje numer druku. Wnioskodawca przedstawia skutki finansowe jego wykonania."
-msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:152
-#~ msgid "Projekt ustawy wpływa do Sejmu i dostaje numer druku. Od tej chwili zaczyna się jego droga przez sześć etapów."
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:224
-msgid "propozycję uchwalenia albo odrzucenia"
-msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:423
-msgid "przed podpisem skierować ją do Trybunału Konstytucyjnego"
-msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:340
-msgid "przyjąć ustawę bez zmian"
-msgstr ""
+msgstr "The bill is submitted to the Marshal of the Sejm and gets a print number. The sponsor presents the financial impact of implementing it."
 
 #: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:226
+msgid "propozycję uchwalenia albo odrzucenia"
+msgstr "a recommendation to pass or reject it"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:37
+msgid "mps.vote-badge.no"
+msgstr "No"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:425
+msgid "przed podpisem skierować ją do Trybunału Konstytucyjnego"
+msgstr "refer it to the Constitutional Tribunal before signing"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:342
+msgid "przyjąć ustawę bez zmian"
+msgstr "accept the act without changes"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:228
 msgid "przyjęte poprawki"
-msgstr ""
+msgstr "the adopted amendments"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:143
+msgid "Rada Ministrów"
+msgstr "Council of Ministers"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:195
+msgid "Sejm może"
+msgstr "The Sejm can"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:375
+msgid "Sejm odrzuca poprawkę albo wniosek o odrzucenie tylko bezwzględną większością: więcej głosów „za” niż „przeciw” i „wstrzymuję się” łącznie, przy kworum 230 posłów"
+msgstr "The Sejm rejects an amendment or a motion to reject only by an absolute majority: more votes “for” than “against” and “abstain” combined, with a quorum of 230 MPs"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:478
+msgid "Sejm odrzuca weto większością 3/5 głosów w obecności co najmniej 230 posłów"
+msgstr "The Sejm overrides the veto by a 3/5 majority with at least 230 MPs present"
 
 #: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:141
-msgid "Rada Ministrów"
-msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:193
-msgid "Sejm może"
-msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:373
-msgid "Sejm odrzuca poprawkę albo wniosek o odrzucenie tylko bezwzględną większością: więcej głosów „za” niż „przeciw” i „wstrzymuję się” łącznie, przy kworum 230 posłów"
-msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:476
-msgid "Sejm odrzuca weto większością 3/5 głosów w obecności co najmniej 230 posłów"
-msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:139
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:331
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:333
 msgid "Senat"
-msgstr ""
+msgstr "Senate"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:103
-#~ msgid "Senat ma 30 dni na stanowisko"
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:180
-#~ msgid "Senat ma 30 dni na stanowisko. Może przyjąć ustawę, zaproponować poprawki albo ją odrzucić."
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:336
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:338
 msgid "Senat może"
-msgstr ""
+msgstr "The Senate can"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:130
-#~ msgid "skierować ją do Trybunału Konstytucyjnego"
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:197
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:199
 msgid "skierować projekt do komisji"
-msgstr ""
+msgstr "refer the bill to a committee"
 
-#: src/components/education/EducationProcess/EducationProcess.tsx:44
-#~ msgid "Składki ZUS dla artystów"
-#~ msgstr ""
+#: src/constants/education.ts:4
+msgid "Słowniczek"
+msgstr "Glossary"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:220
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:36
+msgid "Sortuj posłów: {currentSortLabel}"
+msgstr "Sort MPs: {currentSortLabel}"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:40
+msgid "Sortuj:"
+msgstr "Sort by:"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:222
 msgid "Sprawozdanie komisji zawiera"
-msgstr ""
+msgstr "The committee report contains"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:22
+msgid "Szukaj posła lub okręgu"
+msgstr "Search for an MP or a constituency"
 
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
@@ -307,105 +420,106 @@ msgstr ""
 
 #: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.stories.tsx:24
 msgid "Teraz na tym etapie"
-msgstr ""
+msgstr "Now at this stage"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:294
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:296
 msgid "To końcowe głosowanie w trzecim czytaniu, zanim ustawa trafi do Senatu. Sejm rozstrzyga najpierw o poprawkach, potem o całej ustawie."
-msgstr ""
+msgstr "This is the final vote in the third reading, before the act goes to the Senate. The Sejm first decides on the amendments, then on the whole act."
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:440
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:442
 msgid "Trybunał Konstytucyjny"
-msgstr ""
+msgstr "Constitutional Tribunal"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:297
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:299
 msgid "Uchwalenie"
-msgstr ""
+msgstr "Adoption"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:342
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:344
 msgid "uchwalić poprawki"
-msgstr ""
+msgstr "adopt amendments"
 
-#: src/components/education/EducationProcess/EducationProcess.tsx:46
-#~ msgid "Uchwalona przez Sejm 8 paź 2026 · czeka na stanowisko Senatu"
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:102
-#~ msgid "ustawa trafia do Senatu"
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:364
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:366
 msgid "ustawa wraca do Sejmu, który rozpatruje ją po sprawozdaniu komisji"
-msgstr ""
+msgstr "the act returns to the Sejm, which considers it after a committee report"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:590
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:592
 msgid "Ustawa zwykła przechodzi przez Sejm, Senat i Prezydenta. Poniżej jest jej droga od wniesienia projektu do ogłoszenia w Dzienniku Ustaw, razem z miejscami, w których może upaść."
-msgstr ""
+msgstr "An ordinary act goes through the Sejm, the Senate and the President. Below is its path from the introduction of the bill to publication in the Journal of Laws, including the points where it can fail."
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:310
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:312
 msgid "w sali musi być co najmniej połowa ustawowej liczby posłów, czyli 230 z 460"
-msgstr ""
+msgstr "at least half of the statutory number of MPs must be present, i.e. 230 of 460"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:676
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:678
 msgid "W trybie pilnym Senat ma 14 dni, a Prezydent 7 dni na podpis. Tryb ten nie obejmuje projektów podatkowych, wyborczych, ustrojowych i kodeksów."
-msgstr ""
+msgstr "In the urgent procedure the Senate has 14 days and the President 7 days to sign. It does not apply to tax, electoral or political-system bills, or to codes."
 
-#: src/pages/edukacja.tsx:200
-#~ msgid "w trzecim czytaniu Sejm głosuje najpierw nad poprawkami, potem nad całą ustawą"
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:514
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:516
 msgid "wchodzi w życie w terminie w niej wskazanym"
-msgstr ""
+msgstr "it enters into force on the date it specifies"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:471
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:473
 msgid "Weto"
-msgstr ""
+msgstr "Veto"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:345
+#: src/constants/education.ts:28
+msgid "Więcej niż połowa ważnie oddanych głosów."
+msgstr "More than half of the valid votes cast."
+
+#: src/constants/education.ts:27
+msgid "Większość bezwzględna"
+msgstr "Absolute majority"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:347
 msgid "wnieść o odrzucenie ustawy w całości"
-msgstr ""
+msgstr "propose rejecting the act in its entirety"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:239
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:241
 msgid "wnioskodawca może wycofać projekt, także na posiedzeniu komisji"
-msgstr ""
+msgstr "the sponsor can withdraw the bill, including at a committee meeting"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:159
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:161
 msgid "Wnioskodawca uzasadnia projekt, posłowie zadają pytania i dyskutują o jego zasadach. O poszczególnych przepisach Sejm rozstrzyga później."
-msgstr ""
+msgstr "The sponsor justifies the bill, and MPs ask questions and debate its principles. The Sejm decides on individual provisions later."
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:151
-#~ msgid "Wpłynięcie projektu"
-#~ msgstr ""
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:44
+msgid "mps.vote-badge.abstain"
+msgstr "Abstained"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:302
+#: src/components/mps/ConstituencySummary/ClubFilter/ClubFilter.tsx:29
+msgid "Wszystkie"
+msgstr "All"
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:304
 msgid "wystarcza zwykła większość: więcej głosów „za” niż „przeciw”"
-msgstr ""
+msgstr "a simple majority is enough: more votes “for” than “against”"
 
-#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.tsx:37
-#: src/components/shared/BillStageProgress/BillStageProgress.tsx:32
-msgid "Żaden etap się nie rozpoczął"
-msgstr ""
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:30
+msgid "mps.vote-badge.yes"
+msgstr "Yes"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:234
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:236
 msgid "Zanim skończy się drugie czytanie"
-msgstr ""
+msgstr "Before the second reading ends"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.stories.tsx:125
-#~ msgid "zawetować ją — Sejm odrzuca weto większością 3/5 głosów"
-#~ msgstr ""
-
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:431
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:433
 msgid "zawetować ją, czyli odesłać do Sejmu z umotywowanym wnioskiem o ponowne rozpatrzenie"
-msgstr ""
+msgstr "veto it, i.e. send it back to the Sejm with a reasoned request to reconsider it"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:229
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:231
 msgid "zdania odrębne, jeśli je zgłoszono"
-msgstr ""
+msgstr "dissenting opinions, if any were submitted"
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:683
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:685
 msgid "Zmiana Konstytucji oraz ustawa budżetowa mają własne większości i terminy."
-msgstr ""
+msgstr "Amending the Constitution and the budget act have their own majorities and deadlines."
 
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:168
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:35
+msgid "Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "Find your constituency by town or an MP by surname."
+
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:170
 msgid "zwykle w komisji właściwej dla tematu projektu"
-msgstr ""
+msgstr "usually in the committee responsible for the bill's subject"
