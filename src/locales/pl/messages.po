@@ -17,16 +17,6 @@ msgstr "{0} kadencja"
 msgid "{0} kadencja, obecna"
 msgstr "{0} kadencja, obecna"
 
-#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:57
-#~ msgid "{clubName} · Okręg nieznany"
-#~ msgstr "{clubName} · Okręg nieznany"
-
-#. placeholder {0}: constituency.number
-#. placeholder {1}: constituency.name
-#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:59
-#~ msgid "{clubName} · okręg nr {0} {1}"
-#~ msgstr "{clubName} · okręg nr {0} {1}"
-
 #: src/components/mps/ConstituencySummary/utils/formatMpCount.ts:4
 msgid "{count, plural, one {# poseł} few {# posłowie} many {# posłów} other {# posła}}"
 msgstr "{count, plural, one {# poseł} few {# posłowie} many {# posłów} other {# posła}}"
@@ -43,44 +33,30 @@ msgstr "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejsc
 msgid "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 
+#: src/constants/education.ts:263
+msgid "bez większości 3/5 ustawa nie dochodzi do skutku"
+msgstr "bez większości 3/5 ustawa nie dochodzi do skutku"
+
 #. js-lingui-explicit-id
 #: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:21
 msgid "mps.vote-badge.null"
 msgstr "brak danych"
 
 #: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:18
-#~ msgid "brak danych"
-#~ msgstr "brak danych"
-
-#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:18
-#~ msgid "brak danych o kadencji"
-#~ msgstr "brak danych o kadencji"
-
-#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:18
 msgid "Brak danych o kadencji"
 msgstr "Brak danych o kadencji"
-
-#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:43
-#~ msgid "brak danych o klubie"
-#~ msgstr "brak danych o klubie"
 
 #: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:43
 msgid "Brak danych o klubie"
 msgstr "Brak danych o klubie"
 
-#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:31
-#~ msgid "Brak klubu"
-#~ msgstr "Brak klubu"
+#: src/constants/education.ts:66
+msgid "co najmniej 100 000 obywateli mających prawo wybierania do Sejmu"
+msgstr "co najmniej 100 000 obywateli mających prawo wybierania do Sejmu"
 
-#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:51
-#~ msgid "Brak klubu · Okręg nieznany"
-#~ msgstr "Brak klubu · Okręg nieznany"
-
-#. placeholder {0}: constituency.number
-#. placeholder {1}: constituency.name
-#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:53
-#~ msgid "Brak klubu · okręg nr {0} {1}"
-#~ msgstr "Brak klubu · okręg nr {0} {1}"
+#: src/constants/education.ts:60
+msgid "co najmniej 15 posłów"
+msgstr "co najmniej 15 posłów"
 
 #: src/constants/education.ts:22
 msgid "Czytanie"
@@ -103,6 +79,22 @@ msgstr "Etap {currentStep} z {totalSteps}"
 msgid "Filtruj według klubu"
 msgstr "Filtruj według klubu"
 
+#: src/constants/education.ts:245
+msgid "gdy niezgodne są tylko niektóre przepisy i nie są nierozerwalnie związane z całą ustawą, Prezydent po opinii Marszałka Sejmu podpisuje ustawę z ich pominięciem albo zwraca ją Sejmowi"
+msgstr "gdy niezgodne są tylko niektóre przepisy i nie są nierozerwalnie związane z całą ustawą, Prezydent po opinii Marszałka Sejmu podpisuje ustawę z ich pominięciem albo zwraca ją Sejmowi"
+
+#: src/constants/education.ts:186
+msgid "Gdy Senat zgłosi poprawki albo odrzucenie"
+msgstr "Gdy Senat zgłosi poprawki albo odrzucenie"
+
+#: src/constants/education.ts:281
+msgid "gdy terminu nie ma, wchodzi w życie po 14 dniach od ogłoszenia"
+msgstr "gdy terminu nie ma, wchodzi w życie po 14 dniach od ogłoszenia"
+
+#: src/constants/education.ts:79
+msgid "Gdzie się odbywa"
+msgstr "Gdzie się odbywa"
+
 #: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:36
 msgid "Głosowania: udział w głosowaniach"
 msgstr "Głosowania: udział w głosowaniach"
@@ -110,6 +102,22 @@ msgstr "Głosowania: udział w głosowaniach"
 #: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:31
 msgid "Głosowania: udział w głosowaniach, posiedzenia {participationFrom}–{participationTo}"
 msgstr "Głosowania: udział w głosowaniach, posiedzenia {participationFrom}–{participationTo}"
+
+#: src/constants/education.ts:143
+msgid "Głosowanie w Sejmie"
+msgstr "Głosowanie w Sejmie"
+
+#: src/constants/education.ts:74
+msgid "I czytanie"
+msgstr "I czytanie"
+
+#: src/constants/education.ts:52
+msgid "Inicjatywa ustawodawcza"
+msgstr "Inicjatywa ustawodawcza"
+
+#: src/constants/education.ts:289
+msgid "Inne tryby"
+msgstr "Inne tryby"
 
 #: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:60
 msgid "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu"
@@ -119,29 +127,55 @@ msgstr "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# p
 msgid "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu ({median})"
 msgstr "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu ({median})"
 
-#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:51
-#~ msgid "Kadencja"
-#~ msgstr "Kadencja"
-
-#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:47
-#~ msgid "kadencje Sejmu"
-#~ msgstr "kadencje Sejmu"
+#: src/constants/education.ts:32
+msgid "Jak powstaje ustawa"
+msgstr "Jak powstaje ustawa"
 
 #: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:26
 msgid "Kadencje Sejmu"
 msgstr "Kadencje Sejmu"
 
-#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:26
-#~ msgid "Kadencje Sejmu:"
-#~ msgstr "Kadencje Sejmu:"
+#: src/constants/education.ts:110
+msgid "Komisja"
+msgstr "Komisja"
+
+#: src/constants/education.ts:111
+msgid "Komisja rozpatruje projekt przepis po przepisie. Może powołać podkomisję i zapraszać ekspertów."
+msgstr "Komisja rozpatruje projekt przepis po przepisie. Może powołać podkomisję i zapraszać ekspertów."
+
+#: src/constants/education.ts:59
+msgid "komisja sejmowa"
+msgstr "komisja sejmowa"
+
+#. placeholder {0}: step.number
+#. placeholder {1}: step.title
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:165
+msgid "Krok {0}: {1}"
+msgstr "Krok {0}: {1}"
 
 #: src/constants/education.ts:6
 msgid "Krótki opis kluczowych pojęć z procesu legislacyjnego."
 msgstr "Krótki opis kluczowych pojęć z procesu legislacyjnego."
 
+#: src/constants/education.ts:211
+msgid "Marszałek Sejmu przedstawia ustawę Prezydentowi. Prezydent ma 21 dni i wybiera jedną z trzech dróg."
+msgstr "Marszałek Sejmu przedstawia ustawę Prezydentowi. Prezydent ma 21 dni i wybiera jedną z trzech dróg."
+
+#: src/constants/education.ts:169
+msgid "Marszałek Sejmu przekazuje uchwaloną ustawę Marszałkowi Senatu. Senat ma 30 dni na stanowisko."
+msgstr "Marszałek Sejmu przekazuje uchwaloną ustawę Marszałkowi Senatu. Senat ma 30 dni na stanowisko."
+
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:23
 msgid "Miejscowość lub nazwisko posła"
 msgstr "Miejscowość lub nazwisko posła"
+
+#: src/constants/education.ts:87
+msgid "na posiedzeniu Sejmu przy projektach zmiany Konstytucji, budżetowych, podatkowych, wyborczych, ustrojowych i przy kodeksach"
+msgstr "na posiedzeniu Sejmu przy projektach zmiany Konstytucji, budżetowych, podatkowych, wyborczych, ustrojowych i przy kodeksach"
+
+#: src/constants/education.ts:91
+msgid "na posiedzeniu Sejmu także wtedy, gdy tak skieruje projekt Marszałek Sejmu"
+msgstr "na posiedzeniu Sejmu także wtedy, gdy tak skieruje projekt Marszałek Sejmu"
 
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.constants.ts:8
 msgid "Nazwisko A–Ż"
@@ -156,6 +190,30 @@ msgstr "Nazwisko Ż–A"
 msgid "mps.vote-badge.absent"
 msgstr "Nie głosował"
 
+#: src/constants/education.ts:180
+msgid "nie podjąć uchwały: ustawa zostaje wtedy w brzmieniu Sejmu i idzie do Prezydenta"
+msgstr "nie podjąć uchwały: ustawa zostaje wtedy w brzmieniu Sejmu i idzie do Prezydenta"
+
+#: src/constants/education.ts:202
+msgid "nieodrzucenie wniosku o odrzucenie oznacza, że ustawa nie dochodzi do skutku"
+msgstr "nieodrzucenie wniosku o odrzucenie oznacza, że ustawa nie dochodzi do skutku"
+
+#: src/constants/education.ts:241
+msgid "niezgodność całej ustawy oznacza odmowę podpisu"
+msgstr "niezgodność całej ustawy oznacza odmowę podpisu"
+
+#: src/constants/education.ts:160
+msgid "odrzucenie projektu na tym etapie kończy postępowanie"
+msgstr "odrzucenie projektu na tym etapie kończy postępowanie"
+
+#: src/constants/education.ts:102
+msgid "odrzucić projekt w całości, i wtedy ustawa nie powstaje"
+msgstr "odrzucić projekt w całości, i wtedy ustawa nie powstaje"
+
+#: src/constants/education.ts:269
+msgid "Ogłoszenie"
+msgstr "Ogłoszenie"
+
 #: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:16
 msgid "Okręg nr {number} · {name}"
 msgstr "Okręg nr {number} · {name}"
@@ -163,6 +221,26 @@ msgstr "Okręg nr {number} · {name}"
 #: src/constants/education.ts:23
 msgid "Omówienie projektu ustawy w Sejmie."
 msgstr "Omówienie projektu ustawy w Sejmie."
+
+#: src/constants/education.ts:237
+msgid "orzeczenie o zgodności z Konstytucją zobowiązuje Prezydenta do podpisu"
+msgstr "orzeczenie o zgodności z Konstytucją zobowiązuje Prezydenta do podpisu"
+
+#: src/constants/education.ts:259
+msgid "po ponownym uchwaleniu Prezydent podpisuje ustawę w ciągu 7 dni i nie może zawetować jej drugi raz ani skierować do Trybunału"
+msgstr "po ponownym uchwaleniu Prezydent podpisuje ustawę w ciągu 7 dni i nie może zawetować jej drugi raz ani skierować do Trybunału"
+
+#: src/constants/education.ts:219
+msgid "podpisać ustawę i zarządzić jej ogłoszenie w Dzienniku Ustaw"
+msgstr "podpisać ustawę i zarządzić jej ogłoszenie w Dzienniku Ustaw"
+
+#: src/constants/education.ts:273
+msgid "podpisana ustawa ukazuje się w Dzienniku Ustaw"
+msgstr "podpisana ustawa ukazuje się w Dzienniku Ustaw"
+
+#: src/constants/education.ts:198
+msgid "poprawka, której Sejm nie odrzuci, wchodzi do ustawy"
+msgstr "poprawka, której Sejm nie odrzuci, wchodzi do ustawy"
 
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:42
 msgid "Posłowie"
@@ -172,10 +250,80 @@ msgstr "Posłowie"
 msgid "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 
+#: src/constants/education.ts:62
+#: src/constants/education.ts:210
+msgid "Prezydent"
+msgstr "Prezydent"
+
+#: src/constants/education.ts:215
+msgid "Prezydent może"
+msgstr "Prezydent może"
+
+#: src/constants/education.ts:57
+msgid "Projekt mogą wnieść"
+msgstr "Projekt mogą wnieść"
+
+#: src/constants/education.ts:135
+msgid "projekt poselski upada, gdy popiera go mniej niż 15 posłów spośród tych, którzy go podpisali"
+msgstr "projekt poselski upada, gdy popiera go mniej niż 15 posłów spośród tych, którzy go podpisali"
+
+#: src/constants/education.ts:297
+msgid "Projekt rządowy, zanim trafi do Sejmu, przechodzi uzgodnienia, konsultacje i uchwałę Rady Ministrów."
+msgstr "Projekt rządowy, zanim trafi do Sejmu, przechodzi uzgodnienia, konsultacje i uchwałę Rady Ministrów."
+
+#: src/constants/education.ts:53
+msgid "Projekt ustawy wpływa do Marszałka Sejmu i dostaje numer druku. Wnioskodawca przedstawia skutki finansowe jego wykonania."
+msgstr "Projekt ustawy wpływa do Marszałka Sejmu i dostaje numer druku. Wnioskodawca przedstawia skutki finansowe jego wykonania."
+
+#: src/constants/education.ts:119
+msgid "propozycję uchwalenia albo odrzucenia"
+msgstr "propozycję uchwalenia albo odrzucenia"
+
 #. js-lingui-explicit-id
 #: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:37
 msgid "mps.vote-badge.no"
 msgstr "Przeciw"
+
+#: src/constants/education.ts:223
+msgid "przed podpisem skierować ją do Trybunału Konstytucyjnego"
+msgstr "przed podpisem skierować ją do Trybunału Konstytucyjnego"
+
+#: src/constants/education.ts:175
+msgid "przyjąć ustawę bez zmian"
+msgstr "przyjąć ustawę bez zmian"
+
+#: src/constants/education.ts:121
+msgid "przyjęte poprawki"
+msgstr "przyjęte poprawki"
+
+#: src/constants/education.ts:63
+msgid "Rada Ministrów"
+msgstr "Rada Ministrów"
+
+#: src/constants/education.ts:97
+msgid "Sejm może"
+msgstr "Sejm może"
+
+#: src/constants/education.ts:194
+msgid "Sejm odrzuca poprawkę albo wniosek o odrzucenie tylko bezwzględną większością: więcej głosów „za” niż „przeciw” i „wstrzymuję się” łącznie, przy kworum 230 posłów"
+msgstr "Sejm odrzuca poprawkę albo wniosek o odrzucenie tylko bezwzględną większością: więcej głosów „za” niż „przeciw” i „wstrzymuję się” łącznie, przy kworum 230 posłów"
+
+#: src/constants/education.ts:255
+msgid "Sejm odrzuca weto większością 3/5 głosów w obecności co najmniej 230 posłów"
+msgstr "Sejm odrzuca weto większością 3/5 głosów w obecności co najmniej 230 posłów"
+
+#: src/constants/education.ts:61
+#: src/constants/education.ts:168
+msgid "Senat"
+msgstr "Senat"
+
+#: src/constants/education.ts:173
+msgid "Senat może"
+msgstr "Senat może"
+
+#: src/constants/education.ts:99
+msgid "skierować projekt do komisji"
+msgstr "skierować projekt do komisji"
 
 #: src/constants/education.ts:4
 msgid "Słowniczek"
@@ -188,6 +336,10 @@ msgstr "Sortuj posłów: {currentSortLabel}"
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:40
 msgid "Sortuj:"
 msgstr "Sortuj:"
+
+#: src/constants/education.ts:115
+msgid "Sprawozdanie komisji zawiera"
+msgstr "Sprawozdanie komisji zawiera"
 
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:22
 msgid "Szukaj posła lub okręgu"
@@ -202,6 +354,46 @@ msgstr "Tekst źródłowy bez tłumaczenia"
 msgid "Teraz na tym etapie"
 msgstr "Teraz na tym etapie"
 
+#: src/constants/education.ts:144
+msgid "To końcowe głosowanie w trzecim czytaniu, zanim ustawa trafi do Senatu. Sejm rozstrzyga najpierw o poprawkach, potem o całej ustawie."
+msgstr "To końcowe głosowanie w trzecim czytaniu, zanim ustawa trafi do Senatu. Sejm rozstrzyga najpierw o poprawkach, potem o całej ustawie."
+
+#: src/constants/education.ts:233
+msgid "Trybunał Konstytucyjny"
+msgstr "Trybunał Konstytucyjny"
+
+#: src/constants/education.ts:148
+msgid "Uchwalenie"
+msgstr "Uchwalenie"
+
+#: src/constants/education.ts:176
+msgid "uchwalić poprawki"
+msgstr "uchwalić poprawki"
+
+#: src/constants/education.ts:190
+msgid "ustawa wraca do Sejmu, który rozpatruje ją po sprawozdaniu komisji"
+msgstr "ustawa wraca do Sejmu, który rozpatruje ją po sprawozdaniu komisji"
+
+#: src/constants/education.ts:34
+msgid "Ustawa zwykła przechodzi przez Sejm, Senat i Prezydenta. Poniżej jest jej droga od wniesienia projektu do ogłoszenia w Dzienniku Ustaw, razem z miejscami, w których może upaść."
+msgstr "Ustawa zwykła przechodzi przez Sejm, Senat i Prezydenta. Poniżej jest jej droga od wniesienia projektu do ogłoszenia w Dzienniku Ustaw, razem z miejscami, w których może upaść."
+
+#: src/constants/education.ts:156
+msgid "w sali musi być co najmniej połowa ustawowej liczby posłów, czyli 230 z 460"
+msgstr "w sali musi być co najmniej połowa ustawowej liczby posłów, czyli 230 z 460"
+
+#: src/constants/education.ts:301
+msgid "W trybie pilnym Senat ma 14 dni, a Prezydent 7 dni na podpis. Tryb ten nie obejmuje projektów podatkowych, wyborczych, ustrojowych i kodeksów."
+msgstr "W trybie pilnym Senat ma 14 dni, a Prezydent 7 dni na podpis. Tryb ten nie obejmuje projektów podatkowych, wyborczych, ustrojowych i kodeksów."
+
+#: src/constants/education.ts:277
+msgid "wchodzi w życie w terminie w niej wskazanym"
+msgstr "wchodzi w życie w terminie w niej wskazanym"
+
+#: src/constants/education.ts:251
+msgid "Weto"
+msgstr "Weto"
+
 #: src/constants/education.ts:28
 msgid "Więcej niż połowa ważnie oddanych głosów."
 msgstr "Więcej niż połowa ważnie oddanych głosów."
@@ -209,6 +401,18 @@ msgstr "Więcej niż połowa ważnie oddanych głosów."
 #: src/constants/education.ts:27
 msgid "Większość bezwzględna"
 msgstr "Większość bezwzględna"
+
+#: src/constants/education.ts:177
+msgid "wnieść o odrzucenie ustawy w całości"
+msgstr "wnieść o odrzucenie ustawy w całości"
+
+#: src/constants/education.ts:131
+msgid "wnioskodawca może wycofać projekt, także na posiedzeniu komisji"
+msgstr "wnioskodawca może wycofać projekt, także na posiedzeniu komisji"
+
+#: src/constants/education.ts:75
+msgid "Wnioskodawca uzasadnia projekt, posłowie zadają pytania i dyskutują o jego zasadach. O poszczególnych przepisach Sejm rozstrzyga później."
+msgstr "Wnioskodawca uzasadnia projekt, posłowie zadają pytania i dyskutują o jego zasadach. O poszczególnych przepisach Sejm rozstrzyga później."
 
 #. js-lingui-explicit-id
 #: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:44
@@ -219,11 +423,35 @@ msgstr "Wstrzymał się"
 msgid "Wszystkie"
 msgstr "Wszystkie"
 
+#: src/constants/education.ts:152
+msgid "wystarcza zwykła większość: więcej głosów „za” niż „przeciw”"
+msgstr "wystarcza zwykła większość: więcej głosów „za” niż „przeciw”"
+
 #. js-lingui-explicit-id
 #: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:30
 msgid "mps.vote-badge.yes"
 msgstr "Za"
 
+#: src/constants/education.ts:127
+msgid "Zanim skończy się drugie czytanie"
+msgstr "Zanim skończy się drugie czytanie"
+
+#: src/constants/education.ts:227
+msgid "zawetować ją, czyli odesłać do Sejmu z umotywowanym wnioskiem o ponowne rozpatrzenie"
+msgstr "zawetować ją, czyli odesłać do Sejmu z umotywowanym wnioskiem o ponowne rozpatrzenie"
+
+#: src/constants/education.ts:122
+msgid "zdania odrębne, jeśli je zgłoszono"
+msgstr "zdania odrębne, jeśli je zgłoszono"
+
+#: src/constants/education.ts:305
+msgid "Zmiana Konstytucji oraz ustawa budżetowa mają własne większości i terminy."
+msgstr "Zmiana Konstytucji oraz ustawa budżetowa mają własne większości i terminy."
+
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:35
 msgid "Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "Znajdź swój okręg po miejscowości albo posła po nazwisku."
+
+#: src/constants/education.ts:83
+msgid "zwykle w komisji właściwej dla tematu projektu"
+msgstr "zwykle w komisji właściwej dla tematu projektu"
