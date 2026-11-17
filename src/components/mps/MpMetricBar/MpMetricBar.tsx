@@ -41,7 +41,6 @@ const MetricRow = ({ layout, label, value, bar, children }: MetricRowProps) =>
     </div>
   );
 
-// Spacing of the bar in each layout; the bar itself looks the same in both.
 const barPlacement = (layout: MetricLayout, stackedSpacing: string) =>
   layout === "stacked" ? stackedSpacing : "min-w-0 flex-1";
 
@@ -107,7 +106,6 @@ const MedianBar = ({
           className={`relative h-5 ${barPlacement(layout, "my-1")}`}
         >
           <span className="absolute inset-x-0 top-[7px] h-1.5 rounded-full bg-gi-dark-ash" />
-          {/* Inset by the dot radius so the dot stays inside the track. */}
           <span className="absolute inset-x-2 inset-y-0">
             <span
               data-testid="metric-middle"

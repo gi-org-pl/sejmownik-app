@@ -24,7 +24,7 @@ export const MetricLegend = ({
           aria-hidden="true"
           className="relative h-1.5 w-8 shrink-0 rounded-full bg-gi-dark-ash"
         >
-          <span className="absolute inset-y-0 left-0 w-3/4 rounded-full bg-gi-secondary" />
+          <span className="absolute inset-y-0 left-0 w-3/4 rounded-full bg-gi-primary" />
         </span>
         <span>
           {hasRange ? (
@@ -40,8 +40,8 @@ export const MetricLegend = ({
       <li className="flex items-center gap-2">
         <span aria-hidden="true" className="relative h-3 w-8 shrink-0">
           <span className="absolute inset-x-0 top-[3px] h-1.5 rounded-full bg-gi-dark-ash" />
-          <span className="absolute top-0 left-[15px] h-3 w-0.5 rounded-[1px] bg-gi-dark-gray" />
-          <span className="absolute top-px left-[19px] size-2.5 rounded-full border-2 border-white bg-gi-secondary" />
+          <span className="absolute top-0 left-[15px] h-3 w-0.5 rounded-[1px] bg-gi-primary" />
+          <span className="absolute top-px left-[19px] size-2.5 rounded-full border-2 border-white bg-gi-primary" />
         </span>
         <span>
           {hasMedian ? (

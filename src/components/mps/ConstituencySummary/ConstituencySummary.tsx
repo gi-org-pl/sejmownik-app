@@ -17,7 +17,7 @@ export const ConstituencySummary = ({
           Okręg nr {number} · {name}
         </Trans>
       </h2>
-      <p className="text-sm leading-5 text-gi-primary">
+      <p className="text-sm leading-5 text-gi-light-primary">
         {includesAbroadVotes ? (
           <Trans>{count} · także głosy oddane za granicą</Trans>
         ) : (

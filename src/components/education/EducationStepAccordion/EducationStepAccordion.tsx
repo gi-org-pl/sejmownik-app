@@ -200,7 +200,7 @@ export const EducationStepAccordion = ({
               }`}
             >
               <div className="min-h-0 overflow-hidden">
-                <div className="flex flex-col gap-5 pt-4 pl-14 text-[16px] leading-[22px] font-normal text-gi-primary">
+                <div className="flex flex-col gap-5 pt-4 pl-14 text-[16px] leading-[22px] font-normal text-gi-light-primary">
                   {hasDescription ? <p>{step.description}</p> : null}
                   {step.content}
                 </div>

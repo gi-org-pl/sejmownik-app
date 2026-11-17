@@ -32,7 +32,7 @@ export const EducationQuizCard = ({
         </h2>
 
         <div className="flex flex-col gap-2 pt-2">
-          <p className="text-base leading-5.5 tracking-[-0.01em] wrap-break-word text-gi-primary">
+          <p className="text-base leading-5.5 tracking-[-0.01em] wrap-break-word text-gi-light-primary">
             {description}
           </p>
           <div className="flex items-center justify-between gap-4">
