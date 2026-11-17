@@ -57,6 +57,32 @@ export const SingleItem: Story = {
   },
 };
 
+export const WithoutDescription: Story = {
+  args: {
+    title: "Słowniczek",
+    items: [
+      {
+        key: "druk",
+        term: "Druk",
+        description: null,
+      },
+      {
+        key: "czytanie",
+        term: "Czytanie",
+        description: "Omówienie projektu ustawy w Sejmie.",
+      },
+    ],
+  },
+};
+
+export const Empty: Story = {
+  args: {
+    title: "Słowniczek",
+    items: [],
+    emptyMessage: "Brak haseł w słowniczku",
+  },
+};
+
 export const WithSource: Story = {
   args: {
     title: "Szczegóły",

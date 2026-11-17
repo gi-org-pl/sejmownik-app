@@ -49,6 +49,19 @@ describe("<DefinitionList />", () => {
     });
   });
 
+  describe("given several items", () => {
+    it("draws a divider between items but not after the last one", () => {
+      const { container } = render(
+        <DefinitionList title="Słowniczek" items={threeItems} />,
+      );
+
+      const itemWrappers = container.querySelectorAll("dl > div");
+      expect(itemWrappers[0]).toHaveClass("border-b");
+      expect(itemWrappers[1]).toHaveClass("border-b");
+      expect(itemWrappers[2]).not.toHaveClass("border-b");
+    });
+  });
+
   describe("given a single item", () => {
     it("renders it without a trailing divider", () => {
       const { container } = render(
@@ -99,7 +112,10 @@ describe("<DefinitionList />", () => {
 
       expect(screen.getByText("Słowniczek")).toBeInTheDocument();
       expect(container.querySelector("dl")).not.toBeInTheDocument();
-      expect(container.querySelectorAll("p")).toHaveLength(1);
+      expect(
+        screen.getByRole("heading", { name: "Słowniczek" }),
+      ).toBeInTheDocument();
+      expect(container.querySelectorAll("p")).toHaveLength(0);
     });
   });
 

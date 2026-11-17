@@ -4,12 +4,18 @@ import { ICON_MASK_CLASS_NAME } from "@/constants/icon";
 import { getIconMaskStyle } from "@/utils/style/getIconMaskStyle";
 import type { SectionHeaderProps } from "./SectionHeader.types";
 
-export const SectionHeader = ({ title, info }: SectionHeaderProps) => {
+export const SectionHeader = ({
+  title,
+  info,
+  headingLevel = 2,
+}: SectionHeaderProps) => {
+  const Heading = `h${headingLevel}` as const;
+
   return (
     <div className="flex items-center">
-      <p className="m-0 min-w-0 flex-1 rounded-lg border border-gi-ash text-center text-base leading-[30px] font-bold tracking-normal text-gi-primary">
+      <Heading className="m-0 min-w-0 flex-1 rounded-lg border border-gi-ash text-center text-base leading-[30px] font-bold tracking-normal text-gi-primary">
         {title}
-      </p>
+      </Heading>
 
       {info ? (
         <Tooltip content={info} side="top" className="ml-2 shrink-0">

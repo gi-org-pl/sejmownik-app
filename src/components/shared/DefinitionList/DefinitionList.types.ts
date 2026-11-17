@@ -1,3 +1,5 @@
+import type { SectionHeadingLevel } from "@/components/shared/SectionHeader/SectionHeader.types";
+
 export type DefinitionListItem = {
   key: string;
   term: string;
@@ -15,4 +17,5 @@ export type DefinitionListProps = {
   emptyMessage?: string;
   info?: string;
   source?: DefinitionListSource;
+  headingLevel?: SectionHeadingLevel;
 };

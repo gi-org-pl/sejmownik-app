@@ -29,6 +29,7 @@ export const DefinitionList = ({
   emptyMessage,
   info,
   source,
+  headingLevel,
 }: DefinitionListProps) => {
   useEffect(() => {
     warnDuplicateKeys(items.map((item) => item.key));
@@ -39,7 +40,7 @@ export const DefinitionList = ({
   return (
     <div className="flex w-full flex-col gap-4">
       <section className="flex w-full flex-col gap-4 rounded-2xl border border-gi-ash bg-background p-4">
-        <SectionHeader title={title} info={info} />
+        <SectionHeader title={title} info={info} headingLevel={headingLevel} />
 
         {items.length === 0 ? (
           emptyMessage ? (
@@ -53,9 +54,13 @@ export const DefinitionList = ({
               const isDuplicate = seenKeys.has(item.key);
               seenKeys.add(item.key);
               const reactKey = isDuplicate ? String(index) : item.key;
+              const isLast = index === items.length - 1;
 
               return (
-                <div key={reactKey} className="flex flex-col gap-0.5">
+                <div
+                  key={reactKey}
+                  className={`flex flex-col gap-0.5${isLast ? "" : " border-b border-gi-ash pb-4"}`}
+                >
                   <dt className="text-base leading-5 font-bold text-gi-primary">
                     {item.term}
                   </dt>
