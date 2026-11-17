@@ -13,7 +13,7 @@ export const Header = () => {
   const { menuId, isOpen, menuRef, buttonRef, toggle, close } = useHeaderMenu();
 
   return (
-    <header className="relative w-full border-b border-[#d4e1e4] bg-white">
+    <header className="relative w-full border-b border-gi-light-gray-dark bg-white">
       <div className="mx-auto box-content flex max-w-300 items-center justify-between px-8 py-6">
         <Link
           to={PATHS.home}
