@@ -12,21 +12,24 @@ const renderBar = (props: MpMetricBarProps) =>
   );
 
 const participation = (percent: number | null): MpMetricBarProps => ({
-  variant: "participation",
+  variant: "percent",
   label: "Głosowania",
   percent,
 });
 
-const interpellations = (
-  count: number | null,
-  rank: number | null,
-): MpMetricBarProps => ({
-  variant: "interpellations",
+// Scale 0–200: median 30.5 → 15.25%, middle half 10–60 → 5%–30%.
+const interpellations = (value: number | null): MpMetricBarProps => ({
+  variant: "median",
   label: "Interpelacje",
-  count,
-  rank,
-  totalMps: 460,
+  value,
+  median: 30.5,
+  q1: 10,
+  q3: 60,
+  scaleMax: 200,
 });
+
+const leftOf = (testId: string) =>
+  Number.parseFloat(screen.getByTestId(testId).style.left);
 
 describe("<MpMetricBar />", () => {
   describe("given participation 98", () => {
@@ -66,52 +69,102 @@ describe("<MpMetricBar />", () => {
     });
   });
 
-  describe("given interpellations 0 at the last rank", () => {
+  describe("given interpellations count 0", () => {
     it("puts the dot at the start of the scale", () => {
-      renderBar(interpellations(0, 460));
+      renderBar(interpellations(0));
 
       expect(screen.getByTestId("metric-dot")).toHaveStyle({ left: "0%" });
       expect(screen.getByText("0")).toBeInTheDocument();
     });
   });
 
-  describe("given interpellations 117 at rank 77 of 460", () => {
-    it("places the dot by rank and shows the count", () => {
-      renderBar(interpellations(117, 77));
+  describe("given interpellations count 117", () => {
+    it("places the dot by count on the scale and shows the value", () => {
+      renderBar(interpellations(117));
 
-      const left = Number.parseFloat(
-        screen.getByTestId("metric-dot").style.left,
-      );
-
-      expect(left).toBeCloseTo(83.44, 1);
+      expect(leftOf("metric-dot")).toBeCloseTo(58.5, 1);
       expect(screen.getByText("117")).toBeInTheDocument();
     });
   });
 
   describe("given interpellations null", () => {
     it("hides the dot and shows brak danych", () => {
-      renderBar(interpellations(null, null));
+      renderBar(interpellations(null));
 
       expect(screen.getByText("brak danych")).toBeInTheDocument();
       expect(screen.queryByTestId("metric-dot")).not.toBeInTheDocument();
     });
   });
 
-  describe("given the top-ranked MP with 505 interpellations", () => {
-    it("puts the dot at the end of the scale and shows the full value", () => {
-      renderBar(interpellations(505, 1));
+  describe("given a count above the scale max", () => {
+    it("clamps the dot to the end and shows the full value", () => {
+      renderBar(interpellations(505));
 
       expect(screen.getByTestId("metric-dot")).toHaveStyle({ left: "100%" });
       expect(screen.getByText("505")).toBeInTheDocument();
     });
   });
 
-  describe("given a count without a rank", () => {
-    it("shows the value but does not invent a dot position", () => {
-      renderBar(interpellations(30, null));
+  describe("median tick", () => {
+    it.each([
+      ["with data", 117],
+      ["without data", null],
+    ])("is drawn at the median position %s", (_, value) => {
+      renderBar(interpellations(value));
 
-      expect(screen.getByText("30")).toBeInTheDocument();
+      expect(leftOf("metric-median")).toBeCloseTo(15.25, 2);
+    });
+
+    it("puts the dot on the tick when the count equals the median", () => {
+      renderBar({ ...interpellations(30), median: 30 });
+
+      expect(leftOf("metric-dot")).toBe(leftOf("metric-median"));
+    });
+
+    it("exposes the median value as text for screen readers", () => {
+      renderBar(interpellations(117));
+
+      expect(screen.getByText("mediana Sejmu: 30,5")).toBeInTheDocument();
+    });
+  });
+
+  describe("given the stacked layout", () => {
+    it("renders participation with the label and value above the fill", () => {
+      renderBar({ ...participation(98), layout: "stacked" });
+
+      expect(screen.getByText("Głosowania")).toBeInTheDocument();
+      expect(screen.getByText("98%")).toBeInTheDocument();
+      expect(screen.getByTestId("metric-fill")).toHaveStyle({ width: "98%" });
+    });
+
+    it("draws the middle half of MPs from q1 to q3", () => {
+      renderBar({ ...interpellations(117), layout: "stacked" });
+
+      expect(screen.getByTestId("metric-middle")).toHaveStyle({
+        left: "5%",
+        width: "25%",
+      });
+      expect(screen.getByTestId("metric-dot")).toBeInTheDocument();
+    });
+
+    it("hides the dot without data but keeps the median and the band", () => {
+      renderBar({ ...interpellations(null), layout: "stacked" });
+
+      expect(screen.getByText("brak danych")).toBeInTheDocument();
       expect(screen.queryByTestId("metric-dot")).not.toBeInTheDocument();
+      expect(screen.getByTestId("metric-median")).toBeInTheDocument();
+      expect(screen.getByTestId("metric-middle")).toBeInTheDocument();
+    });
+  });
+
+  describe("given the inline layout", () => {
+    it("draws the middle half band", () => {
+      renderBar(interpellations(117));
+
+      expect(screen.getByTestId("metric-middle")).toHaveStyle({
+        left: "5%",
+        width: "25%",
+      });
     });
   });
 
