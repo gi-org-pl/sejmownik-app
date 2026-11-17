@@ -1,11 +1,13 @@
 import { Trans, useLingui } from "@lingui/react/macro";
 import type { ReactNode } from "react";
+import { METRIC_ROW_COLUMNS_CLASS } from "./MetricBar.constants";
 import type {
   MedianMetricProps,
+  MetricBarProps,
   MetricLayout,
-  MpMetricBarProps,
   PercentMetricProps,
-} from "./MpMetricBar.types";
+} from "./MetricBar.types";
+import { useIsInMetricBarGroup } from "./MetricBarGroup/MetricBarGroup.context";
 import { getScalePosition, getScaleRange } from "./utils/getScalePosition";
 
 const TEXT_CLASS = "text-sm leading-4";
@@ -20,29 +22,42 @@ type MetricRowProps = {
   children?: ReactNode;
 };
 
-const MetricRow = ({ layout, label, value, bar, children }: MetricRowProps) =>
-  layout === "stacked" ? (
-    <div className={`flex flex-col ${TEXT_CLASS}`}>
-      <div className="flex h-5 items-center justify-between gap-2">
-        <span className={LABEL_CLASS}>{label}</span>
-        <span className={VALUE_CLASS}>{value}</span>
+const MetricRow = ({ layout, label, value, bar, children }: MetricRowProps) => {
+  const isInGroup = useIsInMetricBarGroup();
+
+  if (layout === "stacked") {
+    return (
+      <div
+        className={`flex flex-col ${isInGroup ? "col-span-3" : ""} ${TEXT_CLASS}`}
+      >
+        <div className="flex min-h-5 items-center justify-between gap-2">
+          <span className={`min-w-0 wrap-break-word ${LABEL_CLASS}`}>
+            {label}
+          </span>
+          <span className={VALUE_CLASS}>{value}</span>
+        </div>
+        {bar}
+        {children}
       </div>
+    );
+  }
+
+  const columnsClass = isInGroup
+    ? "col-span-3 grid-cols-subgrid"
+    : `gap-x-2 ${METRIC_ROW_COLUMNS_CLASS}`;
+
+  return (
+    <div className={`grid items-center ${columnsClass} ${TEXT_CLASS}`}>
+      <span className={`min-w-0 wrap-break-word ${LABEL_CLASS}`}>{label}</span>
       {bar}
-      {children}
-    </div>
-  ) : (
-    <div className={`flex items-center gap-2 ${TEXT_CLASS}`}>
-      <span className={`w-20 shrink-0 ${LABEL_CLASS}`}>{label}</span>
-      {bar}
-      <span className={`min-w-7.5 shrink-0 text-right ${VALUE_CLASS}`}>
-        {value}
-      </span>
+      <span className={`min-w-7.5 text-right ${VALUE_CLASS}`}>{value}</span>
       {children}
     </div>
   );
+};
 
 const barPlacement = (layout: MetricLayout, stackedSpacing: string) =>
-  layout === "stacked" ? stackedSpacing : "min-w-0 flex-1";
+  layout === "stacked" ? stackedSpacing : "min-w-0";
 
 const PercentBar = ({
   label,
@@ -132,13 +147,13 @@ const MedianBar = ({
       }
     >
       <span className="sr-only">
-        <Trans>mediana Sejmu: {formattedMedian}</Trans>
+        <Trans>mediana: {formattedMedian}</Trans>
       </span>
     </MetricRow>
   );
 };
 
-export const MpMetricBar = (props: MpMetricBarProps) =>
+export const MetricBar = (props: MetricBarProps) =>
   props.variant === "percent" ? (
     <PercentBar {...props} />
   ) : (

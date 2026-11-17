@@ -46,12 +46,12 @@ msgid "bez większości 3/5 ustawa nie dochodzi do skutku"
 msgstr "bez większości 3/5 ustawa nie dochodzi do skutku"
 
 #. js-lingui-explicit-id
-#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:21
-msgid "mps.vote-badge.null"
+#: src/components/shared/VoteBadge/VoteBadge.constants.ts:21
+msgid "vote-badge.null"
 msgstr "brak danych"
 
-#: src/components/mps/MpMetricBar/MpMetricBar.tsx:63
-#: src/components/mps/MpMetricBar/MpMetricBar.tsx:103
+#: src/components/shared/MetricBar/MetricBar.tsx:77
+#: src/components/shared/MetricBar/MetricBar.tsx:117
 msgid "brak danych"
 msgstr "brak danych"
 
@@ -88,10 +88,6 @@ msgstr "Druk"
 msgid "Etap {currentStep} z {totalSteps}"
 msgstr "Etap {currentStep} z {totalSteps}"
 
-#: src/components/mps/ConstituencySummary/ClubFilter/ClubFilter.tsx:21
-msgid "Filtruj według klubu"
-msgstr "Filtruj według klubu"
-
 #: src/constants/education.ts:245
 msgid "gdy niezgodne są tylko niektóre przepisy i nie są nierozerwalnie związane z całą ustawą, Prezydent po opinii Marszałka Sejmu podpisuje ustawę z ich pominięciem albo zwraca ją Sejmowi"
 msgstr "gdy niezgodne są tylko niektóre przepisy i nie są nierozerwalnie związane z całą ustawą, Prezydent po opinii Marszałka Sejmu podpisuje ustawę z ich pominięciem albo zwraca ją Sejmowi"
@@ -108,14 +104,6 @@ msgstr "gdy terminu nie ma, wchodzi w życie po 14 dniach od ogłoszenia"
 msgid "Gdzie się odbywa"
 msgstr "Gdzie się odbywa"
 
-#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:36
-msgid "Głosowania: udział w głosowaniach"
-msgstr "Głosowania: udział w głosowaniach"
-
-#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:31
-msgid "Głosowania: udział w głosowaniach, posiedzenia {participationFrom}–{participationTo}"
-msgstr "Głosowania: udział w głosowaniach, posiedzenia {participationFrom}–{participationTo}"
-
 #: src/constants/education.ts:143
 msgid "Głosowanie w Sejmie"
 msgstr "Głosowanie w Sejmie"
@@ -131,14 +119,6 @@ msgstr "Inicjatywa ustawodawcza"
 #: src/constants/education.ts:289
 msgid "Inne tryby"
 msgstr "Inne tryby"
-
-#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:60
-msgid "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu"
-msgstr "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu"
-
-#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:48
-msgid "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu ({median})"
-msgstr "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu ({median})"
 
 #: src/constants/education.ts:32
 msgid "Jak powstaje ustawa"
@@ -178,13 +158,9 @@ msgstr "Marszałek Sejmu przedstawia ustawę Prezydentowi. Prezydent ma 21 dni i
 msgid "Marszałek Sejmu przekazuje uchwaloną ustawę Marszałkowi Senatu. Senat ma 30 dni na stanowisko."
 msgstr "Marszałek Sejmu przekazuje uchwaloną ustawę Marszałkowi Senatu. Senat ma 30 dni na stanowisko."
 
-#: src/components/mps/MpMetricBar/MpMetricBar.tsx:137
-msgid "mediana Sejmu: {formattedMedian}"
-msgstr "mediana Sejmu: {formattedMedian}"
-
-#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:23
-msgid "Miejscowość lub nazwisko posła"
-msgstr "Miejscowość lub nazwisko posła"
+#: src/components/shared/MetricBar/MetricBar.tsx:150
+msgid "mediana: {formattedMedian}"
+msgstr "mediana: {formattedMedian}"
 
 #: src/constants/education.ts:87
 msgid "na posiedzeniu Sejmu przy projektach zmiany Konstytucji, budżetowych, podatkowych, wyborczych, ustrojowych i przy kodeksach"
@@ -194,17 +170,9 @@ msgstr "na posiedzeniu Sejmu przy projektach zmiany Konstytucji, budżetowych, p
 msgid "na posiedzeniu Sejmu także wtedy, gdy tak skieruje projekt Marszałek Sejmu"
 msgstr "na posiedzeniu Sejmu także wtedy, gdy tak skieruje projekt Marszałek Sejmu"
 
-#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.constants.ts:8
-msgid "Nazwisko A–Ż"
-msgstr "Nazwisko A–Ż"
-
-#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.constants.ts:9
-msgid "Nazwisko Ż–A"
-msgstr "Nazwisko Ż–A"
-
 #. js-lingui-explicit-id
-#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:51
-msgid "mps.vote-badge.absent"
+#: src/components/shared/VoteBadge/VoteBadge.constants.ts:51
+msgid "vote-badge.absent"
 msgstr "Nie głosował"
 
 #: src/constants/education.ts:180
@@ -297,8 +265,8 @@ msgid "propozycję uchwalenia albo odrzucenia"
 msgstr "propozycję uchwalenia albo odrzucenia"
 
 #. js-lingui-explicit-id
-#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:37
-msgid "mps.vote-badge.no"
+#: src/components/shared/VoteBadge/VoteBadge.constants.ts:37
+msgid "vote-badge.no"
 msgstr "Przeciw"
 
 #: src/constants/education.ts:223
@@ -354,21 +322,17 @@ msgstr "skierować projekt do komisji"
 msgid "Słowniczek"
 msgstr "Słowniczek"
 
-#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:36
-msgid "Sortuj posłów: {currentSortLabel}"
-msgstr "Sortuj posłów: {currentSortLabel}"
-
-#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:40
+#: src/components/shared/SearchToolbar/SearchToolbar.tsx:43
 msgid "Sortuj:"
 msgstr "Sortuj:"
+
+#: src/components/shared/SearchToolbar/SearchToolbar.tsx:39
+msgid "Sortuj: {currentSortLabel}"
+msgstr "Sortuj: {currentSortLabel}"
 
 #: src/constants/education.ts:115
 msgid "Sprawozdanie komisji zawiera"
 msgstr "Sprawozdanie komisji zawiera"
-
-#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:22
-msgid "Szukaj posła lub okręgu"
-msgstr "Szukaj posła lub okręgu"
 
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
@@ -440,11 +404,11 @@ msgid "Wnioskodawca uzasadnia projekt, posłowie zadają pytania i dyskutują o 
 msgstr "Wnioskodawca uzasadnia projekt, posłowie zadają pytania i dyskutują o jego zasadach. O poszczególnych przepisach Sejm rozstrzyga później."
 
 #. js-lingui-explicit-id
-#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:44
-msgid "mps.vote-badge.abstain"
+#: src/components/shared/VoteBadge/VoteBadge.constants.ts:44
+msgid "vote-badge.abstain"
 msgstr "Wstrzymał się"
 
-#: src/components/mps/ConstituencySummary/ClubFilter/ClubFilter.tsx:29
+#: src/components/shared/FilterChips/FilterChips.tsx:26
 msgid "Wszystkie"
 msgstr "Wszystkie"
 
@@ -453,8 +417,8 @@ msgid "wystarcza zwykła większość: więcej głosów „za” niż „przeciw
 msgstr "wystarcza zwykła większość: więcej głosów „za” niż „przeciw”"
 
 #. js-lingui-explicit-id
-#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:30
-msgid "mps.vote-badge.yes"
+#: src/components/shared/VoteBadge/VoteBadge.constants.ts:30
+msgid "vote-badge.yes"
 msgstr "Za"
 
 #: src/constants/education.ts:127

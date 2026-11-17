@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState } from "react";
-import { ClubFilter } from "./ClubFilter";
-import type { ClubFilterOption } from "./ClubFilter.types";
+import { FilterChips } from "./FilterChips";
+import type { FilterChipsOption } from "./FilterChips.types";
 
-const DEFAULT_OPTIONS: ClubFilterOption[] = [
+const DEFAULT_OPTIONS: FilterChipsOption[] = [
   { id: "KO", label: "KO", count: 9 },
   { id: "PiS", label: "PiS", count: 3 },
   { id: "Lewica", label: "Lewica", count: 2 },
@@ -15,7 +15,7 @@ const DEFAULT_OPTIONS: ClubFilterOption[] = [
   { id: "RozwojPlus", label: "Rozwój Plus", count: 1 },
 ];
 
-const MANY_OPTIONS: ClubFilterOption[] = [
+const MANY_OPTIONS: FilterChipsOption[] = [
   ...DEFAULT_OPTIONS,
   { id: "Wolnosciowcy", label: "Wolnościowcy", count: 2 },
   { id: "Niezrzeszeni", label: "Niezrzeszeni", count: 1 },
@@ -23,18 +23,22 @@ const MANY_OPTIONS: ClubFilterOption[] = [
 ];
 
 type StoryProps = {
-  options: ClubFilterOption[];
+  options: FilterChipsOption[];
   initialSelectedId?: string | null;
 };
 
-const ClubFilterStory = ({ options, initialSelectedId = null }: StoryProps) => {
+const FilterChipsStory = ({
+  options,
+  initialSelectedId = null,
+}: StoryProps) => {
   const [selectedId, setSelectedId] = useState<string | null>(
     initialSelectedId,
   );
   const totalCount = options.reduce((sum, option) => sum + option.count, 0);
 
   return (
-    <ClubFilter
+    <FilterChips
+      label="Filtruj według klubu"
       options={options}
       totalCount={totalCount}
       selectedId={selectedId}
@@ -43,13 +47,13 @@ const ClubFilterStory = ({ options, initialSelectedId = null }: StoryProps) => {
   );
 };
 
-const meta: Meta<typeof ClubFilterStory> = {
-  title: "Mps/ClubFilter",
-  component: ClubFilterStory,
+const meta: Meta<typeof FilterChipsStory> = {
+  title: "Shared/FilterChips",
+  component: FilterChipsStory,
 };
 
 export default meta;
-type Story = StoryObj<typeof ClubFilterStory>;
+type Story = StoryObj<typeof FilterChipsStory>;
 
 export const Default: Story = {
   args: { options: DEFAULT_OPTIONS },

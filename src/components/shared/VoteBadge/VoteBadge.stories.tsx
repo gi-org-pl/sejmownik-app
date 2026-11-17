@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { MpVoteBadge } from "./MpVoteBadge";
-import type { MpVoteBadgeProps } from "./MpVoteBadge.types";
+import { VoteBadge } from "./VoteBadge";
+import type { VoteBadgeProps } from "./VoteBadge.types";
 
 const meta = {
-  title: "mps/MpVoteBadge",
-  component: MpVoteBadge,
+  title: "Shared/VoteBadge",
+  component: VoteBadge,
   tags: ["autodocs"],
   parameters: {
     layout: "centered",
@@ -16,10 +16,10 @@ Badge showing how an MP voted. Meaning comes from the icon **and** the text labe
 ### Types
 
 \`\`\`ts
-type MpVote = "yes" | "no" | "abstain" | "absent";
+type Vote = "yes" | "no" | "abstain" | "absent";
 
-type MpVoteBadgeProps = {
-  vote: MpVote | null; // null = no vote recorded → "brak danych"
+type VoteBadgeProps = {
+  vote: Vote | null; // null = no vote recorded → "brak danych"
   showLabel?: boolean; // default true; false = visual icon only (label remains as sr-only text)
 };
 \`\`\`
@@ -40,7 +40,7 @@ type MpVoteBadgeProps = {
   args: {
     vote: "yes",
     showLabel: true,
-  } satisfies MpVoteBadgeProps,
+  } satisfies VoteBadgeProps,
   argTypes: {
     vote: {
       description:
@@ -49,7 +49,7 @@ type MpVoteBadgeProps = {
       options: ["yes", "no", "abstain", "absent", null],
       table: {
         type: {
-          summary: "MpVote | null",
+          summary: "Vote | null",
           detail: '"yes" | "no" | "abstain" | "absent" | null',
         },
         defaultValue: { summary: undefined },
@@ -65,7 +65,7 @@ type MpVoteBadgeProps = {
       },
     },
   },
-} satisfies Meta<typeof MpVoteBadge>;
+} satisfies Meta<typeof VoteBadge>;
 
 export default meta;
 
@@ -126,11 +126,11 @@ export const AllBadges: Story = {
   args: { vote: "yes" },
   render: () => (
     <div className="flex flex-col gap-3">
-      <MpVoteBadge vote="yes" />
-      <MpVoteBadge vote="no" />
-      <MpVoteBadge vote="abstain" />
-      <MpVoteBadge vote="absent" />
-      <MpVoteBadge vote={null} />
+      <VoteBadge vote="yes" />
+      <VoteBadge vote="no" />
+      <VoteBadge vote="abstain" />
+      <VoteBadge vote="absent" />
+      <VoteBadge vote={null} />
     </div>
   ),
 };
@@ -140,11 +140,11 @@ export const AllIcons: Story = {
   args: { vote: "yes", showLabel: false },
   render: () => (
     <div className="flex items-center gap-3">
-      <MpVoteBadge vote="yes" showLabel={false} />
-      <MpVoteBadge vote="no" showLabel={false} />
-      <MpVoteBadge vote="abstain" showLabel={false} />
-      <MpVoteBadge vote="absent" showLabel={false} />
-      <MpVoteBadge vote={null} showLabel={false} />
+      <VoteBadge vote="yes" showLabel={false} />
+      <VoteBadge vote="no" showLabel={false} />
+      <VoteBadge vote="abstain" showLabel={false} />
+      <VoteBadge vote="absent" showLabel={false} />
+      <VoteBadge vote={null} showLabel={false} />
     </div>
   ),
 };

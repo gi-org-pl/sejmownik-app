@@ -1,13 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { MpMetricBar } from "./MpMetricBar";
-import type {
-  MedianMetricProps,
-  PercentMetricProps,
-} from "./MpMetricBar.types";
+import { MetricBar } from "./MetricBar";
+import type { MedianMetricProps, PercentMetricProps } from "./MetricBar.types";
+import { MetricBarGroup } from "./MetricBarGroup/MetricBarGroup";
 
-const meta: Meta<typeof MpMetricBar> = {
-  title: "Mps/MpMetricBar",
-  component: MpMetricBar,
+const meta: Meta<typeof MetricBar> = {
+  title: "Shared/MetricBar",
+  component: MetricBar,
   tags: ["autodocs"],
   parameters: {
     layout: "padded",
@@ -29,6 +27,19 @@ One labelled metric row for an MP: a label, a bar and the value as text.
 | --- | --- | --- |
 | \`"inline"\` (default) | MP card in the list | Label, bar and value in one row |
 | \`"stacked"\` | MP profile header | Label and value above the bar |
+
+### Several rows: \`MetricBarGroup\`
+
+A single inline row sizes its own columns, so rows with different labels or values get bars of different widths. Wrap rows that sit one under another in \`MetricBarGroup\`: they then share the label, bar and value columns (CSS subgrid), so every bar starts and ends in the same place.
+
+\`\`\`tsx
+<MetricBarGroup>
+  <MetricBar variant="percent" label="Głosowania" percent={98} />
+  <MetricBar variant="median" label="Interpelacje" value={85} median={30.5} q1={12} q3={62} scaleMax={120} />
+</MetricBarGroup>
+\`\`\`
+
+The label column is at least 80px and grows to the longest label. When space runs out, the label wraps and the bar keeps at least 48px, always with an 8px gap.
 
 ### Types
 
@@ -53,7 +64,7 @@ type MedianMetricProps = {
   scaleMax: number;     // end of the scale, e.g. the 95th percentile
 };
 
-type MpMetricBarProps = PercentMetricProps | MedianMetricProps;
+type MetricBarProps = PercentMetricProps | MedianMetricProps;
 \`\`\`
 
 ### Median scale
@@ -160,7 +171,7 @@ Colours: label \`gi-dark-gray\`, value, fill, tick and dot \`gi-primary\`, track
 };
 
 export default meta;
-type Story = StoryObj<typeof MpMetricBar>;
+type Story = StoryObj<typeof MetricBar>;
 
 // Flat args with both variants' fields, so the variant can be switched in the
 // controls without losing data.
@@ -182,9 +193,9 @@ export const Playground: StoryObj<PlaygroundArgs> = {
   },
   render: ({ variant, percent, value, median, q1, q3, scaleMax, ...rest }) =>
     variant === "percent" ? (
-      <MpMetricBar {...rest} variant="percent" percent={percent} />
+      <MetricBar {...rest} variant="percent" percent={percent} />
     ) : (
-      <MpMetricBar
+      <MetricBar
         {...rest}
         variant="median"
         value={value}
@@ -299,4 +310,24 @@ export const StackedInterpellationsNoData: Story = {
   name: "Median · stacked: Interpelacje no data",
   decorators: stackedDecorator,
   args: { ...interpellations, layout: "stacked", value: null },
+};
+
+export const LongLabel: Story = {
+  name: "Percent · inline: long label wraps, keeps a gap to the bar",
+  args: {
+    ...participation,
+    label: "Udział w głosowaniach na posiedzeniach",
+    percent: 76,
+  },
+};
+
+export const Group: StoryObj<typeof MetricBarGroup> = {
+  name: "Group: rows share columns, bars have equal width",
+  render: () => (
+    <MetricBarGroup>
+      <MetricBar {...participation} percent={98} />
+      <MetricBar {...interpellations} label="Interpelacje" value={505} />
+      <MetricBar {...participation} label="Obecność" percent={null} />
+    </MetricBarGroup>
+  ),
 };

@@ -2,11 +2,8 @@ import { useLingui } from "@lingui/react";
 import type { CSSProperties } from "react";
 import { ICON_MASK_CLASS_NAME } from "@/constants/icon";
 import { getIconMaskStyle } from "@/utils/style/getIconMaskStyle";
-import {
-  getVoteBadgeConfig,
-  MP_VOTE_BADGE_TEST_ID,
-} from "./MpVoteBadge.constants";
-import type { MpVoteBadgeProps } from "./MpVoteBadge.types";
+import { getVoteBadgeConfig, VOTE_BADGE_TEST_ID } from "./VoteBadge.constants";
+import type { VoteBadgeProps } from "./VoteBadge.types";
 
 const getVoteIconStyle = (
   iconUrl: string,
@@ -17,13 +14,13 @@ const getVoteIconStyle = (
   WebkitMaskSize: iconMaskSize,
 });
 
-export const MpVoteBadge = ({ vote, showLabel = true }: MpVoteBadgeProps) => {
+export const VoteBadge = ({ vote, showLabel = true }: VoteBadgeProps) => {
   const { _ } = useLingui();
   const config = getVoteBadgeConfig(vote);
 
   return (
     <span
-      data-testid={MP_VOTE_BADGE_TEST_ID}
+      data-testid={VOTE_BADGE_TEST_ID}
       className="inline-flex items-center gap-2"
     >
       <span

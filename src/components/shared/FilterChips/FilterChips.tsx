@@ -1,14 +1,15 @@
 import { Button } from "@gi-org-pl/athena";
 import { Trans, useLingui } from "@lingui/react/macro";
-import type { ClubFilterProps } from "./ClubFilter.types";
+import type { FilterChipsProps } from "./FilterChips.types";
 
-export const ClubFilter = ({
+export const FilterChips = ({
+  label,
   options,
   totalCount,
   selectedId,
   onSelect,
-}: ClubFilterProps) => {
-  const { t, i18n } = useLingui();
+}: FilterChipsProps) => {
+  const { i18n } = useLingui();
 
   const visibleOptions = options.filter((option) => option.count > 0);
   const activeId = visibleOptions.some((option) => option.id === selectedId)
@@ -16,11 +17,7 @@ export const ClubFilter = ({
     : null;
 
   return (
-    <div
-      role="group"
-      aria-label={t`Filtruj według klubu`}
-      className="flex flex-wrap gap-2"
-    >
+    <div role="group" aria-label={label} className="flex flex-wrap gap-2">
       <Button
         type={activeId === null ? "primary" : "outlined"}
         aria-pressed={activeId === null}

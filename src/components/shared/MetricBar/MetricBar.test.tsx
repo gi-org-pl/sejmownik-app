@@ -1,24 +1,24 @@
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 import { render, screen } from "@testing-library/react";
-import { MpMetricBar } from "./MpMetricBar";
-import type { MpMetricBarProps } from "./MpMetricBar.types";
+import { MetricBar } from "./MetricBar";
+import type { MetricBarProps } from "./MetricBar.types";
 
-const renderBar = (props: MpMetricBarProps) =>
+const renderBar = (props: MetricBarProps) =>
   render(
     <I18nProvider i18n={i18n}>
-      <MpMetricBar {...props} />
+      <MetricBar {...props} />
     </I18nProvider>,
   );
 
-const participation = (percent: number | null): MpMetricBarProps => ({
+const participation = (percent: number | null): MetricBarProps => ({
   variant: "percent",
   label: "Głosowania",
   percent,
 });
 
 // Scale 0–200: median 30.5 → 15.25%, middle half 10–60 → 5%–30%.
-const interpellations = (value: number | null): MpMetricBarProps => ({
+const interpellations = (value: number | null): MetricBarProps => ({
   variant: "median",
   label: "Interpelacje",
   value,
@@ -31,7 +31,7 @@ const interpellations = (value: number | null): MpMetricBarProps => ({
 const leftOf = (testId: string) =>
   Number.parseFloat(screen.getByTestId(testId).style.left);
 
-describe("<MpMetricBar />", () => {
+describe("<MetricBar />", () => {
   describe("given participation 98", () => {
     it("fills the bar to 98% and shows the value", () => {
       renderBar(participation(98));
@@ -124,7 +124,7 @@ describe("<MpMetricBar />", () => {
     it("exposes the median value as text for screen readers", () => {
       renderBar(interpellations(117));
 
-      expect(screen.getByText("mediana Sejmu: 30,5")).toBeInTheDocument();
+      expect(screen.getByText("mediana: 30,5")).toBeInTheDocument();
     });
   });
 

@@ -2,21 +2,22 @@ import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { vi } from "vitest";
-import { ClubFilter } from "./ClubFilter";
-import type { ClubFilterOption, ClubFilterProps } from "./ClubFilter.types";
+import { FilterChips } from "./FilterChips";
+import type { FilterChipsOption, FilterChipsProps } from "./FilterChips.types";
 
-const OPTIONS: ClubFilterOption[] = [
+const OPTIONS: FilterChipsOption[] = [
   { id: "KO", label: "KO", count: 9 },
   { id: "PiS", label: "PiS", count: 3 },
   { id: "Lewica", label: "Lewica", count: 2 },
 ];
 
-const renderFilter = (props: Partial<ClubFilterProps> = {}) => {
+const renderFilter = (props: Partial<FilterChipsProps> = {}) => {
   const onSelect = vi.fn();
 
   render(
     <I18nProvider i18n={i18n}>
-      <ClubFilter
+      <FilterChips
+        label="Filtruj według klubu"
         options={OPTIONS}
         totalCount={14}
         selectedId={null}
@@ -29,7 +30,7 @@ const renderFilter = (props: Partial<ClubFilterProps> = {}) => {
   return { onSelect };
 };
 
-describe("<ClubFilter />", () => {
+describe("<FilterChips />", () => {
   describe("given nothing is selected", () => {
     it("shows Wszystkie as active with the total", () => {
       renderFilter();

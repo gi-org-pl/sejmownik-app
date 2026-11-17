@@ -1,6 +1,6 @@
 /**
- * inline: label, bar and value in one row (MP list card).
- * stacked: label and value above the bar (MP profile header).
+ * inline: label, bar and value in one row (e.g. a list card).
+ * stacked: label and value above the bar (e.g. a profile header).
  */
 export type MetricLayout = "inline" | "stacked";
 
@@ -14,16 +14,16 @@ export type PercentMetricProps = {
 };
 
 /**
- * Scale from 0 to `scaleMax` that shows the MP's value against all MPs,
+ * Scale from 0 to `scaleMax` that shows one value against the whole group,
  * e.g. interpellation count. The statistics are computed by the data layer.
  */
 export type MedianMetricProps = {
   variant: "median";
   label: string;
   layout?: MetricLayout;
-  /** The MP's value, drawn as the dot; null = no data. */
+  /** The value, drawn as the dot; null = no data. */
   value: number | null;
-  /** Sejm median, drawn as the tick. */
+  /** Group median, drawn as the tick. */
   median: number;
   /** 25th percentile, start of the middle-half band. */
   q1: number;
@@ -33,4 +33,4 @@ export type MedianMetricProps = {
   scaleMax: number;
 };
 
-export type MpMetricBarProps = PercentMetricProps | MedianMetricProps;
+export type MetricBarProps = PercentMetricProps | MedianMetricProps;

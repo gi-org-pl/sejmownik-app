@@ -3,24 +3,27 @@ import { useLingui } from "@lingui/react/macro";
 import searchIcon from "@/assets/vectors/search-icon.svg";
 import { BUTTON_ICON_MASK_CLASS_NAME } from "@/constants/icon";
 import { getIconMaskStyle } from "@/utils/style/getIconMaskStyle";
-import { SORT_OPTION_LABELS, SORT_OPTIONS } from "./MpsSearchToolbar.constants";
-import type { MpsSearchToolbarProps } from "./MpsSearchToolbar.types";
+import type { SearchToolbarProps } from "./SearchToolbar.types";
 
-export const MpsSearchToolbar = ({
+export const SearchToolbar = <TSort extends string>({
   query,
   onQueryChange,
+  searchLabel,
+  searchPlaceholder,
+  sortOptions,
   sort,
   onSortChange,
-}: MpsSearchToolbarProps) => {
-  const { t, i18n } = useLingui();
-  const currentSortLabel = i18n._(SORT_OPTION_LABELS[sort]);
+}: SearchToolbarProps<TSort>) => {
+  const { t } = useLingui();
+  const currentSortLabel =
+    sortOptions.find((option) => option.value === sort)?.label ?? "";
 
   return (
     <div className="flex w-full flex-col gap-4 md:flex-row md:items-center md:justify-between">
       <div className="w-full md:w-100">
         <Input
-          aria-label={t`Szukaj posła lub okręgu`}
-          placeholder={t`Miejscowość lub nazwisko posła`}
+          aria-label={searchLabel}
+          placeholder={searchPlaceholder}
           value={query}
           onChange={onQueryChange}
           LeftIcon={
@@ -33,7 +36,8 @@ export const MpsSearchToolbar = ({
         />
       </div>
       <Select
-        aria-label={t`Sortuj posłów: ${currentSortLabel}`}
+        aria-label={t`Sortuj: ${currentSortLabel}`}
+        className="h-auto px-4 py-3"
         value={
           <>
             <span className="text-sm font-normal text-gi-dark-gray">
@@ -44,10 +48,10 @@ export const MpsSearchToolbar = ({
         }
       >
         <ActionList
-          items={SORT_OPTIONS.map((option) => ({
-            label: i18n._(SORT_OPTION_LABELS[option]),
-            isSelected: option === sort,
-            onClick: () => onSortChange(option),
+          items={sortOptions.map((option) => ({
+            label: option.label,
+            isSelected: option.value === sort,
+            onClick: () => onSortChange(option.value),
           }))}
         />
       </Select>

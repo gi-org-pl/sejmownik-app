@@ -2,18 +2,31 @@ import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { vi } from "vitest";
-import { MpsSearchToolbar } from "./MpsSearchToolbar";
-import type { MpsSearchToolbarProps } from "./MpsSearchToolbar.types";
+import { SearchToolbar } from "./SearchToolbar";
+import type {
+  SearchToolbarProps,
+  SearchToolbarSortOption,
+} from "./SearchToolbar.types";
 
-const renderToolbar = (props: Partial<MpsSearchToolbarProps> = {}) => {
+type SortOption = "surnameAsc" | "surnameDesc";
+
+const SORT_OPTIONS: ReadonlyArray<SearchToolbarSortOption<SortOption>> = [
+  { value: "surnameAsc", label: "Nazwisko A–Ż" },
+  { value: "surnameDesc", label: "Nazwisko Ż–A" },
+];
+
+const renderToolbar = (props: Partial<SearchToolbarProps<SortOption>> = {}) => {
   const onQueryChange = vi.fn();
   const onSortChange = vi.fn();
 
   render(
     <I18nProvider i18n={i18n}>
-      <MpsSearchToolbar
+      <SearchToolbar
         query=""
         onQueryChange={onQueryChange}
+        searchLabel="Szukaj posła lub okręgu"
+        searchPlaceholder="Miejscowość lub nazwisko posła"
+        sortOptions={SORT_OPTIONS}
         sort="surnameAsc"
         onSortChange={onSortChange}
         {...props}
@@ -24,7 +37,7 @@ const renderToolbar = (props: Partial<MpsSearchToolbarProps> = {}) => {
   return { onQueryChange, onSortChange };
 };
 
-describe("<MpsSearchToolbar />", () => {
+describe("<SearchToolbar />", () => {
   it("renders the search input with placeholder", () => {
     renderToolbar();
 
@@ -61,7 +74,7 @@ describe("<MpsSearchToolbar />", () => {
     renderToolbar({ sort: "surnameAsc" });
 
     expect(
-      screen.getByRole("button", { name: "Sortuj posłów: Nazwisko A–Ż" }),
+      screen.getByRole("button", { name: "Sortuj: Nazwisko A–Ż" }),
     ).toBeInTheDocument();
   });
 
@@ -69,8 +82,17 @@ describe("<MpsSearchToolbar />", () => {
     renderToolbar({ sort: "surnameDesc" });
 
     expect(
-      screen.getByRole("button", { name: "Sortuj posłów: Nazwisko Ż–A" }),
+      screen.getByRole("button", { name: "Sortuj: Nazwisko Ż–A" }),
     ).toBeInTheDocument();
+  });
+
+  it("pads the sort trigger 16px on the sides and 12px top and bottom", () => {
+    renderToolbar();
+
+    const trigger = screen.getByRole("button", { name: /Sortuj/ });
+
+    expect(trigger).toHaveClass("h-auto", "px-4", "py-3");
+    expect(trigger).not.toHaveClass("px-3", "py-2", "h-10");
   });
 
   it("calls onSortChange when another option is chosen", () => {
