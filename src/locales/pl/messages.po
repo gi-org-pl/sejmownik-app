@@ -25,6 +25,10 @@ msgstr "{count, plural, one {# poseł} few {# posłowie} many {# posłów} other
 msgid "{count} · także głosy oddane za granicą"
 msgstr "{count} · także głosy oddane za granicą"
 
+#: src/components/education/EducationQuizCard/EducationQuizCardPills/EducationQuizCardPills.tsx:30
+msgid "{durationMinutes, plural, one {# min} few {# min} many {# min} other {# min}}"
+msgstr "{durationMinutes, plural, one {# min} few {# min} many {# min} other {# min}}"
+
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:12
 msgid "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
@@ -32,6 +36,10 @@ msgstr "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejsc
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:20
 msgid "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+
+#: src/components/education/EducationQuizCard/EducationQuizCardPills/EducationQuizCardPills.tsx:19
+msgid "{questionCount, plural, one {# pytanie} few {# pytania} many {# pytań} other {# pytań}}"
+msgstr "{questionCount, plural, one {# pytanie} few {# pytania} many {# pytań} other {# pytań}}"
 
 #: src/constants/education.ts:263
 msgid "bez większości 3/5 ustawa nie dochodzi do skutku"
@@ -42,8 +50,8 @@ msgstr "bez większości 3/5 ustawa nie dochodzi do skutku"
 msgid "mps.vote-badge.null"
 msgstr "brak danych"
 
-#: src/components/mps/MpMetricBar/MpMetricBar.tsx:67
-#: src/components/mps/MpMetricBar/MpMetricBar.tsx:106
+#: src/components/mps/MpMetricBar/MpMetricBar.tsx:63
+#: src/components/mps/MpMetricBar/MpMetricBar.tsx:103
 msgid "brak danych"
 msgstr "brak danych"
 
@@ -170,7 +178,7 @@ msgstr "Marszałek Sejmu przedstawia ustawę Prezydentowi. Prezydent ma 21 dni i
 msgid "Marszałek Sejmu przekazuje uchwaloną ustawę Marszałkowi Senatu. Senat ma 30 dni na stanowisko."
 msgstr "Marszałek Sejmu przekazuje uchwaloną ustawę Marszałkowi Senatu. Senat ma 30 dni na stanowisko."
 
-#: src/components/mps/MpMetricBar/MpMetricBar.tsx:151
+#: src/components/mps/MpMetricBar/MpMetricBar.tsx:137
 msgid "mediana Sejmu: {formattedMedian}"
 msgstr "mediana Sejmu: {formattedMedian}"
 
@@ -308,6 +316,14 @@ msgstr "przyjęte poprawki"
 #: src/constants/education.ts:63
 msgid "Rada Ministrów"
 msgstr "Rada Ministrów"
+
+#: src/components/education/EducationQuizCard/EducationQuizCardStartLink/EducationQuizCardStartLink.tsx:31
+msgid "Rozpocznij"
+msgstr "Rozpocznij"
+
+#: src/components/education/EducationQuizCard/EducationQuizCardStartLink/EducationQuizCardStartLink.tsx:29
+msgid "Rozpocznij quiz: {title}"
+msgstr "Rozpocznij quiz: {title}"
 
 #: src/constants/education.ts:97
 msgid "Sejm może"

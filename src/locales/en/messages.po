@@ -25,6 +25,10 @@ msgstr "{count, plural, one {# MP} other {# MPs}}"
 msgid "{count} · także głosy oddane za granicą"
 msgstr "{count} · including votes cast abroad"
 
+#: src/components/education/EducationQuizCard/EducationQuizCardPills/EducationQuizCardPills.tsx:30
+msgid "{durationMinutes, plural, one {# min} few {# min} many {# min} other {# min}}"
+msgstr "{durationMinutes, plural, one {# min} other {# min}}"
+
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:12
 msgid "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "{mpCount} MPs in the Sejm, term {term}. Find your constituency by town or an MP by surname."
@@ -32,6 +36,10 @@ msgstr "{mpCount} MPs in the Sejm, term {term}. Find your constituency by town o
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:20
 msgid "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "{mpCount} MPs in the Sejm. Find your constituency by town or an MP by surname."
+
+#: src/components/education/EducationQuizCard/EducationQuizCardPills/EducationQuizCardPills.tsx:19
+msgid "{questionCount, plural, one {# pytanie} few {# pytania} many {# pytań} other {# pytań}}"
+msgstr "{questionCount, plural, one {# question} other {# questions}}"
 
 #: src/constants/education.ts:263
 msgid "bez większości 3/5 ustawa nie dochodzi do skutku"
@@ -42,8 +50,8 @@ msgstr "without a 3/5 majority the act fails"
 msgid "mps.vote-badge.null"
 msgstr "no data"
 
-#: src/components/mps/MpMetricBar/MpMetricBar.tsx:67
-#: src/components/mps/MpMetricBar/MpMetricBar.tsx:106
+#: src/components/mps/MpMetricBar/MpMetricBar.tsx:63
+#: src/components/mps/MpMetricBar/MpMetricBar.tsx:103
 msgid "brak danych"
 msgstr "no data"
 
@@ -170,7 +178,7 @@ msgstr "The Marshal of the Sejm presents the act to the President. The President
 msgid "Marszałek Sejmu przekazuje uchwaloną ustawę Marszałkowi Senatu. Senat ma 30 dni na stanowisko."
 msgstr "The Marshal of the Sejm passes the adopted act to the Marshal of the Senate. The Senate has 30 days to take a position."
 
-#: src/components/mps/MpMetricBar/MpMetricBar.tsx:151
+#: src/components/mps/MpMetricBar/MpMetricBar.tsx:137
 msgid "mediana Sejmu: {formattedMedian}"
 msgstr "Sejm median: {formattedMedian}"
 
@@ -308,6 +316,14 @@ msgstr "the adopted amendments"
 #: src/constants/education.ts:63
 msgid "Rada Ministrów"
 msgstr "Council of Ministers"
+
+#: src/components/education/EducationQuizCard/EducationQuizCardStartLink/EducationQuizCardStartLink.tsx:31
+msgid "Rozpocznij"
+msgstr "Start"
+
+#: src/components/education/EducationQuizCard/EducationQuizCardStartLink/EducationQuizCardStartLink.tsx:29
+msgid "Rozpocznij quiz: {title}"
+msgstr "Start quiz: {title}"
 
 #: src/constants/education.ts:97
 msgid "Sejm może"
