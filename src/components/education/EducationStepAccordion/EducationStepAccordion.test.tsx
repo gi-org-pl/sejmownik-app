@@ -194,22 +194,31 @@ describe("EducationStepAccordion", () => {
   });
 
   describe("given a focused row", () => {
-    it("toggles on Enter and Space and moves focus with the arrow keys", () => {
+    it("leaves Enter and Space to the native button click", () => {
+      renderAccordion();
+
+      const [row] = getRows();
+      row.focus();
+
+      for (const key of ["Enter", " "]) {
+        const event = new KeyboardEvent("keydown", {
+          key,
+          bubbles: true,
+          cancelable: true,
+        });
+        row.dispatchEvent(event);
+
+        expect(event.defaultPrevented).toBe(false);
+        expect(row).toHaveAttribute("aria-expanded", "false");
+      }
+    });
+
+    it("moves focus with the arrow, Home and End keys", () => {
       renderAccordion();
 
       const rows = getRows();
       const last = rows.length - 1;
       rows[0].focus();
-
-      fireEvent.keyDown(rows[0], { key: "Enter" });
-      expect(rows[0]).toHaveAttribute("aria-expanded", "true");
-      expect(
-        screen.getByText("Projekt wpływa do Marszałka Sejmu."),
-      ).toBeVisible();
-
-      fireEvent.keyDown(rows[0], { key: " " });
-      expect(rows[0]).toHaveAttribute("aria-expanded", "false");
-      expectPanelClosed(rows[0]);
 
       fireEvent.keyDown(rows[0], { key: "ArrowDown" });
       expect(rows[1]).toHaveFocus();
@@ -250,6 +259,24 @@ describe("EducationStepAccordion", () => {
       expect(warn).toHaveBeenCalledWith(
         expect.stringContaining('duplicate step key "submission"'),
       );
+
+      warn.mockRestore();
+    });
+
+    it("warns once, not again on re-render with a rebuilt steps array", () => {
+      const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
+      const buildSteps = () => [STEPS[0], { ...STEPS[1], key: STEPS[0].key }];
+
+      const { rerender } = renderAccordion({ steps: buildSteps() });
+
+      fireEvent.click(getRows()[0]);
+      rerender(
+        <I18nProvider i18n={i18n}>
+          <EducationStepAccordion steps={buildSteps()} />
+        </I18nProvider>,
+      );
+
+      expect(warn).toHaveBeenCalledTimes(1);
 
       warn.mockRestore();
     });

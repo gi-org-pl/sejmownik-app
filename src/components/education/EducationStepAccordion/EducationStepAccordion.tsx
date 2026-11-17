@@ -1,5 +1,5 @@
 import { useLingui } from "@lingui/react/macro";
-import { type KeyboardEvent, useId, useMemo, useRef, useState } from "react";
+import { type KeyboardEvent, useEffect, useId, useRef, useState } from "react";
 import { FOCUS_CLASS_NAME } from "@/constants/focus";
 import type {
   EducationStep,
@@ -36,7 +36,11 @@ const resolveInitialOpenId = (
   return steps.find((step) => step.key === initialOpenKey)?.openId ?? null;
 };
 
-const warnAboutDuplicateKeys = (steps: readonly EducationStep[]) => {
+// The duplicate-key warning depends on the keys joined into one string, not on
+// the steps array, which callers may rebuild every render.
+const KEY_SEPARATOR = "\u0000";
+
+const warnAboutDuplicateKeys = (keys: readonly string[]) => {
   if (!import.meta.env.DEV) {
     return;
   }
@@ -44,15 +48,15 @@ const warnAboutDuplicateKeys = (steps: readonly EducationStep[]) => {
   const seen = new Set<string>();
   const reported = new Set<string>();
 
-  for (const step of steps) {
-    if (seen.has(step.key) && !reported.has(step.key)) {
-      reported.add(step.key);
+  for (const key of keys) {
+    if (seen.has(key) && !reported.has(key)) {
+      reported.add(key);
       console.warn(
-        `EducationStepAccordion: duplicate step key "${step.key}". Using the index as the fallback identity.`,
+        `EducationStepAccordion: duplicate step key "${key}". Using the index as the fallback identity.`,
       );
     }
 
-    seen.add(step.key);
+    seen.add(key);
   }
 };
 
@@ -85,10 +89,14 @@ export const EducationStepAccordion = ({
   const { t } = useLingui();
   const baseId = useId();
   const headerRefs = useRef<Array<HTMLButtonElement | null>>([]);
-  const preparedSteps = useMemo(() => {
-    warnAboutDuplicateKeys(steps);
-    return prepareSteps(steps);
-  }, [steps]);
+  // Cheap (one pass over a handful of steps), so it is not memoised.
+  const preparedSteps = prepareSteps(steps);
+  const keySignature = steps.map((step) => step.key).join(KEY_SEPARATOR);
+
+  useEffect(() => {
+    warnAboutDuplicateKeys(keySignature.split(KEY_SEPARATOR));
+  }, [keySignature]);
+
   const [openId, setOpenId] = useState<string | null>(() =>
     resolveInitialOpenId(preparedSteps, initialOpenKey),
   );
@@ -105,6 +113,7 @@ export const EducationStepAccordion = ({
     headerRefs.current[index]?.focus();
   };
 
+  // Enter and Space are left to the native <button>, which fires click for both.
   const handleKeyDown = (
     event: KeyboardEvent<HTMLButtonElement>,
     index: number,
@@ -127,11 +136,6 @@ export const EducationStepAccordion = ({
       case "End":
         event.preventDefault();
         moveFocus(lastIndex);
-        return;
-      case "Enter":
-      case " ":
-        event.preventDefault();
-        toggle(preparedSteps[index].openId);
         return;
       default:
         return;
