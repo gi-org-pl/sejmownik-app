@@ -18,7 +18,7 @@ export const EducationQuizCardStartLink = ({
       asChild
       type="primary"
       variant="primary"
-      className={`size-12 gap-3 border border-transparent bg-gi-light-primary p-0 text-base leading-none font-bold hover:bg-gi-primary has-[>svg]:px-0 md:-my-0.5 md:h-12.75 md:w-auto md:px-3.75 md:has-[>svg]:px-3.75 ${FOCUS_CLASS_NAME}`}
+      className={`size-12 gap-3 border border-transparent bg-gi-light-primary p-0 text-base leading-none font-bold hover:bg-gi-primary has-[>svg]:px-0 md:h-12.75 md:w-auto md:px-3.75 md:has-[>svg]:px-3.75 ${FOCUS_CLASS_NAME}`}
       RightIcon={
         <span
           className={`${BUTTON_ICON_MASK_CLASS_NAME} h-4 w-3.5 mask-contain`}

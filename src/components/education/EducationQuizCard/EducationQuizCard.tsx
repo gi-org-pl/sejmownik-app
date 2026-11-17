@@ -19,32 +19,33 @@ export const EducationQuizCard = ({
       aria-labelledby={titleId}
       className="w-full overflow-hidden rounded-3xl bg-gi-ash outline-1 -outline-offset-1 outline-gi-dark-ash"
     >
-      <p className="w-fit max-w-full rounded-br-2xl bg-gi-primary px-4 py-2.5 text-sm leading-4.5 font-bold wrap-break-word text-white">
+      <p className="w-fit max-w-full rounded-br-xl bg-gi-primary px-4 py-3 text-sm leading-4.5 font-bold wrap-break-word text-white">
         {eyebrow}
       </p>
 
       <div className="p-4">
-        <div className="flex min-h-12 items-center justify-between gap-4">
-          <h2
-            id={titleId}
-            className="min-w-0 text-2xl leading-7.25 font-bold tracking-[-0.01em] wrap-break-word text-gi-light-primary"
-          >
-            {title}
-          </h2>
-
-          {startLink ? (
-            <EducationQuizCardStartLink href={startLink} title={title} />
-          ) : null}
-        </div>
+        <h2
+          id={titleId}
+          className="text-2xl leading-7.25 font-bold tracking-[-0.01em] wrap-break-word text-gi-light-primary"
+        >
+          {title}
+        </h2>
 
         <div className="flex flex-col gap-2 pt-2">
           <p className="text-base leading-5.5 tracking-[-0.01em] wrap-break-word text-gi-primary">
             {description}
           </p>
-          <EducationQuizCardPills
-            questionCount={questionCount}
-            durationMinutes={durationMinutes}
-          />
+          <div className="flex items-center justify-between gap-4">
+            <EducationQuizCardPills
+              questionCount={questionCount}
+              durationMinutes={durationMinutes}
+            />
+            {startLink ? (
+              <div className="ml-auto shrink-0">
+                <EducationQuizCardStartLink href={startLink} title={title} />
+              </div>
+            ) : null}
+          </div>
         </div>
       </div>
     </section>
