@@ -42,6 +42,11 @@ msgstr "without a 3/5 majority the act fails"
 msgid "mps.vote-badge.null"
 msgstr "no data"
 
+#: src/components/mps/MpMetricBar/MpMetricBar.tsx:67
+#: src/components/mps/MpMetricBar/MpMetricBar.tsx:106
+msgid "brak danych"
+msgstr "no data"
+
 #: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:18
 msgid "Brak danych o kadencji"
 msgstr "No data about the term"
@@ -149,7 +154,7 @@ msgstr "a Sejm committee"
 
 #. placeholder {0}: step.number
 #. placeholder {1}: step.title
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:165
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:169
 msgid "Krok {0}: {1}"
 msgstr "Step {0}: {1}"
 
@@ -164,6 +169,10 @@ msgstr "The Marshal of the Sejm presents the act to the President. The President
 #: src/constants/education.ts:169
 msgid "Marszałek Sejmu przekazuje uchwaloną ustawę Marszałkowi Senatu. Senat ma 30 dni na stanowisko."
 msgstr "The Marshal of the Sejm passes the adopted act to the Marshal of the Senate. The Senate has 30 days to take a position."
+
+#: src/components/mps/MpMetricBar/MpMetricBar.tsx:151
+msgid "mediana Sejmu: {formattedMedian}"
+msgstr "Sejm median: {formattedMedian}"
 
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:23
 msgid "Miejscowość lub nazwisko posła"

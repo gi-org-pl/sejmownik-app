@@ -42,6 +42,11 @@ msgstr "bez większości 3/5 ustawa nie dochodzi do skutku"
 msgid "mps.vote-badge.null"
 msgstr "brak danych"
 
+#: src/components/mps/MpMetricBar/MpMetricBar.tsx:67
+#: src/components/mps/MpMetricBar/MpMetricBar.tsx:106
+msgid "brak danych"
+msgstr "brak danych"
+
 #: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:18
 msgid "Brak danych o kadencji"
 msgstr "Brak danych o kadencji"
@@ -149,7 +154,7 @@ msgstr "komisja sejmowa"
 
 #. placeholder {0}: step.number
 #. placeholder {1}: step.title
-#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:165
+#: src/components/education/EducationStepAccordion/EducationStepAccordion.tsx:169
 msgid "Krok {0}: {1}"
 msgstr "Krok {0}: {1}"
 
@@ -164,6 +169,10 @@ msgstr "Marszałek Sejmu przedstawia ustawę Prezydentowi. Prezydent ma 21 dni i
 #: src/constants/education.ts:169
 msgid "Marszałek Sejmu przekazuje uchwaloną ustawę Marszałkowi Senatu. Senat ma 30 dni na stanowisko."
 msgstr "Marszałek Sejmu przekazuje uchwaloną ustawę Marszałkowi Senatu. Senat ma 30 dni na stanowisko."
+
+#: src/components/mps/MpMetricBar/MpMetricBar.tsx:151
+msgid "mediana Sejmu: {formattedMedian}"
+msgstr "mediana Sejmu: {formattedMedian}"
 
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:23
 msgid "Miejscowość lub nazwisko posła"
