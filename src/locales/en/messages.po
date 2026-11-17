@@ -7,39 +7,207 @@ msgstr ""
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
 
-#: src/constants/education.ts:23
+#. placeholder {0}: term.roman
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:33
+msgid "{0} kadencja"
+msgstr "{0} term"
+
+#. placeholder {0}: term.roman
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:32
+msgid "{0} kadencja, obecna"
+msgstr "{0} term, current"
+
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:57
+#~ msgid "{clubName} · Okręg nieznany"
+#~ msgstr "{clubName} · Unknown constituency"
+
+#. placeholder {0}: constituency.number
+#. placeholder {1}: constituency.name
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:59
+#~ msgid "{clubName} · okręg nr {0} {1}"
+#~ msgstr "{clubName} · constituency no. {0} {1}"
+
+#: src/components/mps/ConstituencySummary/utils/formatMpCount.ts:4
+msgid "{count, plural, one {# poseł} few {# posłowie} many {# posłów} other {# posła}}"
+msgstr "{count, plural, one {# MP} other {# MPs}}"
+
+#: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:22
+msgid "{count} · także głosy oddane za granicą"
+msgstr "{count} · including votes cast abroad"
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:12
+msgid "{mpCount} posłów {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "{mpCount} MPs in the Sejm, term {term}. Find your constituency by town or an MP by surname."
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:20
+msgid "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "{mpCount} MPs in the Sejm. Find your constituency by town or an MP by surname."
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:21
+msgid "mps.vote-badge.null"
+msgstr "no data"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:18
+#~ msgid "brak danych"
+#~ msgstr "no data"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:18
+#~ msgid "brak danych o kadencji"
+#~ msgstr "no data about the term"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:18
+msgid "Brak danych o kadencji"
+msgstr "No data about the term"
+
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:43
+#~ msgid "brak danych o klubie"
+#~ msgstr "no data about the club"
+
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:43
+msgid "Brak danych o klubie"
+msgstr "No data about the club"
+
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:31
+#~ msgid "Brak klubu"
+#~ msgstr "No club"
+
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:51
+#~ msgid "Brak klubu · Okręg nieznany"
+#~ msgstr "No club · Unknown constituency"
+
+#. placeholder {0}: constituency.number
+#. placeholder {1}: constituency.name
+#: src/components/mps/MpProfileHeader/MpProfileHeader.tsx:53
+#~ msgid "Brak klubu · okręg nr {0} {1}"
+#~ msgstr "No club · constituency no. {0} {1}"
+
+#: src/constants/education.ts:22
 msgid "Czytanie"
 msgstr "Reading"
 
-#: src/constants/education.ts:19
+#: src/constants/education.ts:18
 msgid "Dokument zawierający projekt ustawy."
 msgstr "A document containing a bill draft."
 
-#: src/constants/education.ts:18
+#: src/constants/education.ts:17
 msgid "Druk"
 msgstr "Print"
 
-#: src/constants/education.ts:7
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.tsx:32
+#: src/components/shared/BillStageProgress/BillStageProgress.tsx:27
+msgid "Etap {currentStep} z {totalSteps}"
+msgstr "Stage {currentStep} of {totalSteps}"
+
+#: src/components/mps/ConstituencySummary/ClubFilter/ClubFilter.tsx:21
+msgid "Filtruj według klubu"
+msgstr "Filter by club"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:51
+#~ msgid "Kadencja"
+#~ msgstr "Term"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:47
+#~ msgid "kadencje Sejmu"
+#~ msgstr "terms of the Sejm"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:26
+msgid "Kadencje Sejmu"
+msgstr "Terms of the Sejm"
+
+#: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:26
+#~ msgid "Kadencje Sejmu:"
+#~ msgstr "Terms of the Sejm:"
+
+#: src/constants/education.ts:6
 msgid "Krótki opis kluczowych pojęć z procesu legislacyjnego."
 msgstr "A short description of key terms from the legislative process."
 
-#: src/constants/education.ts:24
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:23
+msgid "Miejscowość lub nazwisko posła"
+msgstr "Town or MP surname"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.constants.ts:8
+msgid "Nazwisko A–Ż"
+msgstr "Surname A–Z"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.constants.ts:9
+msgid "Nazwisko Ż–A"
+msgstr "Surname Z–A"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:51
+msgid "mps.vote-badge.absent"
+msgstr "Did not vote"
+
+#: src/components/mps/ConstituencySummary/ConstituencySummary.tsx:16
+msgid "Okręg nr {number} · {name}"
+msgstr "Constituency no. {number} · {name}"
+
+#: src/constants/education.ts:23
 msgid "Omówienie projektu ustawy w Sejmie."
 msgstr "Discussion of a bill in the Sejm."
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:42
+msgid "Posłowie"
+msgstr "MPs"
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:28
+msgid "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "MPs of the Sejm, term {term}. Find your constituency by town or an MP by surname."
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:37
+msgid "mps.vote-badge.no"
+msgstr "No"
 
 #: src/constants/education.ts:4
 msgid "Słowniczek"
 msgstr "Glossary"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:36
+msgid "Sortuj posłów: {currentSortLabel}"
+msgstr "Sort MPs: {currentSortLabel}"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:40
+msgid "Sortuj:"
+msgstr "Sort by:"
+
+#: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:22
+msgid "Szukaj posła lub okręgu"
+msgstr "Search for an MP or a constituency"
 
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"
 msgstr ""
 
-#: src/constants/education.ts:29
+#: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.stories.tsx:24
+msgid "Teraz na tym etapie"
+msgstr "Now at this stage"
+
+#: src/constants/education.ts:28
 msgid "Więcej niż połowa ważnie oddanych głosów."
 msgstr "More than half of the valid votes cast."
 
-#: src/constants/education.ts:28
+#: src/constants/education.ts:27
 msgid "Większość bezwzględna"
 msgstr "Absolute majority"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:44
+msgid "mps.vote-badge.abstain"
+msgstr "Abstained"
+
+#: src/components/mps/ConstituencySummary/ClubFilter/ClubFilter.tsx:29
+msgid "Wszystkie"
+msgstr "All"
+
+#. js-lingui-explicit-id
+#: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:30
+msgid "mps.vote-badge.yes"
+msgstr "Yes"
+
+#: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:35
+msgid "Znajdź swój okręg po miejscowości albo posła po nazwisku."
+msgstr "Find your constituency by town or an MP by surname."
