@@ -82,6 +82,18 @@ msgstr "Brak danych o klubie"
 #~ msgid "Brak klubu · okręg nr {0} {1}"
 #~ msgstr "Brak klubu · okręg nr {0} {1}"
 
+#: src/constants/education.ts:22
+msgid "Czytanie"
+msgstr "Czytanie"
+
+#: src/constants/education.ts:18
+msgid "Dokument zawierający projekt ustawy."
+msgstr "Dokument zawierający projekt ustawy."
+
+#: src/constants/education.ts:17
+msgid "Druk"
+msgstr "Druk"
+
 #: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.tsx:32
 #: src/components/shared/BillStageProgress/BillStageProgress.tsx:27
 msgid "Etap {currentStep} z {totalSteps}"
@@ -107,6 +119,10 @@ msgstr "Kadencje Sejmu"
 #~ msgid "Kadencje Sejmu:"
 #~ msgstr "Kadencje Sejmu:"
 
+#: src/constants/education.ts:6
+msgid "Krótki opis kluczowych pojęć z procesu legislacyjnego."
+msgstr "Krótki opis kluczowych pojęć z procesu legislacyjnego."
+
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:23
 msgid "Miejscowość lub nazwisko posła"
 msgstr "Miejscowość lub nazwisko posła"
@@ -128,6 +144,10 @@ msgstr "Nie głosował"
 msgid "Okręg nr {number} · {name}"
 msgstr "Okręg nr {number} · {name}"
 
+#: src/constants/education.ts:23
+msgid "Omówienie projektu ustawy w Sejmie."
+msgstr "Omówienie projektu ustawy w Sejmie."
+
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:42
 msgid "Posłowie"
 msgstr "Posłowie"
@@ -140,6 +160,10 @@ msgstr "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości a
 #: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:37
 msgid "mps.vote-badge.no"
 msgstr "Przeciw"
+
+#: src/constants/education.ts:4
+msgid "Słowniczek"
+msgstr "Słowniczek"
 
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:36
 msgid "Sortuj posłów: {currentSortLabel}"
@@ -161,6 +185,14 @@ msgstr "Tekst źródłowy bez tłumaczenia"
 #: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.stories.tsx:24
 msgid "Teraz na tym etapie"
 msgstr "Teraz na tym etapie"
+
+#: src/constants/education.ts:28
+msgid "Więcej niż połowa ważnie oddanych głosów."
+msgstr "Więcej niż połowa ważnie oddanych głosów."
+
+#: src/constants/education.ts:27
+msgid "Większość bezwzględna"
+msgstr "Większość bezwzględna"
 
 #. js-lingui-explicit-id
 #: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:44

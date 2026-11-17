@@ -82,6 +82,18 @@ msgstr "No data about the club"
 #~ msgid "Brak klubu · okręg nr {0} {1}"
 #~ msgstr "No club · constituency no. {0} {1}"
 
+#: src/constants/education.ts:22
+msgid "Czytanie"
+msgstr "Reading"
+
+#: src/constants/education.ts:18
+msgid "Dokument zawierający projekt ustawy."
+msgstr "A document containing a bill draft."
+
+#: src/constants/education.ts:17
+msgid "Druk"
+msgstr "Print"
+
 #: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.tsx:32
 #: src/components/shared/BillStageProgress/BillStageProgress.tsx:27
 msgid "Etap {currentStep} z {totalSteps}"
@@ -107,6 +119,10 @@ msgstr "Terms of the Sejm"
 #~ msgid "Kadencje Sejmu:"
 #~ msgstr "Terms of the Sejm:"
 
+#: src/constants/education.ts:6
+msgid "Krótki opis kluczowych pojęć z procesu legislacyjnego."
+msgstr "A short description of key terms from the legislative process."
+
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:23
 msgid "Miejscowość lub nazwisko posła"
 msgstr "Town or MP surname"
@@ -128,6 +144,10 @@ msgstr "Did not vote"
 msgid "Okręg nr {number} · {name}"
 msgstr "Constituency no. {number} · {name}"
 
+#: src/constants/education.ts:23
+msgid "Omówienie projektu ustawy w Sejmie."
+msgstr "Discussion of a bill in the Sejm."
+
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:42
 msgid "Posłowie"
 msgstr "MPs"
@@ -140,6 +160,10 @@ msgstr "MPs of the Sejm, term {term}. Find your constituency by town or an MP by
 #: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:37
 msgid "mps.vote-badge.no"
 msgstr "No"
+
+#: src/constants/education.ts:4
+msgid "Słowniczek"
+msgstr "Glossary"
 
 #: src/components/mps/MpsSearchToolbar/MpsSearchToolbar.tsx:36
 msgid "Sortuj posłów: {currentSortLabel}"
@@ -161,6 +185,14 @@ msgstr ""
 #: src/components/education/EducationCurrentStageCard/EducationCurrentStageCard.stories.tsx:24
 msgid "Teraz na tym etapie"
 msgstr "Now at this stage"
+
+#: src/constants/education.ts:28
+msgid "Więcej niż połowa ważnie oddanych głosów."
+msgstr "More than half of the valid votes cast."
+
+#: src/constants/education.ts:27
+msgid "Większość bezwzględna"
+msgstr "Absolute majority"
 
 #. js-lingui-explicit-id
 #: src/components/mps/MpVoteBadge/MpVoteBadge.constants.ts:44
