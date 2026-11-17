@@ -103,6 +103,22 @@ msgstr "Stage {currentStep} of {totalSteps}"
 msgid "Filtruj według klubu"
 msgstr "Filter by club"
 
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:36
+msgid "Głosowania: udział w głosowaniach"
+msgstr "Votes: participation in votes"
+
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:31
+msgid "Głosowania: udział w głosowaniach, posiedzenia {participationFrom}–{participationTo}"
+msgstr "Votes: participation in votes, sittings {participationFrom}–{participationTo}"
+
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:60
+msgid "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu"
+msgstr "Interpellations: position among {totalMps, plural, one {# MP} other {# MPs}}, line = Sejm median"
+
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:48
+msgid "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu ({median})"
+msgstr "Interpellations: position among {totalMps, plural, one {# MP} other {# MPs}}, line = Sejm median ({median})"
+
 #: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:51
 #~ msgid "Kadencja"
 #~ msgstr "Term"

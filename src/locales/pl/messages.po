@@ -103,6 +103,22 @@ msgstr "Etap {currentStep} z {totalSteps}"
 msgid "Filtruj według klubu"
 msgstr "Filtruj według klubu"
 
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:36
+msgid "Głosowania: udział w głosowaniach"
+msgstr "Głosowania: udział w głosowaniach"
+
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:31
+msgid "Głosowania: udział w głosowaniach, posiedzenia {participationFrom}–{participationTo}"
+msgstr "Głosowania: udział w głosowaniach, posiedzenia {participationFrom}–{participationTo}"
+
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:60
+msgid "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu"
+msgstr "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu"
+
+#: src/components/mps/ConstituencySummary/MetricLegend/MetricLegend.tsx:48
+msgid "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu ({median})"
+msgstr "Interpelacje: pozycja wśród {totalMps, plural, one {# posła} few {# posłów} many {# posłów} other {# posła}}, kreska = mediana Sejmu ({median})"
+
 #: src/components/mps/MpProfileHeader/MpProfileTerms/MpProfileTerms.tsx:51
 #~ msgid "Kadencja"
 #~ msgstr "Kadencja"
