@@ -39,7 +39,7 @@ export const HEADER_NAV_LOOKS: Record<HeaderNavVariant, HeaderNavLook> = {
   },
   menu: {
     className:
-      "absolute top-full left-0 z-50 mt-px flex w-full flex-col gap-3 border-b border-[#d4e1e4] bg-white px-3.75 py-6 md:hidden",
+      "absolute top-full left-0 z-50 mt-px flex w-full flex-col gap-3 border-b border-gi-light-gray-dark bg-white px-3.75 py-6 md:hidden",
     entries: [...HEADER_NAV_ENTRIES].reverse(),
   },
 };
