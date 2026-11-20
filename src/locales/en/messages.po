@@ -63,6 +63,11 @@ msgstr "No data about the term"
 msgid "Brak danych o klubie"
 msgstr "No data about the club"
 
+#: src/components/mps/MpCard/MpCard.tsx:20
+#: src/components/mps/MpCard/MpCardHeader/MpCardHeader.tsx:28
+msgid "Brak klubu"
+msgstr ""
+
 #: src/constants/education.ts:66
 msgid "co najmniej 100 000 obywateli mających prawo wybierania do Sejmu"
 msgstr "at least 100,000 citizens with the right to vote in Sejm elections"
@@ -104,6 +109,10 @@ msgstr "if no date is set, it enters into force 14 days after publication"
 msgid "Gdzie się odbywa"
 msgstr "Where it takes place"
 
+#: src/components/mps/MpCard/MpCard.tsx:37
+msgid "Głosowania"
+msgstr ""
+
 #: src/constants/education.ts:143
 msgid "Głosowanie w Sejmie"
 msgstr "Vote in the Sejm"
@@ -119,6 +128,10 @@ msgstr "Legislative initiative"
 #: src/constants/education.ts:289
 msgid "Inne tryby"
 msgstr "Other procedures"
+
+#: src/components/mps/MpCard/MpCard.tsx:42
+msgid "Interpelacje"
+msgstr ""
 
 #: src/constants/education.ts:32
 msgid "Jak powstaje ustawa"
@@ -322,7 +335,7 @@ msgstr "refer the bill to a committee"
 msgid "Słowniczek"
 msgstr "Glossary"
 
-#: src/components/shared/SearchToolbar/SearchToolbar.tsx:43
+#: src/components/shared/SearchToolbar/SearchToolbar.tsx:44
 msgid "Sortuj:"
 msgstr "Sort by:"
 
