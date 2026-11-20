@@ -10,7 +10,7 @@ const baseArgs: MpCardProps = {
   clubName: "Koalicja Obywatelska",
   photoUrl: null,
   participationPercent: 76,
-  interpellations: { count: 117, median: 30.5, q1: 5, q3: 80, scaleMax: 200 },
+  interpellations: { count: 57, median: 30.5, q1: 12, q3: 62, scaleMax: 120 },
 };
 
 const meta: Meta<typeof MpCard> = {

@@ -1,7 +1,6 @@
 import { useLingui } from "@lingui/react/macro";
 import { Link } from "react-router";
 import { MetricBar } from "@/components/shared/MetricBar/MetricBar";
-import { MetricBarGroup } from "@/components/shared/MetricBar/MetricBarGroup/MetricBarGroup";
 import { FOCUS_CLASS_NAME } from "@/constants/focus";
 import { PATHS } from "@/constants/paths";
 import type { MpCardProps } from "./MpCard.types";
@@ -31,14 +30,16 @@ export const MpCard = ({
         clubName={clubName}
         photoUrl={photoUrl}
       />
-      <MetricBarGroup>
+      <div className="flex flex-col gap-4">
         <MetricBar
           variant="percent"
+          layout="stacked"
           label={t`Głosowania`}
           percent={participationPercent}
         />
         <MetricBar
           variant="median"
+          layout="stacked"
           label={t`Interpelacje`}
           value={interpellations.count}
           median={interpellations.median}
@@ -46,7 +47,7 @@ export const MpCard = ({
           q3={interpellations.q3}
           scaleMax={interpellations.scaleMax}
         />
-      </MetricBarGroup>
+      </div>
     </Link>
   );
 };

@@ -66,7 +66,7 @@ msgstr "No data about the club"
 #: src/components/mps/MpCard/MpCard.tsx:20
 #: src/components/mps/MpCard/MpCardHeader/MpCardHeader.tsx:28
 msgid "Brak klubu"
-msgstr ""
+msgstr "No club"
 
 #: src/constants/education.ts:66
 msgid "co najmniej 100 000 obywateli mających prawo wybierania do Sejmu"
@@ -111,7 +111,7 @@ msgstr "Where it takes place"
 
 #: src/components/mps/MpCard/MpCard.tsx:37
 msgid "Głosowania"
-msgstr ""
+msgstr "Votes"
 
 #: src/constants/education.ts:143
 msgid "Głosowanie w Sejmie"
@@ -131,7 +131,7 @@ msgstr "Other procedures"
 
 #: src/components/mps/MpCard/MpCard.tsx:42
 msgid "Interpelacje"
-msgstr ""
+msgstr "Interpellations"
 
 #: src/constants/education.ts:32
 msgid "Jak powstaje ustawa"
