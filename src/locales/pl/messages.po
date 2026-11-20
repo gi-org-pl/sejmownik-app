@@ -63,6 +63,11 @@ msgstr "Brak danych o kadencji"
 msgid "Brak danych o klubie"
 msgstr "Brak danych o klubie"
 
+#: src/components/mps/MpCard/MpCard.tsx:20
+#: src/components/mps/MpCard/MpCardHeader/MpCardHeader.tsx:28
+msgid "Brak klubu"
+msgstr "Brak klubu"
+
 #: src/constants/education.ts:66
 msgid "co najmniej 100 000 obywateli mających prawo wybierania do Sejmu"
 msgstr "co najmniej 100 000 obywateli mających prawo wybierania do Sejmu"
@@ -104,6 +109,10 @@ msgstr "gdy terminu nie ma, wchodzi w życie po 14 dniach od ogłoszenia"
 msgid "Gdzie się odbywa"
 msgstr "Gdzie się odbywa"
 
+#: src/components/mps/MpCard/MpCard.tsx:37
+msgid "Głosowania"
+msgstr "Głosowania"
+
 #: src/constants/education.ts:143
 msgid "Głosowanie w Sejmie"
 msgstr "Głosowanie w Sejmie"
@@ -119,6 +128,10 @@ msgstr "Inicjatywa ustawodawcza"
 #: src/constants/education.ts:289
 msgid "Inne tryby"
 msgstr "Inne tryby"
+
+#: src/components/mps/MpCard/MpCard.tsx:42
+msgid "Interpelacje"
+msgstr "Interpelacje"
 
 #: src/constants/education.ts:32
 msgid "Jak powstaje ustawa"
@@ -322,7 +335,7 @@ msgstr "skierować projekt do komisji"
 msgid "Słowniczek"
 msgstr "Słowniczek"
 
-#: src/components/shared/SearchToolbar/SearchToolbar.tsx:43
+#: src/components/shared/SearchToolbar/SearchToolbar.tsx:44
 msgid "Sortuj:"
 msgstr "Sortuj:"
 
