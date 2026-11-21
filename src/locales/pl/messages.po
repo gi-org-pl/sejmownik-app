@@ -101,6 +101,10 @@ msgstr "Druk"
 msgid "Etap {currentStep} z {totalSteps}"
 msgstr "Etap {currentStep} z {totalSteps}"
 
+#: src/pages/poslowie.tsx:179
+msgid "Filtruj według klubu"
+msgstr "Filtruj według klubu"
+
 #: src/constants/education.ts:245
 msgid "gdy niezgodne są tylko niektóre przepisy i nie są nierozerwalnie związane z całą ustawą, Prezydent po opinii Marszałka Sejmu podpisuje ustawę z ich pominięciem albo zwraca ją Sejmowi"
 msgstr "gdy niezgodne są tylko niektóre przepisy i nie są nierozerwalnie związane z całą ustawą, Prezydent po opinii Marszałka Sejmu podpisuje ustawę z ich pominięciem albo zwraca ją Sejmowi"
@@ -121,6 +125,10 @@ msgstr "Gdzie się odbywa"
 msgid "Głosowania"
 msgstr "Głosowania"
 
+#: src/pages/poslowie.tsx:93
+msgid "Głosowania: udział we wszystkich głosowaniach w tej kadencji"
+msgstr "Głosowania: udział we wszystkich głosowaniach w tej kadencji"
+
 #: src/constants/education.ts:143
 msgid "Głosowanie w Sejmie"
 msgstr "Głosowanie w Sejmie"
@@ -140,6 +148,10 @@ msgstr "Inne tryby"
 #: src/components/mps/MpCard/MpCard.tsx:43
 msgid "Interpelacje"
 msgstr "Interpelacje"
+
+#: src/pages/poslowie.tsx:97
+msgid "Interpelacje: pozycja wśród {totalMpCount} posłów, kreska = mediana Sejmu ({medianLabel})"
+msgstr "Interpelacje: pozycja wśród {totalMpCount} posłów, kreska = mediana Sejmu ({medianLabel})"
 
 #: src/constants/education.ts:32
 msgid "Jak powstaje ustawa"
@@ -183,6 +195,10 @@ msgstr "Marszałek Sejmu przekazuje uchwaloną ustawę Marszałkowi Senatu. Sena
 msgid "mediana: {formattedMedian}"
 msgstr "mediana: {formattedMedian}"
 
+#: src/pages/poslowie.tsx:129
+msgid "Miejscowość lub nazwisko posła"
+msgstr "Miejscowość lub nazwisko posła"
+
 #: src/constants/education.ts:87
 msgid "na posiedzeniu Sejmu przy projektach zmiany Konstytucji, budżetowych, podatkowych, wyborczych, ustrojowych i przy kodeksach"
 msgstr "na posiedzeniu Sejmu przy projektach zmiany Konstytucji, budżetowych, podatkowych, wyborczych, ustrojowych i przy kodeksach"
@@ -190,6 +206,14 @@ msgstr "na posiedzeniu Sejmu przy projektach zmiany Konstytucji, budżetowych, p
 #: src/constants/education.ts:91
 msgid "na posiedzeniu Sejmu także wtedy, gdy tak skieruje projekt Marszałek Sejmu"
 msgstr "na posiedzeniu Sejmu także wtedy, gdy tak skieruje projekt Marszałek Sejmu"
+
+#: src/pages/poslowie.tsx:79
+msgid "Nazwisko A–Ż"
+msgstr "Nazwisko A–Ż"
+
+#: src/pages/poslowie.tsx:80
+msgid "Nazwisko Ż–A"
+msgstr "Nazwisko Ż–A"
 
 #. js-lingui-explicit-id
 #: src/components/shared/VoteBadge/VoteBadge.constants.ts:51
@@ -199,6 +223,10 @@ msgstr "Nie głosował"
 #: src/constants/education.ts:180
 msgid "nie podjąć uchwały: ustawa zostaje wtedy w brzmieniu Sejmu i idzie do Prezydenta"
 msgstr "nie podjąć uchwały: ustawa zostaje wtedy w brzmieniu Sejmu i idzie do Prezydenta"
+
+#: src/pages/poslowie.tsx:172
+msgid "Nie znaleziono okręgu"
+msgstr "Nie znaleziono okręgu"
 
 #: src/components/mps/MpsList/MpsList.tsx:105
 msgid "Nie znaleziono posłów"
@@ -267,6 +295,10 @@ msgstr "Posłowie"
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:28
 msgid "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+
+#: src/pages/poslowie.tsx:106
+msgid "Posłowie okręgu nr {constituencyNumber}"
+msgstr "Posłowie okręgu nr {constituencyNumber}"
 
 #: src/constants/education.ts:62
 #: src/constants/education.ts:210
@@ -367,6 +399,14 @@ msgstr "Sortuj: {currentSortLabel}"
 msgid "Sprawozdanie komisji zawiera"
 msgstr "Sprawozdanie komisji zawiera"
 
+#: src/pages/poslowie.tsx:128
+msgid "Szukaj okręgu lub posła"
+msgstr "Szukaj okręgu lub posła"
+
+#: src/pages/poslowie.tsx:149
+msgid "Ta miejscowość leży w kilku okręgach (nr {constituencyNumber}, {otherConstituencyNumbers}). Pokazujemy okręg nr {constituencyNumber}."
+msgstr "Ta miejscowość leży w kilku okręgach (nr {constituencyNumber}, {otherConstituencyNumbers}). Pokazujemy okręg nr {constituencyNumber}."
+
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"
@@ -444,6 +484,14 @@ msgstr "Wstrzymał się"
 #: src/components/shared/FilterChips/FilterChips.tsx:26
 msgid "Wszystkie"
 msgstr "Wszystkie"
+
+#: src/pages/poslowie.tsx:162
+msgid "Wyniki dla „{trimmedQuery}”"
+msgstr "Wyniki dla „{trimmedQuery}”"
+
+#: src/pages/poslowie.tsx:105
+msgid "Wyniki wyszukiwania"
+msgstr "Wyniki wyszukiwania"
 
 #: src/constants/education.ts:152
 msgid "wystarcza zwykła większość: więcej głosów „za” niż „przeciw”"
