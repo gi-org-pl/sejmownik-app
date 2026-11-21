@@ -101,6 +101,10 @@ msgstr "Druk"
 msgid "Etap {currentStep} z {totalSteps}"
 msgstr "Etap {currentStep} z {totalSteps}"
 
+#: src/pages/poslowie.tsx:154
+msgid "Filtruj według klubu"
+msgstr "Filtruj według klubu"
+
 #: src/constants/education.ts:245
 msgid "gdy niezgodne są tylko niektóre przepisy i nie są nierozerwalnie związane z całą ustawą, Prezydent po opinii Marszałka Sejmu podpisuje ustawę z ich pominięciem albo zwraca ją Sejmowi"
 msgstr "gdy niezgodne są tylko niektóre przepisy i nie są nierozerwalnie związane z całą ustawą, Prezydent po opinii Marszałka Sejmu podpisuje ustawę z ich pominięciem albo zwraca ją Sejmowi"
@@ -121,6 +125,10 @@ msgstr "Gdzie się odbywa"
 msgid "Głosowania"
 msgstr "Głosowania"
 
+#: src/pages/poslowie.tsx:93
+msgid "Głosowania: udział we wszystkich głosowaniach w tej kadencji"
+msgstr "Głosowania: udział we wszystkich głosowaniach w tej kadencji"
+
 #: src/constants/education.ts:143
 msgid "Głosowanie w Sejmie"
 msgstr "Głosowanie w Sejmie"
@@ -128,6 +136,10 @@ msgstr "Głosowanie w Sejmie"
 #: src/constants/education.ts:74
 msgid "I czytanie"
 msgstr "I czytanie"
+
+#: src/pages/poslowie.tsx:124
+msgid "Imię lub nazwisko posła"
+msgstr "Imię lub nazwisko posła"
 
 #: src/constants/education.ts:52
 msgid "Inicjatywa ustawodawcza"
@@ -140,6 +152,10 @@ msgstr "Inne tryby"
 #: src/components/mps/MpCard/MpCard.tsx:43
 msgid "Interpelacje"
 msgstr "Interpelacje"
+
+#: src/pages/poslowie.tsx:97
+msgid "Interpelacje: pozycja wśród {totalMpCount} posłów, kreska = mediana Sejmu ({medianLabel})"
+msgstr "Interpelacje: pozycja wśród {totalMpCount} posłów, kreska = mediana Sejmu ({medianLabel})"
 
 #: src/constants/education.ts:32
 msgid "Jak powstaje ustawa"
@@ -190,6 +206,14 @@ msgstr "na posiedzeniu Sejmu przy projektach zmiany Konstytucji, budżetowych, p
 #: src/constants/education.ts:91
 msgid "na posiedzeniu Sejmu także wtedy, gdy tak skieruje projekt Marszałek Sejmu"
 msgstr "na posiedzeniu Sejmu także wtedy, gdy tak skieruje projekt Marszałek Sejmu"
+
+#: src/pages/poslowie.tsx:79
+msgid "Nazwisko A–Ż"
+msgstr "Nazwisko A–Ż"
+
+#: src/pages/poslowie.tsx:80
+msgid "Nazwisko Ż–A"
+msgstr "Nazwisko Ż–A"
 
 #. js-lingui-explicit-id
 #: src/components/shared/VoteBadge/VoteBadge.constants.ts:51
@@ -267,6 +291,10 @@ msgstr "Posłowie"
 #: src/components/mps/MpsPageHeader/MpsPageHeader.tsx:28
 msgid "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
+
+#: src/pages/poslowie.tsx:106
+msgid "Posłowie okręgu nr {constituencyNumber}"
+msgstr "Posłowie okręgu nr {constituencyNumber}"
 
 #: src/constants/education.ts:62
 #: src/constants/education.ts:210
@@ -367,6 +395,10 @@ msgstr "Sortuj: {currentSortLabel}"
 msgid "Sprawozdanie komisji zawiera"
 msgstr "Sprawozdanie komisji zawiera"
 
+#: src/pages/poslowie.tsx:123
+msgid "Szukaj posła"
+msgstr "Szukaj posła"
+
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
 msgid "i18n-setup.fallback"
@@ -444,6 +476,14 @@ msgstr "Wstrzymał się"
 #: src/components/shared/FilterChips/FilterChips.tsx:26
 msgid "Wszystkie"
 msgstr "Wszystkie"
+
+#: src/pages/poslowie.tsx:143
+msgid "Wyniki dla „{trimmedQuery}”"
+msgstr "Wyniki dla „{trimmedQuery}”"
+
+#: src/pages/poslowie.tsx:105
+msgid "Wyniki wyszukiwania"
+msgstr "Wyniki wyszukiwania"
 
 #: src/constants/education.ts:152
 msgid "wystarcza zwykła większość: więcej głosów „za” niż „przeciw”"
