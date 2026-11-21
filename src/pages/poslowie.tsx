@@ -62,7 +62,9 @@ const Poslowie = () => {
   );
 
   // Gdyby wybranego klubu nie było na nowej liście, wracamy do "Wszystkie".
-  const activeClubId = clubOptions.some((option) => option.id === selectedClubId)
+  const activeClubId = clubOptions.some(
+    (option) => option.id === selectedClubId,
+  )
     ? selectedClubId
     : null;
 

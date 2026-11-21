@@ -2,7 +2,11 @@ import type { MpCardProps } from "@/components/mps/MpCard/MpCard.types";
 import type { Constituency } from "@/types/mps";
 import { resolveMpsSearch } from "./resolveMpsSearch";
 
-const createMp = (id: number, firstName: string, lastName: string): MpCardProps => ({
+const createMp = (
+  id: number,
+  firstName: string,
+  lastName: string,
+): MpCardProps => ({
   id,
   firstName,
   lastName,
@@ -25,15 +29,24 @@ const createConstituency = (
   mps,
 });
 
-const WARSZAWA = createConstituency(19, "Warszawa", ["Warszawa"], [
-  createMp(1, "Jan", "Łoboda"),
-]);
-const KRAKOW = createConstituency(13, "Kraków", ["Kraków", "Brzesko"], [
-  createMp(2, "Anna", "Mazur"),
-]);
-const TARNOW = createConstituency(14, "Tarnów", ["Tarnów", "Brzesko"], [
-  createMp(3, "Piotr", "Mazurek"),
-]);
+const WARSZAWA = createConstituency(
+  19,
+  "Warszawa",
+  ["Warszawa"],
+  [createMp(1, "Jan", "Łoboda")],
+);
+const KRAKOW = createConstituency(
+  13,
+  "Kraków",
+  ["Kraków", "Brzesko"],
+  [createMp(2, "Anna", "Mazur")],
+);
+const TARNOW = createConstituency(
+  14,
+  "Tarnów",
+  ["Tarnów", "Brzesko"],
+  [createMp(3, "Piotr", "Mazurek")],
+);
 const ALL = [WARSZAWA, KRAKOW, TARNOW];
 
 const search = (query: string, constituencies = ALL) =>

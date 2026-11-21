@@ -7,4 +7,6 @@ export const filterMpsByClub = (
 ): MpCardProps[] =>
   clubId === null
     ? mps
-    : mps.filter((mp) => mp.clubName !== null && getClubId(mp.clubName) === clubId);
+    : mps.filter(
+        (mp) => mp.clubName !== null && getClubId(mp.clubName) === clubId,
+      );

@@ -1,6 +1,8 @@
 import { expect, test } from "@playwright/test";
 
-test("searching for a city shows its constituency and MPs", async ({ page }) => {
+test("searching for a city shows its constituency and MPs", async ({
+  page,
+}) => {
   // Given a user opens the Posłowie page
   await page.goto("/poslowie");
 

@@ -1,7 +1,11 @@
 import type { MpCardProps } from "@/components/mps/MpCard/MpCard.types";
 import { sortMpsByLastName } from "./sortMpsByLastName";
 
-const createMp = (id: number, firstName: string, lastName: string): MpCardProps => ({
+const createMp = (
+  id: number,
+  firstName: string,
+  lastName: string,
+): MpCardProps => ({
   id,
   firstName,
   lastName,

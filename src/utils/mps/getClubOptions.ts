@@ -1,5 +1,5 @@
-import type { FilterChipsOption } from "@/components/shared/FilterChips/FilterChips.types";
 import type { MpCardProps } from "@/components/mps/MpCard/MpCard.types";
+import type { FilterChipsOption } from "@/components/shared/FilterChips/FilterChips.types";
 import { normalizeText } from "./normalizeText";
 
 export const getClubId = (clubName: string) =>
@@ -33,6 +33,7 @@ export const getClubOptions = (
 
   return [...options.values()].sort(
     (first, second) =>
-      second.count - first.count || first.label.localeCompare(second.label, "pl"),
+      second.count - first.count ||
+      first.label.localeCompare(second.label, "pl"),
   );
 };
