@@ -101,7 +101,7 @@ msgstr "Druk"
 msgid "Etap {currentStep} z {totalSteps}"
 msgstr "Etap {currentStep} z {totalSteps}"
 
-#: src/pages/poslowie.tsx:179
+#: src/pages/poslowie.tsx:181
 msgid "Filtruj według klubu"
 msgstr "Filtruj według klubu"
 
@@ -125,7 +125,7 @@ msgstr "Gdzie się odbywa"
 msgid "Głosowania"
 msgstr "Głosowania"
 
-#: src/pages/poslowie.tsx:93
+#: src/pages/poslowie.tsx:95
 msgid "Głosowania: udział we wszystkich głosowaniach w tej kadencji"
 msgstr "Głosowania: udział we wszystkich głosowaniach w tej kadencji"
 
@@ -149,7 +149,7 @@ msgstr "Inne tryby"
 msgid "Interpelacje"
 msgstr "Interpelacje"
 
-#: src/pages/poslowie.tsx:97
+#: src/pages/poslowie.tsx:99
 msgid "Interpelacje: pozycja wśród {totalMpCount} posłów, kreska = mediana Sejmu ({medianLabel})"
 msgstr "Interpelacje: pozycja wśród {totalMpCount} posłów, kreska = mediana Sejmu ({medianLabel})"
 
@@ -195,7 +195,7 @@ msgstr "Marszałek Sejmu przekazuje uchwaloną ustawę Marszałkowi Senatu. Sena
 msgid "mediana: {formattedMedian}"
 msgstr "mediana: {formattedMedian}"
 
-#: src/pages/poslowie.tsx:129
+#: src/pages/poslowie.tsx:131
 msgid "Miejscowość lub nazwisko posła"
 msgstr "Miejscowość lub nazwisko posła"
 
@@ -207,11 +207,11 @@ msgstr "na posiedzeniu Sejmu przy projektach zmiany Konstytucji, budżetowych, p
 msgid "na posiedzeniu Sejmu także wtedy, gdy tak skieruje projekt Marszałek Sejmu"
 msgstr "na posiedzeniu Sejmu także wtedy, gdy tak skieruje projekt Marszałek Sejmu"
 
-#: src/pages/poslowie.tsx:79
+#: src/pages/poslowie.tsx:81
 msgid "Nazwisko A–Ż"
 msgstr "Nazwisko A–Ż"
 
-#: src/pages/poslowie.tsx:80
+#: src/pages/poslowie.tsx:82
 msgid "Nazwisko Ż–A"
 msgstr "Nazwisko Ż–A"
 
@@ -224,7 +224,7 @@ msgstr "Nie głosował"
 msgid "nie podjąć uchwały: ustawa zostaje wtedy w brzmieniu Sejmu i idzie do Prezydenta"
 msgstr "nie podjąć uchwały: ustawa zostaje wtedy w brzmieniu Sejmu i idzie do Prezydenta"
 
-#: src/pages/poslowie.tsx:172
+#: src/pages/poslowie.tsx:174
 msgid "Nie znaleziono okręgu"
 msgstr "Nie znaleziono okręgu"
 
@@ -296,7 +296,7 @@ msgstr "Posłowie"
 msgid "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 
-#: src/pages/poslowie.tsx:106
+#: src/pages/poslowie.tsx:108
 msgid "Posłowie okręgu nr {constituencyNumber}"
 msgstr "Posłowie okręgu nr {constituencyNumber}"
 
@@ -399,11 +399,11 @@ msgstr "Sortuj: {currentSortLabel}"
 msgid "Sprawozdanie komisji zawiera"
 msgstr "Sprawozdanie komisji zawiera"
 
-#: src/pages/poslowie.tsx:128
+#: src/pages/poslowie.tsx:130
 msgid "Szukaj okręgu lub posła"
 msgstr "Szukaj okręgu lub posła"
 
-#: src/pages/poslowie.tsx:149
+#: src/pages/poslowie.tsx:151
 msgid "Ta miejscowość leży w kilku okręgach (nr {constituencyNumber}, {otherConstituencyNumbers}). Pokazujemy okręg nr {constituencyNumber}."
 msgstr "Ta miejscowość leży w kilku okręgach (nr {constituencyNumber}, {otherConstituencyNumbers}). Pokazujemy okręg nr {constituencyNumber}."
 
@@ -485,11 +485,11 @@ msgstr "Wstrzymał się"
 msgid "Wszystkie"
 msgstr "Wszystkie"
 
-#: src/pages/poslowie.tsx:162
+#: src/pages/poslowie.tsx:164
 msgid "Wyniki dla „{trimmedQuery}”"
 msgstr "Wyniki dla „{trimmedQuery}”"
 
-#: src/pages/poslowie.tsx:105
+#: src/pages/poslowie.tsx:107
 msgid "Wyniki wyszukiwania"
 msgstr "Wyniki wyszukiwania"
 
