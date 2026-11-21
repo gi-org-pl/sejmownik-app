@@ -19,34 +19,21 @@ const createMp = (
 const createConstituency = (
   number: number,
   name: string,
-  cities: string[],
   mps: MpCardProps[],
 ): Constituency => ({
   number,
   name,
-  cities,
   includesAbroadVotes: false,
   mps,
 });
 
-const WARSZAWA = createConstituency(
-  19,
-  "Warszawa",
-  ["Warszawa"],
-  [createMp(1, "Jan", "Łoboda")],
-);
-const KRAKOW = createConstituency(
-  13,
-  "Kraków",
-  ["Kraków", "Brzesko"],
-  [createMp(2, "Anna", "Mazur")],
-);
-const TARNOW = createConstituency(
-  14,
-  "Tarnów",
-  ["Tarnów", "Brzesko"],
-  [createMp(3, "Piotr", "Mazurek")],
-);
+const WARSZAWA = createConstituency(19, "Warszawa", [
+  createMp(1, "Jan", "Łoboda"),
+]);
+const KRAKOW = createConstituency(13, "Kraków", [createMp(2, "Anna", "Mazur")]);
+const TARNOW = createConstituency(14, "Tarnów", [
+  createMp(3, "Piotr", "Mazurek"),
+]);
 const ALL = [WARSZAWA, KRAKOW, TARNOW];
 
 const search = (query: string, constituencies = ALL) =>
@@ -65,29 +52,12 @@ describe("resolveMpsSearch", () => {
     expect(search("  ")).toEqual({
       type: "constituency",
       constituency: WARSZAWA,
-      otherConstituencies: [],
     });
   });
 
   it("falls back to the first constituency when the default is missing", () => {
     expect(search("", [KRAKOW, TARNOW])).toMatchObject({
       constituency: KRAKOW,
-    });
-  });
-
-  it("finds a constituency by city, ignoring case and diacritics", () => {
-    expect(search("krakow")).toEqual({
-      type: "constituency",
-      constituency: KRAKOW,
-      otherConstituencies: [],
-    });
-  });
-
-  it("returns the first constituency and the others for a shared city", () => {
-    expect(search("Brzesko")).toEqual({
-      type: "constituency",
-      constituency: KRAKOW,
-      otherConstituencies: [TARNOW],
     });
   });
 
@@ -103,6 +73,17 @@ describe("resolveMpsSearch", () => {
   it("matches a full name and a surname typed without diacritics", () => {
     expect(search("jan loboda")).toMatchObject({ type: "mps" });
     expect(search("loboda")).toMatchObject({ type: "mps" });
+  });
+
+  it("matches a first name", () => {
+    expect(search("anna")).toEqual({
+      type: "mps",
+      mps: KRAKOW.mps,
+    });
+  });
+
+  it("does not search by constituency name", () => {
+    expect(search("krakow")).toEqual({ type: "none" });
   });
 
   it("returns none when nothing matches", () => {

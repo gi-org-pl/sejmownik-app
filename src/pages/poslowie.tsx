@@ -28,8 +28,6 @@ type MpsSort = "surnameAsc" | "surnameDesc";
 const HEADING_CLASS_NAME =
   "font-(family-name:--font-heading) text-2xl leading-8 font-bold text-gi-primary";
 
-// Lista posłów, którą pokazują przyciski klubów i siatka, zanim zadziała
-// filtr klubu: wszyscy posłowie okręgu albo wszyscy znalezieni po nazwisku.
 const getScopeMps = (result: MpsSearchResult) => {
   if (result.type === "constituency") {
     return result.constituency.mps;
@@ -107,11 +105,6 @@ const Poslowie = () => {
       ? t`Wyniki wyszukiwania`
       : t`Posłowie okręgu nr ${constituencyNumber}`;
 
-  const otherConstituencyNumbers =
-    result.type === "constituency"
-      ? result.otherConstituencies.map((other) => other.number).join(", ")
-      : "";
-
   const emptyReason = result.type === "none" ? "noMatch" : "noMps";
 
   return (
@@ -127,8 +120,8 @@ const Poslowie = () => {
           <SearchToolbar
             query={query}
             onQueryChange={handleQueryChange}
-            searchLabel={t`Szukaj okręgu lub posła`}
-            searchPlaceholder={t`Miejscowość lub nazwisko posła`}
+            searchLabel={t`Szukaj posła`}
+            searchPlaceholder={t`Imię lub nazwisko posła`}
             sortOptions={sortOptions}
             sort={sort}
             onSortChange={setSort}
@@ -136,26 +129,12 @@ const Poslowie = () => {
 
           <section aria-label={resultsLabel} className="flex flex-col gap-6">
             {result.type === "constituency" ? (
-              <div className="flex flex-col gap-2">
-                <ConstituencySummary
-                  number={result.constituency.number}
-                  name={result.constituency.name}
-                  mpCount={result.constituency.mps.length}
-                  includesAbroadVotes={result.constituency.includesAbroadVotes}
-                />
-                {result.otherConstituencies.length > 0 ? (
-                  <p
-                    role="status"
-                    className="text-sm leading-5 text-gi-light-primary"
-                  >
-                    <Trans>
-                      Ta miejscowość leży w kilku okręgach (nr{" "}
-                      {constituencyNumber}, {otherConstituencyNumbers}).
-                      Pokazujemy okręg nr {constituencyNumber}.
-                    </Trans>
-                  </p>
-                ) : null}
-              </div>
+              <ConstituencySummary
+                number={result.constituency.number}
+                name={result.constituency.name}
+                mpCount={result.constituency.mps.length}
+                includesAbroadVotes={result.constituency.includesAbroadVotes}
+              />
             ) : null}
 
             {result.type === "mps" ? (
@@ -167,12 +146,6 @@ const Poslowie = () => {
                   {formatMpCount(result.mps.length)}
                 </p>
               </div>
-            ) : null}
-
-            {result.type === "none" ? (
-              <h2 className={HEADING_CLASS_NAME}>
-                <Trans>Nie znaleziono okręgu</Trans>
-              </h2>
             ) : null}
 
             {scopeMps.length > 0 ? (

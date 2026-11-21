@@ -1,6 +1,4 @@
-// Upraszcza tekst do porównań w wyszukiwarce: małe litery, bez polskich
-// znaków (ł nie rozkłada się przy NFD, więc zamieniamy ją osobno) i bez
-// zbędnych spacji. Dzięki temu "krakow" znajdzie "Kraków".
+// Litera ł nie rozkłada się przy NFD, dlatego zamieniamy ją osobno.
 export const normalizeText = (value: string) =>
   value
     .toLowerCase()

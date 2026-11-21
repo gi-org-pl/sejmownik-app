@@ -4,12 +4,7 @@ import { normalizeText } from "./normalizeText";
 
 export type MpsSearchResult =
   | { type: "noData" }
-  | {
-      type: "constituency";
-      constituency: Constituency;
-      /** Inne okręgi z tą samą miejscowością (pokazujemy pierwszy i mówimy o reszcie). */
-      otherConstituencies: Constituency[];
-    }
+  | { type: "constituency"; constituency: Constituency }
   | { type: "mps"; mps: MpCardProps[] }
   | { type: "none" };
 
@@ -19,8 +14,8 @@ type ResolveMpsSearchParams = {
   defaultConstituencyNumber: number;
 };
 
-// Reguła z issue #11: miejscowość wybiera okręg, a nazwisko daje listę posłów
-// ze wszystkich okręgów. Pusta fraza pokazuje okręg domyślny.
+// Pusta fraza pokazuje okręg domyślny, niepusta szuka posłów po imieniu
+// i nazwisku we wszystkich okręgach.
 export const resolveMpsSearch = ({
   query,
   constituencies,
@@ -38,29 +33,13 @@ export const resolveMpsSearch = ({
         (candidate) => candidate.number === defaultConstituencyNumber,
       ) ?? constituencies[0];
 
-    return { type: "constituency", constituency, otherConstituencies: [] };
-  }
-
-  const cityMatches = constituencies.filter((constituency) =>
-    [constituency.name, ...constituency.cities].some((city) =>
-      normalizeText(city).startsWith(normalizedQuery),
-    ),
-  );
-
-  if (cityMatches.length > 0) {
-    const [constituency, ...otherConstituencies] = cityMatches;
-
-    return { type: "constituency", constituency, otherConstituencies };
+    return { type: "constituency", constituency };
   }
 
   const mps = constituencies
     .flatMap((constituency) => constituency.mps)
-    .filter(
-      (mp) =>
-        normalizeText(mp.lastName).startsWith(normalizedQuery) ||
-        normalizeText(`${mp.firstName} ${mp.lastName}`).includes(
-          normalizedQuery,
-        ),
+    .filter((mp) =>
+      normalizeText(`${mp.firstName} ${mp.lastName}`).includes(normalizedQuery),
     );
 
   return mps.length > 0 ? { type: "mps", mps } : { type: "none" };

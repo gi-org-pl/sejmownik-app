@@ -19,12 +19,11 @@ const renderPage = () => {
 
 const search = (value: string) =>
   fireEvent.change(
-    screen.getByRole("textbox", { name: "Szukaj okręgu lub posła" }),
+    screen.getByRole("textbox", { name: "Szukaj posła" }),
     { target: { value } },
   );
 
-// Lista kart posłów ma nazwę typu "20 posłów" lub "1 poseł" (pose?ł łapie obie
-// formy), w odróżnieniu od list w nagłówku.
+// Nazwa listy to "20 posłów" lub "1 poseł", dlatego pose?ł łapie obie formy.
 const getMpsGrid = () => screen.getByRole("list", { name: /^\d+ pose?ł/ });
 
 describe("Posłowie page", () => {
@@ -36,7 +35,7 @@ describe("Posłowie page", () => {
         screen.getByRole("heading", { level: 1, name: "Posłowie" }),
       ).toBeInTheDocument();
       expect(
-        screen.getByRole("textbox", { name: "Szukaj okręgu lub posła" }),
+        screen.getByRole("textbox", { name: "Szukaj posła" }),
       ).toBeInTheDocument();
       expect(
         screen.getByRole("heading", { name: "Okręg nr 19 · Warszawa" }),
@@ -60,16 +59,12 @@ describe("Posłowie page", () => {
     });
   });
 
-  describe('when the user searches for "Warszawa"', () => {
-    it("shows constituency 19 and its MPs", () => {
+  describe("when the search is cleared", () => {
+    it("goes back to the default constituency and its MPs", () => {
       renderPage();
 
-      search("Kraków");
-      expect(
-        screen.getByRole("heading", { name: "Okręg nr 13 · Kraków" }),
-      ).toBeInTheDocument();
-
-      search("Warszawa");
+      search("Mazur");
+      search("");
 
       expect(
         screen.getByRole("heading", { name: "Okręg nr 19 · Warszawa" }),
@@ -97,30 +92,25 @@ describe("Posłowie page", () => {
     });
   });
 
-  describe("when the user searches for a city in several constituencies", () => {
-    it("shows the first one and says so", () => {
+  describe("when the user searches for a town", () => {
+    it("does not pick a constituency", () => {
       renderPage();
 
-      search("Brzesko");
+      search("Kraków");
 
+      expect(screen.queryByText(/Okręg nr/)).not.toBeInTheDocument();
       expect(
-        screen.getByRole("heading", { name: "Okręg nr 13 · Kraków" }),
+        screen.getByText("Nie znaleziono posłów dla „Kraków”"),
       ).toBeInTheDocument();
-      expect(screen.getByRole("status")).toHaveTextContent(
-        "Ta miejscowość leży w kilku okręgach (nr 13, 14). Pokazujemy okręg nr 13.",
-      );
     });
   });
 
-  describe("when the user searches for an unknown city", () => {
-    it("shows the no-constituency message and no grid", () => {
+  describe("when nothing matches the search", () => {
+    it("shows the no-MPs message and no grid", () => {
       renderPage();
 
       search("Atlantyda");
 
-      expect(
-        screen.getByRole("heading", { name: "Nie znaleziono okręgu" }),
-      ).toBeInTheDocument();
       expect(
         screen.getByText("Nie znaleziono posłów dla „Atlantyda”"),
       ).toBeInTheDocument();

@@ -1,12 +1,10 @@
-// TYMCZASOWE dane przykładowe dla strony Posłowie. Zostaną zastąpione, gdy
-// powstanie zadanie ze źródłem danych (CONTEXT.md). Okręg nr 19 odwzorowuje
-// dane z makiety Figmy, pozostałe wpisy są wymyślone na potrzeby wyszukiwarki.
+// TYMCZASOWE dane przykładowe. Okręg nr 19 odwzorowuje makietę Figmy,
+// pozostałe wpisy są wymyślone na potrzeby wyszukiwarki.
 import type { MpCardProps } from "@/components/mps/MpCard/MpCard.types";
 import type { Constituency, MpsFixture } from "@/types/mps";
 
 export const DEFAULT_CONSTITUENCY_NUMBER = 19;
 
-// Krótkie nazwy klubów do przycisków filtra (karta posła pokazuje pełną).
 export const CLUB_SHORT_NAMES: Readonly<Record<string, string>> = {
   "Koalicja Obywatelska": "KO",
   "Prawo i Sprawiedliwość": "PiS",
@@ -35,7 +33,6 @@ const createMp = (
 const WARSZAWA: Constituency = {
   number: 19,
   name: "Warszawa",
-  cities: ["Warszawa"],
   includesAbroadVotes: true,
   mps: [
     createMp(13, "Władysław", "Bartoszewski", "PSL – Trzecia Droga", 98, 0),
@@ -64,7 +61,6 @@ const WARSZAWA: Constituency = {
 const KRAKOW: Constituency = {
   number: 13,
   name: "Kraków",
-  cities: ["Kraków", "Brzesko"],
   includesAbroadVotes: false,
   mps: [
     createMp(401, "Barbara", "Wawrzyniec", "Prawo i Sprawiedliwość", 92, 45),
@@ -73,12 +69,9 @@ const KRAKOW: Constituency = {
   ],
 };
 
-// Brzesko jest też w okręgu krakowskim, dzięki temu da się sprawdzić
-// miejscowość leżącą w kilku okręgach.
 const TARNOW: Constituency = {
   number: 14,
   name: "Tarnów",
-  cities: ["Tarnów", "Brzesko"],
   includesAbroadVotes: false,
   mps: [
     createMp(501, "Krzysztof", "Mazur", "Prawo i Sprawiedliwość", 96, 47),

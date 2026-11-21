@@ -1,22 +1,14 @@
 import { expect, test } from "@playwright/test";
 
-test("searching for a city shows its constituency and MPs", async ({
-  page,
-}) => {
-  // Given a user opens the Posłowie page
+test("searching for a surname lists the matching MPs", async ({ page }) => {
   await page.goto("/poslowie");
 
-  // When they type "Warszawa" in the search
-  await page
-    .getByRole("textbox", { name: "Szukaj okręgu lub posła" })
-    .fill("Warszawa");
+  await page.getByRole("textbox", { name: "Szukaj posła" }).fill("Mazur");
 
-  // Then they see "Okręg nr 19 · Warszawa" and 20 MPs
   await expect(
-    page.getByRole("heading", { name: "Okręg nr 19 · Warszawa" }),
+    page.getByRole("heading", { name: "Wyniki dla „Mazur”" }),
   ).toBeVisible();
-
-  const mpsGrid = page.getByRole("list", { name: "20 posłów" });
-  await page.getByRole("button", { name: "Pokaż wszystkich (20)" }).click();
-  await expect(mpsGrid.getByRole("listitem")).toHaveCount(20);
+  await expect(
+    page.getByRole("list", { name: "1 poseł" }).getByRole("listitem"),
+  ).toHaveCount(1);
 });

@@ -101,7 +101,7 @@ msgstr "Print"
 msgid "Etap {currentStep} z {totalSteps}"
 msgstr "Stage {currentStep} of {totalSteps}"
 
-#: src/pages/poslowie.tsx:181
+#: src/pages/poslowie.tsx:154
 msgid "Filtruj według klubu"
 msgstr "Filter by club"
 
@@ -125,7 +125,7 @@ msgstr "Where it takes place"
 msgid "Głosowania"
 msgstr "Votes"
 
-#: src/pages/poslowie.tsx:95
+#: src/pages/poslowie.tsx:93
 msgid "Głosowania: udział we wszystkich głosowaniach w tej kadencji"
 msgstr "Votes: share of all votes held in this term"
 
@@ -136,6 +136,10 @@ msgstr "Vote in the Sejm"
 #: src/constants/education.ts:74
 msgid "I czytanie"
 msgstr "First reading"
+
+#: src/pages/poslowie.tsx:124
+msgid "Imię lub nazwisko posła"
+msgstr "MP's first or last name"
 
 #: src/constants/education.ts:52
 msgid "Inicjatywa ustawodawcza"
@@ -149,7 +153,7 @@ msgstr "Other procedures"
 msgid "Interpelacje"
 msgstr "Interpellations"
 
-#: src/pages/poslowie.tsx:99
+#: src/pages/poslowie.tsx:97
 msgid "Interpelacje: pozycja wśród {totalMpCount} posłów, kreska = mediana Sejmu ({medianLabel})"
 msgstr "Interpellations: position among {totalMpCount} MPs, the line = Sejm median ({medianLabel})"
 
@@ -195,10 +199,6 @@ msgstr "The Marshal of the Sejm passes the adopted act to the Marshal of the Sen
 msgid "mediana: {formattedMedian}"
 msgstr "median: {formattedMedian}"
 
-#: src/pages/poslowie.tsx:131
-msgid "Miejscowość lub nazwisko posła"
-msgstr "Town or MP surname"
-
 #: src/constants/education.ts:87
 msgid "na posiedzeniu Sejmu przy projektach zmiany Konstytucji, budżetowych, podatkowych, wyborczych, ustrojowych i przy kodeksach"
 msgstr "at a sitting of the Sejm for bills amending the Constitution, budget, tax, electoral and political-system bills, and codes"
@@ -207,11 +207,11 @@ msgstr "at a sitting of the Sejm for bills amending the Constitution, budget, ta
 msgid "na posiedzeniu Sejmu także wtedy, gdy tak skieruje projekt Marszałek Sejmu"
 msgstr "at a sitting of the Sejm also when the Marshal of the Sejm refers the bill there"
 
-#: src/pages/poslowie.tsx:81
+#: src/pages/poslowie.tsx:79
 msgid "Nazwisko A–Ż"
 msgstr "Surname A–Z"
 
-#: src/pages/poslowie.tsx:82
+#: src/pages/poslowie.tsx:80
 msgid "Nazwisko Ż–A"
 msgstr "Surname Z–A"
 
@@ -223,10 +223,6 @@ msgstr "Did not vote"
 #: src/constants/education.ts:180
 msgid "nie podjąć uchwały: ustawa zostaje wtedy w brzmieniu Sejmu i idzie do Prezydenta"
 msgstr "pass no resolution: the act then keeps the Sejm's wording and goes to the President"
-
-#: src/pages/poslowie.tsx:174
-msgid "Nie znaleziono okręgu"
-msgstr "Constituency not found"
 
 #: src/components/mps/MpsList/MpsList.tsx:105
 msgid "Nie znaleziono posłów"
@@ -296,7 +292,7 @@ msgstr "MPs"
 msgid "Posłowie {term} kadencji Sejmu. Znajdź swój okręg po miejscowości albo posła po nazwisku."
 msgstr "MPs of the Sejm, term {term}. Find your constituency by town or an MP by surname."
 
-#: src/pages/poslowie.tsx:108
+#: src/pages/poslowie.tsx:106
 msgid "Posłowie okręgu nr {constituencyNumber}"
 msgstr "MPs of constituency no. {constituencyNumber}"
 
@@ -399,13 +395,9 @@ msgstr "Sort: {currentSortLabel}"
 msgid "Sprawozdanie komisji zawiera"
 msgstr "The committee report contains"
 
-#: src/pages/poslowie.tsx:130
-msgid "Szukaj okręgu lub posła"
-msgstr "Search for a constituency or an MP"
-
-#: src/pages/poslowie.tsx:151
-msgid "Ta miejscowość leży w kilku okręgach (nr {constituencyNumber}, {otherConstituencyNumbers}). Pokazujemy okręg nr {constituencyNumber}."
-msgstr "This town is in several constituencies (no. {constituencyNumber}, {otherConstituencyNumbers}). Showing constituency no. {constituencyNumber}."
+#: src/pages/poslowie.tsx:123
+msgid "Szukaj posła"
+msgstr "Search for an MP"
 
 #. js-lingui-explicit-id
 #: src/i18n.setup.test.tsx:43
@@ -485,11 +477,11 @@ msgstr "Abstained"
 msgid "Wszystkie"
 msgstr "All"
 
-#: src/pages/poslowie.tsx:164
+#: src/pages/poslowie.tsx:143
 msgid "Wyniki dla „{trimmedQuery}”"
 msgstr "Results for “{trimmedQuery}”"
 
-#: src/pages/poslowie.tsx:107
+#: src/pages/poslowie.tsx:105
 msgid "Wyniki wyszukiwania"
 msgstr "Search results"
 
