@@ -41,6 +41,10 @@ msgstr "{mpCount} MPs in the Sejm. Find your constituency by town or an MP by su
 msgid "{questionCount, plural, one {# pytanie} few {# pytania} many {# pytań} other {# pytań}}"
 msgstr "{questionCount, plural, one {# question} other {# questions}}"
 
+#: src/components/mps/MpsList/MpsList.tsx:119
+msgid "{totalCount, plural, one {# poseł} few {# posłowie} many {# posłów} other {# posła}}"
+msgstr "{totalCount, plural, one {# MP} other {# MPs}}"
+
 #: src/constants/education.ts:263
 msgid "bez większości 3/5 ustawa nie dochodzi do skutku"
 msgstr "without a 3/5 majority the act fails"
@@ -63,7 +67,11 @@ msgstr "No data about the term"
 msgid "Brak danych o klubie"
 msgstr "No data about the club"
 
-#: src/components/mps/MpCard/MpCard.tsx:20
+#: src/components/mps/MpsList/MpsList.tsx:108
+msgid "Brak danych o posłach"
+msgstr "No MP data available"
+
+#: src/components/mps/MpCard/MpCard.tsx:19
 #: src/components/mps/MpCard/MpCardHeader/MpCardHeader.tsx:28
 msgid "Brak klubu"
 msgstr "No club"
@@ -129,7 +137,7 @@ msgstr "Legislative initiative"
 msgid "Inne tryby"
 msgstr "Other procedures"
 
-#: src/components/mps/MpCard/MpCard.tsx:42
+#: src/components/mps/MpCard/MpCard.tsx:43
 msgid "Interpelacje"
 msgstr "Interpellations"
 
@@ -192,6 +200,14 @@ msgstr "Did not vote"
 msgid "nie podjąć uchwały: ustawa zostaje wtedy w brzmieniu Sejmu i idzie do Prezydenta"
 msgstr "pass no resolution: the act then keeps the Sejm's wording and goes to the President"
 
+#: src/components/mps/MpsList/MpsList.tsx:105
+msgid "Nie znaleziono posłów"
+msgstr "No MPs found"
+
+#: src/components/mps/MpsList/MpsList.tsx:103
+msgid "Nie znaleziono posłów dla „{query}”"
+msgstr "No MPs found for “{query}”"
+
 #: src/constants/education.ts:202
 msgid "nieodrzucenie wniosku o odrzucenie oznacza, że ustawa nie dochodzi do skutku"
 msgstr "if the motion to reject is not voted down, the act fails"
@@ -235,6 +251,10 @@ msgstr "sign the act and order its publication in the Journal of Laws"
 #: src/constants/education.ts:273
 msgid "podpisana ustawa ukazuje się w Dzienniku Ustaw"
 msgstr "the signed act is published in the Journal of Laws"
+
+#: src/components/mps/MpsList/MpsList.tsx:154
+msgid "Pokaż wszystkich ({totalCount})"
+msgstr "Show all ({totalCount})"
 
 #: src/constants/education.ts:198
 msgid "poprawka, której Sejm nie odrzuci, wchodzi do ustawy"

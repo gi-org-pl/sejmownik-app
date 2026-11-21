@@ -41,6 +41,10 @@ msgstr "{mpCount} posłów Sejmu. Znajdź swój okręg po miejscowości albo pos
 msgid "{questionCount, plural, one {# pytanie} few {# pytania} many {# pytań} other {# pytań}}"
 msgstr "{questionCount, plural, one {# pytanie} few {# pytania} many {# pytań} other {# pytań}}"
 
+#: src/components/mps/MpsList/MpsList.tsx:119
+msgid "{totalCount, plural, one {# poseł} few {# posłowie} many {# posłów} other {# posła}}"
+msgstr "{totalCount, plural, one {# poseł} few {# posłowie} many {# posłów} other {# posła}}"
+
 #: src/constants/education.ts:263
 msgid "bez większości 3/5 ustawa nie dochodzi do skutku"
 msgstr "bez większości 3/5 ustawa nie dochodzi do skutku"
@@ -63,7 +67,11 @@ msgstr "Brak danych o kadencji"
 msgid "Brak danych o klubie"
 msgstr "Brak danych o klubie"
 
-#: src/components/mps/MpCard/MpCard.tsx:20
+#: src/components/mps/MpsList/MpsList.tsx:108
+msgid "Brak danych o posłach"
+msgstr "Brak danych o posłach"
+
+#: src/components/mps/MpCard/MpCard.tsx:19
 #: src/components/mps/MpCard/MpCardHeader/MpCardHeader.tsx:28
 msgid "Brak klubu"
 msgstr "Brak klubu"
@@ -129,7 +137,7 @@ msgstr "Inicjatywa ustawodawcza"
 msgid "Inne tryby"
 msgstr "Inne tryby"
 
-#: src/components/mps/MpCard/MpCard.tsx:42
+#: src/components/mps/MpCard/MpCard.tsx:43
 msgid "Interpelacje"
 msgstr "Interpelacje"
 
@@ -192,6 +200,14 @@ msgstr "Nie głosował"
 msgid "nie podjąć uchwały: ustawa zostaje wtedy w brzmieniu Sejmu i idzie do Prezydenta"
 msgstr "nie podjąć uchwały: ustawa zostaje wtedy w brzmieniu Sejmu i idzie do Prezydenta"
 
+#: src/components/mps/MpsList/MpsList.tsx:105
+msgid "Nie znaleziono posłów"
+msgstr "Nie znaleziono posłów"
+
+#: src/components/mps/MpsList/MpsList.tsx:103
+msgid "Nie znaleziono posłów dla „{query}”"
+msgstr "Nie znaleziono posłów dla „{query}”"
+
 #: src/constants/education.ts:202
 msgid "nieodrzucenie wniosku o odrzucenie oznacza, że ustawa nie dochodzi do skutku"
 msgstr "nieodrzucenie wniosku o odrzucenie oznacza, że ustawa nie dochodzi do skutku"
@@ -235,6 +251,10 @@ msgstr "podpisać ustawę i zarządzić jej ogłoszenie w Dzienniku Ustaw"
 #: src/constants/education.ts:273
 msgid "podpisana ustawa ukazuje się w Dzienniku Ustaw"
 msgstr "podpisana ustawa ukazuje się w Dzienniku Ustaw"
+
+#: src/components/mps/MpsList/MpsList.tsx:154
+msgid "Pokaż wszystkich ({totalCount})"
+msgstr "Pokaż wszystkich ({totalCount})"
 
 #: src/constants/education.ts:198
 msgid "poprawka, której Sejm nie odrzuci, wchodzi do ustawy"
