@@ -46,12 +46,12 @@ export const WhiteNoCount: Story = {
 export const StaticTag: Story = {
   args: {
     variant: "white",
-    label: "Komisja Polityki Społecznej i Rodziny",
+    label: "Komisja Polityki Społecznej",
     onClick: undefined,
   },
   decorators: [
     (Story) => (
-      <div className="max-w-48 bg-gi-light-gray p-4">
+      <div className="max-w-40 bg-gi-light-gray p-4">
         <Story />
       </div>
     ),
