@@ -51,7 +51,7 @@ export const StaticTag: Story = {
   },
   decorators: [
     (Story) => (
-      <div className="max-w-40 bg-gi-light-gray p-4">
+      <div className="bg-gi-light-gray p-4">
         <Story />
       </div>
     ),
