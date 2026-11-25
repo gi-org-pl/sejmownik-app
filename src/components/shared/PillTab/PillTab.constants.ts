@@ -1,7 +1,7 @@
 import type { PillTabVariant } from "./PillTab.types";
 
 export const PILL_TAB_BASE_CLASS_NAME =
-  "inline-flex max-w-full items-center gap-1 rounded-full px-4 py-2 text-left text-sm leading-5 wrap-anywhere";
+  "inline-flex max-w-full items-center gap-2 rounded-full px-4 py-2 text-left text-sm leading-5 wrap-anywhere";
 
 export const PILL_TAB_INTERACTIVE_CLASS_NAME =
   "cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gi-primary";
