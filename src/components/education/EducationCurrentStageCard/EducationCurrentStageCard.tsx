@@ -1,6 +1,7 @@
 import { useLingui } from "@lingui/react/macro";
 import { Link } from "react-router";
 import arrowRightIcon from "@/assets/icons/arrow-right.svg";
+import { BadgeStage } from "@/components/shared/BadgeStage/BadgeStage";
 import { BillStageProgress } from "@/components/shared/BillStageProgress/BillStageProgress";
 import { FOCUS_CLASS_NAME } from "@/constants/focus";
 import { BUTTON_ICON_MASK_CLASS_NAME } from "@/constants/icon";
@@ -41,9 +42,7 @@ export const EducationCurrentStageCard = ({
       aria-label={accessibleName}
       className={`block w-full cursor-pointer overflow-hidden rounded-3xl border border-gi-light-gray-dark bg-white no-underline text-gi-primary ${FOCUS_CLASS_NAME}`}
     >
-      <p className="w-fit max-w-full rounded-br-2xl bg-gi-primary px-4 py-3 text-sm leading-4.5 font-bold wrap-break-word text-white">
-        {badgeLabel}
-      </p>
+      <BadgeStage label={badgeLabel} />
 
       <div className="flex flex-col gap-2.5 p-4">
         <div className="flex items-center gap-4">
