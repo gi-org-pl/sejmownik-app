@@ -468,6 +468,10 @@ msgstr "wnioskodawca może wycofać projekt, także na posiedzeniu komisji"
 msgid "Wnioskodawca uzasadnia projekt, posłowie zadają pytania i dyskutują o jego zasadach. O poszczególnych przepisach Sejm rozstrzyga później."
 msgstr "Wnioskodawca uzasadnia projekt, posłowie zadają pytania i dyskutują o jego zasadach. O poszczególnych przepisach Sejm rozstrzyga później."
 
+#: src/components/shared/Back/Back.tsx:44
+msgid "Wróć"
+msgstr "Wróć"
+
 #. js-lingui-explicit-id
 #: src/components/shared/VoteBadge/VoteBadge.constants.ts:44
 msgid "vote-badge.abstain"
