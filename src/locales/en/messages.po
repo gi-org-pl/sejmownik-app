@@ -468,6 +468,10 @@ msgstr "the sponsor can withdraw the bill, including at a committee meeting"
 msgid "Wnioskodawca uzasadnia projekt, posłowie zadają pytania i dyskutują o jego zasadach. O poszczególnych przepisach Sejm rozstrzyga później."
 msgstr "The sponsor justifies the bill, and MPs ask questions and debate its principles. The Sejm decides on individual provisions later."
 
+#: src/components/shared/Back/Back.tsx:44
+msgid "Wróć"
+msgstr "Back"
+
 #. js-lingui-explicit-id
 #: src/components/shared/VoteBadge/VoteBadge.constants.ts:44
 msgid "vote-badge.abstain"
