@@ -1,4 +1,5 @@
 import { useId } from "react";
+import { BadgeStage } from "@/components/shared/BadgeStage/BadgeStage";
 import type { EducationQuizCardProps } from "./EducationQuizCard.types";
 import { EducationQuizCardPills } from "./EducationQuizCardPills/EducationQuizCardPills";
 import { EducationQuizCardStartLink } from "./EducationQuizCardStartLink/EducationQuizCardStartLink";
@@ -19,9 +20,7 @@ export const EducationQuizCard = ({
       aria-labelledby={titleId}
       className="w-full overflow-hidden rounded-3xl bg-gi-ash outline-1 -outline-offset-1 outline-gi-dark-ash"
     >
-      <p className="w-fit max-w-full rounded-br-xl bg-gi-primary px-4 py-3 text-sm leading-4.5 font-bold wrap-break-word text-white">
-        {eyebrow}
-      </p>
+      <BadgeStage label={eyebrow} />
 
       <div className="p-4">
         <h2
